@@ -8,7 +8,6 @@ public class PlayerMovement : MonoBehaviour
 
     private float movement;
     public float speed = 7f;
-    private bool faceRight = true;
 
     public float jumpForce = 10f;
 
@@ -28,15 +27,13 @@ public class PlayerMovement : MonoBehaviour
         movement = Input.GetAxis("Horizontal");
 
         // Xoay mặt
-        if (movement < 0f && faceRight)
+        if (movement < 0f)
         {
             transform.eulerAngles = new Vector3(0f, -180f, 0f);
-            faceRight = true;
         }
-        if (movement > 0f && !faceRight)
+        if (movement > 0f)
         {
             transform.eulerAngles = new Vector3(0f, 0f, 0f);
-            faceRight = false;
         }
 
 
@@ -85,8 +82,16 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Ground"))
         {
-            //animator.SetBool("Jump", false);
-            jumpCount = 0;
+            foreach (ContactPoint2D contact in collision.contacts)
+            {
+                // Nếu normal của điểm tiếp xúc gần với hướng lên trên (Vector2.up)
+                if (Vector2.Dot(contact.normal, Vector2.up) > 0.5f)
+                {
+                    // animator.SetBool("Jump", false);
+                    jumpCount = 0;
+                    break; // Thoát vòng lặp khi tìm thấy điểm tiếp xúc hợp lệ
+                }
+            }
         }
     }
 
