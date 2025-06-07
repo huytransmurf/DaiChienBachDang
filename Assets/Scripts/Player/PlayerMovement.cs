@@ -2,7 +2,7 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-    //public Animator animator;
+    public Animator animator;
 
     public Rigidbody2D rb;
 
@@ -14,6 +14,13 @@ public class PlayerMovement : MonoBehaviour
 
     private int jumpCount = 0;
     public int maxJumpCount = 2;
+
+    // new
+    public Transform wallCheck;
+    public Transform groundCheck;
+    public float checkRadius = 0.2f;
+    public LayerMask groundLayer;
+    // end - new
 
     void Update()
     {
@@ -40,24 +47,32 @@ public class PlayerMovement : MonoBehaviour
             jumpCount++;
         }
 
-        //if (Mathf.Abs(movement) > .1f)
-        //{
-        //    animator.SetFloat("Run", 1f);
-        //}
-        //else if (movement < .1f)
-        //{
-        //    animator.SetFloat("Run", 0f);
-        //}
+        if (Mathf.Abs(movement) > .1f)
+        {
+            animator.SetFloat("Run", 1f);
+        }
+        else if (movement < .1f)
+        {
+            animator.SetFloat("Run", 0f);
+        }
 
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    animator.SetTrigger("Attack");
-        //}
+        if (Input.GetMouseButtonDown(0))
+        {
+            animator.SetTrigger("Attack_1");
+        }
     }
 
     private void FixedUpdate()
     {
-        transform.position += new Vector3(movement, 0f, 0f) * Time.fixedDeltaTime * speed;
+        //transform.position += new Vector3(movement, 0f, 0f) * Time.fixedDeltaTime * speed;
+        rb.linearVelocity = new Vector2(movement * speed, rb.linearVelocity.y);
+
+        // new
+        if (IsTouchingWall())
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y - 0.1f);
+        }   
+        // end - new
     }
 
     void Jump()
@@ -74,4 +89,17 @@ public class PlayerMovement : MonoBehaviour
             jumpCount = 0;
         }
     }
+
+    // new
+    private bool IsTouchingWall()
+    {
+        return Physics2D.OverlapCircle(wallCheck.position, checkRadius, groundLayer);
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
+    }
+    // end-new
+
 }
