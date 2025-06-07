@@ -30,9 +30,9 @@ AnimationClip:
       value: {fileID: -7728968512584045763, guid: e3a2f0eaf7559dc4ab7c08fcac19e00e, type: 3}
     - time: 0.26666668
       value: {fileID: -4469969801115278493, guid: 8cc963d30acb880438ed550a518d24d0, type: 3}
-    - time: 0.33333334
+    - time: 0.4
       value: {fileID: -8147634180708393105, guid: ed4de99ea9a582d4ba83cfdb3eff30c7, type: 3}
-    - time: 0.41666666
+    - time: 0.43333334
       value: {fileID: 7981653581604046589, guid: 45cb50984ee65ca4bab9abd51aef648e, type: 3}
     - time: 0.48333332
       value: {fileID: -3402844932826697547, guid: e86351a0fcc860d46b41679457d43bb7, type: 3}
