@@ -31,12 +31,12 @@ public class PlayerMovement : MonoBehaviour
         if (movement < 0f && faceRight)
         {
             transform.eulerAngles = new Vector3(0f, -180f, 0f);
-            faceRight = false;
+            faceRight = true;
         }
         if (movement > 0f && !faceRight)
         {
             transform.eulerAngles = new Vector3(0f, 0f, 0f);
-            faceRight = true;
+            faceRight = false;
         }
 
 

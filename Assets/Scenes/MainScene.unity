@@ -4562,7 +4562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   rb: {fileID: 1567805251}
-  speed: 5
+  speed: 7
   jumpForce: 10
   maxJumpCount: 2
   wallCheck: {fileID: 1567805254}
@@ -4632,7 +4632,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.026553512, y: -0.0061933994}
+  m_Offset: {x: -0.1117993, y: -0.30266333}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4642,7 +4642,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.3607314, y: 3.6722822}
+  m_Size: {x: 1.5306145, y: 3.4746356}
   m_EdgeRadius: 0
 --- !u!212 &1567805253
 SpriteRenderer:
@@ -5433,7 +5433,11 @@ Transform:
   m_GameObject: {fileID: 1614929967}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -3.99, y: -0.1, z: -10}
+=======
+  m_LocalPosition: {x: -3.0534632, y: 2.0801098, z: -10}
+>>>>>>> 10032922e676f8af0e2b974eb6b474e10744a1ab
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
