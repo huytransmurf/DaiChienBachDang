@@ -84,19 +84,13 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Enemy"))
         {
             float distanceToEnemy = Vector2.Distance(transform.position, other.transform.position);
-            Debug.Log($"{gameObject.name} detected {other.name} at distance {distanceToEnemy} (attackDistance: {attackDistance})");
             if (distanceToEnemy <= attackDistance)
             {
                 TryAttack();
             }
-        }
-
-        if (other.CompareTag("Enemmy"))
-        {
-            StartFollowing(); // Bắt đầu di chuyển về phía player khi player đi vào vùng trigger
         }
     }
 
