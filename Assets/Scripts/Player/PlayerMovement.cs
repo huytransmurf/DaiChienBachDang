@@ -47,19 +47,23 @@ public class PlayerMovement : MonoBehaviour
 
         if (Mathf.Abs(movement) > .1f)
         {
-            audioPlayer.PlayRunAudio();
+           
             animator.SetFloat("Run", 1f);
+            audioPlayer.PlayRunAudio();
+
         }
         else if (movement < .1f)
         {
-            audioPlayer.PlayRunAudio();
             animator.SetFloat("Run", 0f);
+            
+
         }
 
         if (Input.GetMouseButtonDown(0))
         {
-            audioPlayer.PlayAttackAudio();
             animator.SetTrigger("Attack_1");
+            audioPlayer.PlayAttackAudio();
+
         }
     }
 
