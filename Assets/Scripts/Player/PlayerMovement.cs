@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         {
            
             animator.SetFloat("Run", 1f);
-            audioPlayer.PlayRunAudio();
+           // audioPlayer.PlayRunAudio();
 
         }
         else if (movement < .1f)

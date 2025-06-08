@@ -10,7 +10,7 @@ namespace Assets.Scripts.Enemy
     public class EnemyHealth : MonoBehaviour
     {
         [Header("Health Settings")]
-        public int maxHealth = 100;
+        private int maxHealth = 100;
         private int currentHealth;
 
         private Animator animator;
@@ -25,21 +25,23 @@ namespace Assets.Scripts.Enemy
         void Start()
         {
             currentHealth = maxHealth;
-            healthBar.SetMaxHeal(currentHealth);
+            healthBar.SetMaxHeal(maxHealth);
 
             animator = GetComponent<Animator>();
             rb = GetComponent<Rigidbody2D>();
             col = GetComponent<Collider2D>();
+            Debug.Log(currentHealth);
         }
 
         public void TakeDamage(int damage)
         {
-            Debug.Log("TakeDamage boss");
             if (isDead)
                 return;
 
             currentHealth -= damage;
-            healthBar.SetHeal(currentHealth);
+           healthBar.SetHeal(currentHealth);
+            Debug.Log(currentHealth);
+
             if (currentHealth <= 0)
             {
                 Die();
