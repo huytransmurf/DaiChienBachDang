@@ -17,6 +17,7 @@ namespace Assets.Scripts.Player
 
         private float lastAttackTime = 0f;
 
+
         void Update()
         {
             if (Input.GetMouseButtonDown(0) && Time.time >= lastAttackTime + attackCooldown)
@@ -40,11 +41,12 @@ namespace Assets.Scripts.Player
 
             foreach (Collider2D enemy in hitEnemies)
             {
+
                 Enemy.EnemyHealth health = enemy.GetComponent<Enemy.EnemyHealth>();
                 Debug.Log("health: " + health);
                 if (health != null)
                 {
-                    Debug.Log("TakeDamage");
+                    Debug.Log("TakeDamage: " + enemy.name); 
                     health.TakeDamage(attackDamage);
                 }
             }
