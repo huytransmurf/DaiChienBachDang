@@ -17,11 +17,16 @@ namespace Assets.Scripts.Enemy
         private Rigidbody2D rb;
         private Collider2D col;
 
+        public HealthBar healthBar;
+
+
         private bool isDead = false;
 
         void Start()
         {
             currentHealth = maxHealth;
+            healthBar.SetMaxHeal(currentHealth);
+
             animator = GetComponent<Animator>();
             rb = GetComponent<Rigidbody2D>();
             col = GetComponent<Collider2D>();
@@ -34,6 +39,7 @@ namespace Assets.Scripts.Enemy
                 return;
 
             currentHealth -= damage;
+            healthBar.SetHeal(currentHealth);
             if (currentHealth <= 0)
             {
                 Die();

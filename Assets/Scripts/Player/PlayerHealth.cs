@@ -16,6 +16,8 @@ namespace Assets.Scripts.Player
         public GameObject gameOverMenu;
         public SpriteRenderer spriteRenderer;
 
+        public HealthBar healthBar;
+
         // Biến cho hiệu ứng nhấp nháy
         public Color damageColor = Color.red;
         public float flashDuration = 0.1f;
@@ -24,6 +26,7 @@ namespace Assets.Scripts.Player
         {
             currentHealth = maxHealth;
             //gameOverMenu.SetActive(false);
+            healthBar.SetMaxHeal(currentHealth);
 
             if (spriteRenderer == null)
                 spriteRenderer = GetComponent<SpriteRenderer>();
@@ -38,7 +41,9 @@ namespace Assets.Scripts.Player
                 Debug.Log("Die" + amount);
                 return;
             }
+
             currentHealth -= amount;
+            healthBar.SetHeal(currentHealth);
         }
 
         void Die()
