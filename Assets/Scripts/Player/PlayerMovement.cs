@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
 
     public Rigidbody2D rb;
+    public AudioPlayer audioPlayer;
 
     private float movement;
     public float speed = 7f;
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float checkRadius = 0.2f;
     public LayerMask groundLayer;
+
     // end - new
 
     void Update()
@@ -36,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
             transform.eulerAngles = new Vector3(0f, 0f, 0f);
         }
 
-
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumpCount)
         {
             Jump();
@@ -46,15 +47,18 @@ public class PlayerMovement : MonoBehaviour
 
         if (Mathf.Abs(movement) > .1f)
         {
+            audioPlayer.PlayRunAudio();
             animator.SetFloat("Run", 1f);
         }
         else if (movement < .1f)
         {
+            audioPlayer.PlayRunAudio();
             animator.SetFloat("Run", 0f);
         }
 
         if (Input.GetMouseButtonDown(0))
         {
+            audioPlayer.PlayAttackAudio();
             animator.SetTrigger("Attack_1");
         }
     }
@@ -68,18 +72,18 @@ public class PlayerMovement : MonoBehaviour
         if (IsTouchingWall())
         {
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y - 0.1f);
-        }   
+        }
         // end - new
     }
 
     void Jump()
     {
+        audioPlayer.PlayJumpAudio();
         rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
         if (collision.gameObject.CompareTag("Ground"))
         {
             foreach (ContactPoint2D contact in collision.contacts)
@@ -106,5 +110,4 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
     }
     // end-new
-
 }

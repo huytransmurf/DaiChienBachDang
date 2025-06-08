@@ -150,6 +150,7 @@ namespace Assets.Scripts.Enemy
 
             if (nextButton != null)
             {
+                Debug.Log("SetupNextButton");
                 nextButton.onClick.AddListener(NextDialogue);
             }
         }
@@ -176,7 +177,6 @@ namespace Assets.Scripts.Enemy
 
             distanceToPlayer = Vector2.Distance(transform.position, player.position);
             playerInDetectionRange = distanceToPlayer <= detectionRange;
-            Debug.Log("Distance to player: " + distanceToPlayer);
 
             float effectiveAttackRange =
                 currentState == EnemyState.Attack ? attackRange + attackBufferRange : attackRange;
@@ -450,6 +450,7 @@ namespace Assets.Scripts.Enemy
 
         public void NextDialogue()
         {
+            Debug.Log("Next dialogue");
             currentDialogueIndex++;
 
             if (currentDialogueIndex < dialogueLines.Length)
