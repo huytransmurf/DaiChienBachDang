@@ -17,8 +17,6 @@ public class AudioPlayer : MonoBehaviour
     [SerializeField]
     private AudioClip attackAudioClips;
 
-    [SerializeField]
-    private AudioClip runAudioClips;
 
     void Start()
     {
@@ -44,8 +42,5 @@ public class AudioPlayer : MonoBehaviour
         backgroundAudio.Play();
     }
 
-    public void PlayRunAudio()
-    {
-        effectAudio.PlayOneShot(runAudioClips);
-    }
+    
 }
