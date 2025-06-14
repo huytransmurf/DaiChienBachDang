@@ -1,11 +1,21 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class NpcDialog : MonoBehaviour
 {
-    public GameObject dialogUI;               // Gắn Panel UI trong Inspector
-    public TextMeshProUGUI dialogText;        // Gắn TextMeshPro vào
-    public string[] dialogLines;              // Nhập hội thoại từng dòng
+    [System.Serializable]
+    public class DialogLine
+    {
+        public string text;
+        public Sprite image;
+    }
+
+    public GameObject dialogUI;                    // Gắn Panel UI trong Inspector
+    public TextMeshProUGUI dialogText;             // Gắn TextMeshPro vào
+    public Image dialogImage;                      // Gắn Image UI để hiển thị ảnh
+    public DialogLine[] dialogLines;               // Mỗi đoạn thoại gồm text + ảnh
+
     private int currentLine = 0;
     private bool playerInRange = false;
     private bool dialogActive = false;
@@ -30,7 +40,7 @@ public class NpcDialog : MonoBehaviour
         dialogActive = true;
         currentLine = 0;
         dialogUI.SetActive(true);
-        dialogText.text = dialogLines[currentLine];
+        ShowLine();
     }
 
     void NextLine()
@@ -38,11 +48,26 @@ public class NpcDialog : MonoBehaviour
         currentLine++;
         if (currentLine < dialogLines.Length)
         {
-            dialogText.text = dialogLines[currentLine];
+            ShowLine();
         }
         else
         {
             EndDialog();
+        }
+    }
+
+    void ShowLine()
+    {
+        dialogText.text = dialogLines[currentLine].text;
+
+        if (dialogLines[currentLine].image != null)
+        {
+            dialogImage.sprite = dialogLines[currentLine].image;
+            dialogImage.gameObject.SetActive(true);
+        }
+        else
+        {
+            dialogImage.gameObject.SetActive(false); // Ẩn nếu không có ảnh
         }
     }
 
@@ -66,7 +91,7 @@ public class NpcDialog : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-            EndDialog(); // tự tắt khi rời xa
+            EndDialog(); // Tắt UI khi rời xa
         }
     }
 }

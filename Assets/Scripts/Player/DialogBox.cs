@@ -42,10 +42,6 @@ public class DialogBox : MonoBehaviour
                 NextLine();
             }
         }
-        else
-        {
-            return;
-        }
     }
 
     void StartDialog()
