@@ -11,6 +11,8 @@ namespace Assets.Scripts.Player
 {
     public class PlayerHealth : MonoBehaviour
     {
+        public Animator animator;
+
         public float maxHealth = 100f;
         public float currentHealth;
         public GameObject gameOverMenu;
@@ -34,6 +36,7 @@ namespace Assets.Scripts.Player
 
         public void TakeDamage(float amount)
         {
+            animator.SetTrigger("Hurt");
             Debug.Log("TakeDamage" + amount);
             if (currentHealth <= 0)
             {
@@ -50,6 +53,7 @@ namespace Assets.Scripts.Player
         {
             //currentHealth = 0;
             //gameOverMenu.SetActive(true);
+            animator.SetTrigger("Die");
             SceneManager.LoadSceneAsync(0);
             //Time.timeScale = 0f;
         }
