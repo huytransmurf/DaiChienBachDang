@@ -47,15 +47,15 @@ public class PlayerMovement : MonoBehaviour
 
         if (Mathf.Abs(movement) > .1f)
         {
-           
+
             animator.SetFloat("Run", 1f);
-           // audioPlayer.PlayRunAudio();
+            // audioPlayer.PlayRunAudio();
 
         }
         else if (movement < .1f)
         {
             animator.SetFloat("Run", 0f);
-            
+
 
         }
 
@@ -84,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
     {
         audioPlayer.PlayJumpAudio();
         rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+        animator.SetBool("isJumping", true);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -100,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
                     break; // Thoát vòng lặp khi tìm thấy điểm tiếp xúc hợp lệ
                 }
             }
+            animator.SetBool("isJumping", false);
         }
     }
 
