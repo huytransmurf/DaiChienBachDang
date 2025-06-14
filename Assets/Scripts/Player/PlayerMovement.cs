@@ -15,16 +15,19 @@ public class PlayerMovement : MonoBehaviour
     private int jumpCount = 0;
     public int maxJumpCount = 2;
 
-    // new
+    
     public Transform wallCheck;
     public Transform groundCheck;
     public float checkRadius = 0.2f;
     public LayerMask groundLayer;
 
-    // end - new
+    public bool canMove = true;
+
+   
 
     void Update()
     {
+        if (canMove == true) { 
         // Di chuyển ngang
         movement = Input.GetAxis("Horizontal");
 
@@ -59,11 +62,12 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            animator.SetTrigger("Attack_1");
-            audioPlayer.PlayAttackAudio();
+            if (Input.GetMouseButtonDown(0))
+            {
+                animator.SetTrigger("Attack_1");
+                audioPlayer.PlayAttackAudio();
 
+            }        
         }
     }
 
@@ -92,18 +96,18 @@ public class PlayerMovement : MonoBehaviour
         {
             foreach (ContactPoint2D contact in collision.contacts)
             {
-                // Nếu normal của điểm tiếp xúc gần với hướng lên trên (Vector2.up)
+                
                 if (Vector2.Dot(contact.normal, Vector2.up) > 0.5f)
                 {
                     // animator.SetBool("Jump", false);
                     jumpCount = 0;
-                    break; // Thoát vòng lặp khi tìm thấy điểm tiếp xúc hợp lệ
+                    break; 
                 }
             }
         }
     }
 
-    // new
+   
     private bool IsTouchingWall()
     {
         return Physics2D.OverlapCircle(wallCheck.position, checkRadius, groundLayer);
@@ -113,5 +117,5 @@ public class PlayerMovement : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
     }
-    // end-new
+    
 }
