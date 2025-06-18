@@ -720,9 +720,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.90188676, g: 0.0459451, b: 0.0459451, a: 1}
-    m_PressedColor: {r: 0.93207544, g: 0.06858658, b: 0.06858658, a: 1}
-    m_SelectedColor: {r: 1, g: 0.073584795, b: 0.073584795, a: 1}
+    m_HighlightedColor: {r: 0.8627451, g: 0.16078432, b: 0, a: 0.6431373}
+    m_PressedColor: {r: 0.8627451, g: 0.16078432, b: 0.16078432, a: 0.63529414}
+    m_SelectedColor: {r: 0.8627451, g: 0.16078432, b: 0.16078432, a: 0.6431373}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -779,7 +779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.94716984, g: 0.870324, b: 0.870324, a: 0.29411766}
+  m_Color: {r: 0.86415094, g: 0.1614168, b: 0.1614168, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -866,7 +866,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.028301716, b: 0.028301716, a: 1}
+    m_HighlightedColor: {r: 0.5320754, g: 0.3837182, b: 0.07127803, a: 0.3254902}
     m_PressedColor: {r: 0.93962264, g: 0.03368445, b: 0.03368445, a: 1}
     m_SelectedColor: {r: 0.82641506, g: 0.08575996, b: 0.08575996, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -913,7 +913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.33333334}
+  m_Color: {r: 0.9245283, g: 0.4622642, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1097,7 +1097,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5213392907808588702, guid: a7a352266a02d7a47aae16abca658ba5, type: 3}
+  m_Sprite: {fileID: 6170603303395702774, guid: 9e1a68c082df6d544b202a619ab4baf0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1194,9 +1194,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Dai chien Bach Dang
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
