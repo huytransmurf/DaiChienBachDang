@@ -1,61 +1,193 @@
 fileFormatVersion: 2
-guid: f2b4c483985ce4449bb128f0aa31746c
+guid: d76948013bf16aa43be9bdd85d6fb1bd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7243615536323895233
-    second: spr_ArcherAttack_strip_NoBkg_0
+      213: -7132710336831216126
+    second: Spell2_0
   - first:
-      213: 6759640509303396367
-    second: spr_ArcherAttack_strip_NoBkg_1
+      213: 4071864531623572647
+    second: Spell2_1
   - first:
-      213: -2756151581962605931
-    second: spr_ArcherAttack_strip_NoBkg_2
+      213: 4665093342161206058
+    second: Spell2_2
   - first:
-      213: 7049770765452447389
-    second: spr_ArcherAttack_strip_NoBkg_3
+      213: 2754278920091521496
+    second: Spell2_3
   - first:
-      213: 4389246912445186638
-    second: spr_ArcherAttack_strip_NoBkg_4
+      213: -3655772964997902501
+    second: Spell2_4
   - first:
-      213: -1294576501022817952
-    second: spr_ArcherAttack_strip_NoBkg_5
+      213: 1176739112865770190
+    second: Spell2_5
   - first:
-      213: 3837543601976821850
-    second: spr_ArcherAttack_strip_NoBkg_6
+      213: 1565196311934971981
+    second: Spell2_6
   - first:
-      213: 8479706863885118980
-    second: spr_ArcherAttack_strip_NoBkg_7
+      213: 4049896027283242005
+    second: Spell2_7
   - first:
-      213: 999227502422942335
-    second: spr_ArcherAttack_strip_NoBkg_8
+      213: 6841124985947222486
+    second: Spell2_8
   - first:
-      213: -6525645608432652152
-    second: spr_ArcherAttack_strip_NoBkg_9
+      213: -5423300249437568791
+    second: Spell2_9
   - first:
-      213: -3284696614204815154
-    second: spr_ArcherAttack_strip_NoBkg_10
+      213: -7097996302438239574
+    second: Spell2_10
   - first:
-      213: 437343341963369431
-    second: spr_ArcherAttack_strip_NoBkg_11
+      213: 5325948251172148921
+    second: Spell2_11
   - first:
-      213: 8427264711992668458
-    second: spr_ArcherAttack_strip_NoBkg_12
+      213: -7007466483404879444
+    second: Spell2_12
   - first:
-      213: -6043847795777448549
-    second: spr_ArcherAttack_strip_NoBkg_13
+      213: 703796387477479175
+    second: Spell2_13
   - first:
-      213: -83384386637133886
-    second: spr_ArcherAttack_strip_NoBkg_14
+      213: -7695254787075874077
+    second: Spell2_14
   - first:
-      213: -1867770427908137541
-    second: spr_ArcherAttack_strip_NoBkg_15
+      213: -1853652462956065477
+    second: Spell2_15
   - first:
-      213: -894835629556058496
-    second: spr_ArcherAttack_strip_NoBkg_16
+      213: 4474687536705979036
+    second: Spell2_16
   - first:
-      213: 9171838437411179919
-    second: spr_ArcherAttack_strip_NoBkg_17
+      213: 1856728493052650700
+    second: Spell2_17
+  - first:
+      213: -1365558434350418792
+    second: Spell2_18
+  - first:
+      213: 8948187902086773925
+    second: Spell2_19
+  - first:
+      213: -3043885905451751040
+    second: Spell2_20
+  - first:
+      213: -3751311648684755751
+    second: Spell2_21
+  - first:
+      213: -275252672775072294
+    second: Spell2_22
+  - first:
+      213: -4902344466269074777
+    second: Spell2_23
+  - first:
+      213: -1589974224293794758
+    second: Spell2_24
+  - first:
+      213: 3135246149689575015
+    second: Spell2_25
+  - first:
+      213: 3618804779023254423
+    second: Spell2_26
+  - first:
+      213: -3329148909317331490
+    second: Spell2_27
+  - first:
+      213: 469059261550396035
+    second: Spell2_28
+  - first:
+      213: 4371563406365487704
+    second: Spell2_29
+  - first:
+      213: 3832674100233213508
+    second: Spell2_30
+  - first:
+      213: -148239878654017699
+    second: Spell2_31
+  - first:
+      213: -7357338516611832697
+    second: Spell2_32
+  - first:
+      213: 3803290588122818268
+    second: Spell2_33
+  - first:
+      213: 4209573142961858506
+    second: Spell2_34
+  - first:
+      213: -1555610951856097536
+    second: Spell2_35
+  - first:
+      213: 2378459676178247313
+    second: Spell2_36
+  - first:
+      213: -5780166003409852124
+    second: Spell2_37
+  - first:
+      213: -957076058878207839
+    second: Spell2_38
+  - first:
+      213: -94354166932909492
+    second: Spell2_39
+  - first:
+      213: -801378828869331452
+    second: Spell2_40
+  - first:
+      213: 6774345840912138294
+    second: Spell2_41
+  - first:
+      213: -3208051029601595873
+    second: Spell2_42
+  - first:
+      213: -3238947075509415616
+    second: Spell2_43
+  - first:
+      213: -4945755672137319087
+    second: Spell2_44
+  - first:
+      213: -2149975938723997201
+    second: Spell2_45
+  - first:
+      213: -7882410287955797748
+    second: Spell2_46
+  - first:
+      213: -8955243058400206384
+    second: Spell2_47
+  - first:
+      213: 5660662841330714585
+    second: Spell2_48
+  - first:
+      213: -1261637413854936141
+    second: Spell2_49
+  - first:
+      213: -5278137060999508371
+    second: Spell2_50
+  - first:
+      213: -685340617834980559
+    second: Spell2_51
+  - first:
+      213: -2877080876047505344
+    second: Spell2_52
+  - first:
+      213: -2743801661240873397
+    second: Spell2_53
+  - first:
+      213: 7797469562080160088
+    second: Spell2_54
+  - first:
+      213: 1252050914546091319
+    second: Spell2_55
+  - first:
+      213: -3756956399434253279
+    second: Spell2_56
+  - first:
+      213: 3800507707682412241
+    second: Spell2_57
+  - first:
+      213: 1255844650764093052
+    second: Spell2_58
+  - first:
+      213: 6099872660697540993
+    second: Spell2_59
+  - first:
+      213: 4278318572968079049
+    second: Spell2_60
+  - first:
+      213: 4538308855485455551
+    second: Spell2_61
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -151,419 +283,353 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_0
+      name: Spell2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 144
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1cf1614b3fd768460800000000000000
-      internalID: 7243615536323895233
+      spriteID: 2062b674db5830d90800000000000000
+      internalID: -7132710336831216126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_1
+      name: Spell2_1
       rect:
         serializedVersion: 2
-        x: 180
+        x: 144
         y: 0
-        width: 128
-        height: 128
+        width: 144
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f089e56aa311fcd50800000000000000
-      internalID: 6759640509303396367
+      spriteID: 7a47fe4c73b228830800000000000000
+      internalID: 4071864531623572647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_2
+      name: Spell2_2
       rect:
         serializedVersion: 2
-        x: 360
+        x: 288
         y: 0
-        width: 128
-        height: 128
+        width: 144
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 59aecf92dbe20c9d0800000000000000
-      internalID: -2756151581962605931
+      spriteID: a2bfe8f8dadbdb040800000000000000
+      internalID: 4665093342161206058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_3
+      name: Spell2_3
       rect:
         serializedVersion: 2
-        x: 540
+        x: 432
         y: 0
-        width: 128
-        height: 128
+        width: 144
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d9e0abee821d5d160800000000000000
-      internalID: 7049770765452447389
+      spriteID: 8d1d664c51a293620800000000000000
+      internalID: 2754278920091521496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_4
+      name: Spell2_4
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5fc2d18bd5144dc0800000000000000
+      internalID: -3655772964997902501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell2_5
       rect:
         serializedVersion: 2
         x: 720
         y: 0
-        width: 128
-        height: 128
+        width: 144
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e4286c7cfccb9ec30800000000000000
-      internalID: 4389246912445186638
+      spriteID: eca2caf0dfd945010800000000000000
+      internalID: 1176739112865770190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_5
+      name: Spell2_6
       rect:
         serializedVersion: 2
-        x: 900
+        x: 864
         y: 0
-        width: 128
-        height: 128
+        width: 144
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06187f1088db80ee0800000000000000
-      internalID: -1294576501022817952
+      spriteID: d40b2a0c0c1b8b510800000000000000
+      internalID: 1565196311934971981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_6
+      name: Spell2_7
       rect:
         serializedVersion: 2
-        x: 1080
+        x: 1008
         y: 0
-        width: 128
-        height: 128
+        width: 144
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a58c6e5e291b14530800000000000000
-      internalID: 3837543601976821850
+      spriteID: 51cbb73cafe143830800000000000000
+      internalID: 4049896027283242005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_7
+      name: Spell2_8
       rect:
         serializedVersion: 2
-        x: 1260
+        x: 1152
         y: 0
-        width: 128
-        height: 128
+        width: 144
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40e605d1778fda570800000000000000
-      internalID: 8479706863885118980
+      spriteID: 6d1fe6bcdee80fe50800000000000000
+      internalID: 6841124985947222486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_8
+      name: Spell2_9
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 0
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e08cf138219cb4b0800000000000000
+      internalID: -5423300249437568791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell2_10
       rect:
         serializedVersion: 2
         x: 1440
         y: 0
-        width: 128
-        height: 128
+        width: 144
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f7268bb8e18fddd00800000000000000
-      internalID: 999227502422942335
+      spriteID: aa2f12048f9de7d90800000000000000
+      internalID: -7097996302438239574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_9
+      name: Spell2_11
       rect:
         serializedVersion: 2
-        x: 1620
+        x: 1584
         y: 0
-        width: 128
-        height: 128
+        width: 144
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 880b84bb4ef3075a0800000000000000
-      internalID: -6525645608432652152
+      spriteID: 9b69a3367b199e940800000000000000
+      internalID: 5325948251172148921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_10
+      name: Spell2_12
       rect:
         serializedVersion: 2
-        x: 1800
+        x: 1728
         y: 0
-        width: 128
-        height: 128
+        width: 144
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec8c46b15d96a62d0800000000000000
-      internalID: -3284696614204815154
+      spriteID: ca942394c5a70ce90800000000000000
+      internalID: -7007466483404879444
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_11
+      name: Spell2_13
       rect:
         serializedVersion: 2
-        x: 1980
+        x: 1872
         y: 0
-        width: 128
-        height: 128
+        width: 144
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7dbdb9ec371c11600800000000000000
-      internalID: 437343341963369431
+      spriteID: 70f5cc5e51364c900800000000000000
+      internalID: 703796387477479175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_12
+      name: Spell2_14
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 0
+        width: 144
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e2e738da86f43590800000000000000
+      internalID: -7695254787075874077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spell2_15
       rect:
         serializedVersion: 2
         x: 2160
         y: 0
-        width: 128
-        height: 128
+        width: 144
+        height: 80
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a21f1822b98a3f470800000000000000
-      internalID: 8427264711992668458
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_13
-      rect:
-        serializedVersion: 2
-        x: 2340
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b9558209370ff1ca0800000000000000
-      internalID: -6043847795777448549
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_14
-      rect:
-        serializedVersion: 2
-        x: 1748
-        y: 0
-        width: 52
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b46b74f642c5b2445a15ab493806a19c
-      internalID: 1959670849
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_15
-      rect:
-        serializedVersion: 2
-        x: 1928
-        y: 0
-        width: 52
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efab96e398802c442ad196397c88c15b
-      internalID: 1237665482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_16
-      rect:
-        serializedVersion: 2
-        x: 2108
-        y: 0
-        width: 52
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 463fe3ffe5beb304493353831e93856f
-      internalID: 1172897983
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_17
-      rect:
-        serializedVersion: 2
-        x: 2288
-        y: 0
-        width: 52
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbd88464f35f4fd438c0921cd07816b0
-      internalID: 1817669866
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: spr_ArcherAttack_strip_NoBkg_18
-      rect:
-        serializedVersion: 2
-        x: 2468
-        y: 0
-        width: 52
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 853f27e7604519d49982a39b4cb52f5c
-      internalID: -379558217
+      spriteID: b3dc970f7e08646e0800000000000000
+      internalID: -1853652462956065477
       vertices: []
       indices: 
       edges: []
@@ -572,7 +638,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 25c6d981665cd044a8121db2404ab5a3
+    spriteID: 37792974208069b418cffc57bdb53f80
     internalID: 0
     vertices: []
     indices: 
@@ -582,27 +648,24 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":180.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":144.0,"y":80.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      spr_ArcherAttack_strip_NoBkg_0: 7243615536323895233
-      spr_ArcherAttack_strip_NoBkg_1: 6759640509303396367
-      spr_ArcherAttack_strip_NoBkg_10: -3284696614204815154
-      spr_ArcherAttack_strip_NoBkg_11: 437343341963369431
-      spr_ArcherAttack_strip_NoBkg_12: 8427264711992668458
-      spr_ArcherAttack_strip_NoBkg_13: -6043847795777448549
-      spr_ArcherAttack_strip_NoBkg_14: 1959670849
-      spr_ArcherAttack_strip_NoBkg_15: 1237665482
-      spr_ArcherAttack_strip_NoBkg_16: 1172897983
-      spr_ArcherAttack_strip_NoBkg_17: 1817669866
-      spr_ArcherAttack_strip_NoBkg_18: -379558217
-      spr_ArcherAttack_strip_NoBkg_2: -2756151581962605931
-      spr_ArcherAttack_strip_NoBkg_3: 7049770765452447389
-      spr_ArcherAttack_strip_NoBkg_4: 4389246912445186638
-      spr_ArcherAttack_strip_NoBkg_5: -1294576501022817952
-      spr_ArcherAttack_strip_NoBkg_6: 3837543601976821850
-      spr_ArcherAttack_strip_NoBkg_7: 8479706863885118980
-      spr_ArcherAttack_strip_NoBkg_8: 999227502422942335
-      spr_ArcherAttack_strip_NoBkg_9: -6525645608432652152
+      Spell2_0: -7132710336831216126
+      Spell2_1: 4071864531623572647
+      Spell2_10: -7097996302438239574
+      Spell2_11: 5325948251172148921
+      Spell2_12: -7007466483404879444
+      Spell2_13: 703796387477479175
+      Spell2_14: -7695254787075874077
+      Spell2_15: -1853652462956065477
+      Spell2_2: 4665093342161206058
+      Spell2_3: 2754278920091521496
+      Spell2_4: -3655772964997902501
+      Spell2_5: 1176739112865770190
+      Spell2_6: 1565196311934971981
+      Spell2_7: 4049896027283242005
+      Spell2_8: 6841124985947222486
+      Spell2_9: -5423300249437568791
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
