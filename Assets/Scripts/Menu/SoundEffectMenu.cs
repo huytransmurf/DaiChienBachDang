@@ -9,7 +9,6 @@ public class SoundEffectMenu : MonoBehaviour
 
     public void StartBtn()
     {
-        src.clip = sfx1;
-        src.Play();
+        src.PlayOneShot(sfx1);
     }
 }
