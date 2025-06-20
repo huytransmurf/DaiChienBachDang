@@ -6,8 +6,7 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField]
     private GameObject pauseMenu;
-    [SerializeField]
-    private PlayerCombat playerCombat;
+    
 
 
     private bool isPaused = false;
@@ -19,12 +18,10 @@ public class PauseMenu : MonoBehaviour
             if (!isPaused)
             {
                 Pause();
-                playerCombat.enabled = false;
             }
             else
             {
                 Resume();
-                playerCombat.enabled = true;
 
             }
         }
