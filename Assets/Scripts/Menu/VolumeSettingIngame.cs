@@ -1,4 +1,3 @@
-﻿using Assets.Scripts.Player;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -11,8 +10,6 @@ public class VolumeSettingIngame : MonoBehaviour
     private Slider musicSlider;
     [SerializeField]
     private Slider sfxSlider;
-
-
 
     private void Start()
     {
