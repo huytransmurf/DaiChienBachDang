@@ -156,10 +156,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 180
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -178,10 +178,10 @@ TextureImporter:
         serializedVersion: 2
         x: 180
         y: 0
-        width: 180
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -200,10 +200,10 @@ TextureImporter:
         serializedVersion: 2
         x: 360
         y: 0
-        width: 180
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -222,10 +222,10 @@ TextureImporter:
         serializedVersion: 2
         x: 540
         y: 0
-        width: 180
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -244,10 +244,10 @@ TextureImporter:
         serializedVersion: 2
         x: 720
         y: 0
-        width: 180
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -266,10 +266,10 @@ TextureImporter:
         serializedVersion: 2
         x: 900
         y: 0
-        width: 180
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -288,10 +288,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1080
         y: 0
-        width: 180
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -310,10 +310,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1260
         y: 0
-        width: 180
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -332,10 +332,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1440
         y: 0
-        width: 180
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -354,10 +354,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1620
         y: 0
-        width: 180
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -376,10 +376,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1800
         y: 0
-        width: 180
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -398,10 +398,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1980
         y: 0
-        width: 180
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -420,10 +420,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2160
         y: 0
-        width: 180
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -442,10 +442,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2340
         y: 0
-        width: 180
+        width: 128
         height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -454,6 +454,116 @@ TextureImporter:
       bones: []
       spriteID: b9558209370ff1ca0800000000000000
       internalID: -6043847795777448549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_ArcherAttack_strip_NoBkg_14
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 0
+        width: 52
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46b74f642c5b2445a15ab493806a19c
+      internalID: 1959670849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_ArcherAttack_strip_NoBkg_15
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 0
+        width: 52
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efab96e398802c442ad196397c88c15b
+      internalID: 1237665482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_ArcherAttack_strip_NoBkg_16
+      rect:
+        serializedVersion: 2
+        x: 2108
+        y: 0
+        width: 52
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463fe3ffe5beb304493353831e93856f
+      internalID: 1172897983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_ArcherAttack_strip_NoBkg_17
+      rect:
+        serializedVersion: 2
+        x: 2288
+        y: 0
+        width: 52
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd88464f35f4fd438c0921cd07816b0
+      internalID: 1817669866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_ArcherAttack_strip_NoBkg_18
+      rect:
+        serializedVersion: 2
+        x: 2468
+        y: 0
+        width: 52
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853f27e7604519d49982a39b4cb52f5c
+      internalID: -379558217
       vertices: []
       indices: 
       edges: []
@@ -480,6 +590,11 @@ TextureImporter:
       spr_ArcherAttack_strip_NoBkg_11: 437343341963369431
       spr_ArcherAttack_strip_NoBkg_12: 8427264711992668458
       spr_ArcherAttack_strip_NoBkg_13: -6043847795777448549
+      spr_ArcherAttack_strip_NoBkg_14: 1959670849
+      spr_ArcherAttack_strip_NoBkg_15: 1237665482
+      spr_ArcherAttack_strip_NoBkg_16: 1172897983
+      spr_ArcherAttack_strip_NoBkg_17: 1817669866
+      spr_ArcherAttack_strip_NoBkg_18: -379558217
       spr_ArcherAttack_strip_NoBkg_2: -2756151581962605931
       spr_ArcherAttack_strip_NoBkg_3: 7049770765452447389
       spr_ArcherAttack_strip_NoBkg_4: 4389246912445186638
