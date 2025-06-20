@@ -43,7 +43,8 @@ namespace Assets.Scripts.Enemy
             "Ta sẽ không tha thứ cho ngươi!",
             "Chuẩn bị chiến đấu!"
         };
-
+        //item drop
+        //public GameObject keyPrefab;
         public enum EnemyState
         {
             Idle,
@@ -427,6 +428,7 @@ namespace Assets.Scripts.Enemy
                 }
             }
         }
+        
 
         #region Dialogue System
         void ShowDialogue()
@@ -510,6 +512,7 @@ namespace Assets.Scripts.Enemy
             if (currentHealth <= 0)
             {
                 //Die();
+                //DropKey();
             }
             else
             {
@@ -521,6 +524,7 @@ namespace Assets.Scripts.Enemy
         {
             Debug.Log("Boss died!");
             isDead = true;
+            //DropKey();
 
             if (dialoguePanel != null)
             {

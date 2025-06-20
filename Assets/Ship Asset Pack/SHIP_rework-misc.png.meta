@@ -472,7 +472,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SHIP_rework-misc_0: 8797753376703668979
+      SHIP_rework-misc_1: -8368794129504265910
+      SHIP_rework-misc_10: -1150424279228198451
+      SHIP_rework-misc_11: 1932431705631108882
+      SHIP_rework-misc_12: -8556606402713092479
+      SHIP_rework-misc_13: -5301602181451385407
+      SHIP_rework-misc_2: -3501362901032970300
+      SHIP_rework-misc_3: 5217666469369476321
+      SHIP_rework-misc_4: -4958700934012225627
+      SHIP_rework-misc_5: 7803706556002985826
+      SHIP_rework-misc_6: -8650417137755815459
+      SHIP_rework-misc_7: 2558233633962532139
+      SHIP_rework-misc_8: -7150899493759703274
+      SHIP_rework-misc_9: -4824863606678095389
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

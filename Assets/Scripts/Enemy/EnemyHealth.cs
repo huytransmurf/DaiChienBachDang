@@ -22,6 +22,8 @@ namespace Assets.Scripts.Enemy
 
         private bool isDead = false;
 
+        public GameObject keyPrefab;
+
         void Start()
         {
             currentHealth = maxHealth;
@@ -45,6 +47,7 @@ namespace Assets.Scripts.Enemy
             if (currentHealth <= 0)
             {
                 Die();
+                DropKey();
             }
             else
             {
@@ -52,6 +55,22 @@ namespace Assets.Scripts.Enemy
             }
         }
 
+        void DropKey()
+        {
+            Debug.Log("Đã gọi DropKey");
+            Vector3 dropPosition = transform.position + new Vector3(0.5f, 0, 0);
+            GameObject key = Instantiate(keyPrefab, dropPosition, Quaternion.identity);
+            if (key == null)
+            {
+                Debug.LogError("Chìa khóa bị null! Bạn đã gán đúng Prefab chưa?");
+                return;
+            }
+            Rigidbody2D rb = key.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.AddForce(new Vector2(0.5f, 2f), ForceMode2D.Impulse); // Bay nhẹ sang phải và lên
+            }
+        }
         void Die()
         {
             isDead = true;

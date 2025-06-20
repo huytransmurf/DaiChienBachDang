@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      renaissance-propeller_0: 2181027209529290857
+      renaissance-propeller_1: 7139915306187002968
+      renaissance-propeller_2: -86188394664318061
+      renaissance-propeller_3: 6782780549962350902
+      renaissance-propeller_4: 5292190873346282199
+      renaissance-propeller_5: 5429888201919285615
+      renaissance-propeller_6: -761540766067309731
+      renaissance-propeller_7: -134886865119256976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

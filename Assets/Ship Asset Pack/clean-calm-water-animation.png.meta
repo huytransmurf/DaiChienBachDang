@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      clean-calm-water-animation_0: 3297432036010568113
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

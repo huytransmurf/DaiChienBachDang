@@ -422,7 +422,19 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      steuer-schiff_0: -1716094106442354020
+      steuer-schiff_1: -4194167411866437740
+      steuer-schiff_10: -1503306091568874331
+      steuer-schiff_11: -7166284928568891173
+      steuer-schiff_2: 1778835050765977866
+      steuer-schiff_3: 3513872466623506268
+      steuer-schiff_4: 8959473352764065368
+      steuer-schiff_5: 1142648555553188402
+      steuer-schiff_6: -7196332207411515861
+      steuer-schiff_7: 4031676955792952850
+      steuer-schiff_8: 3698943551586756750
+      steuer-schiff_9: -8260067206482358970
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

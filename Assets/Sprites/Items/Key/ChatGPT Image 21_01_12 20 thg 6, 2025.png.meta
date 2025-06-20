@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d4d1048bdb9b26f4091193fd4de794b7
+guid: 640532afbc00ae64fb9386ee0c182750
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1489110622931662873
-    second: Ocean2_0
+      213: 8628249725569997145
+    second: ChatGPT Image 21_01_12 20 thg 6, 2025_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ocean2_0
+      name: ChatGPT Image 21_01_12 20 thg 6, 2025_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 384
-        height: 128
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9183a1fc8326aa410800000000000000
-      internalID: 1489110622931662873
+      spriteID: 95916f53963bdb770800000000000000
+      internalID: 8628249725569997145
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Ocean2_0: 1489110622931662873
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
