@@ -4986,13 +4986,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: NamHanArcher
       objectReference: {fileID: 0}
+    - target: {fileID: 2104174310682892282, guid: 7d6671db918debb4cb5968a679401348, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3874844294069115917, guid: 7d6671db918debb4cb5968a679401348, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 101.76293
+      value: 101.54
       objectReference: {fileID: 0}
     - target: {fileID: 3874844294069115917, guid: 7d6671db918debb4cb5968a679401348, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.8656726
+      value: 2.87
       objectReference: {fileID: 0}
     - target: {fileID: 3874844294069115917, guid: 7d6671db918debb4cb5968a679401348, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5037,6 +5041,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 945241975}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2104174310682892282, guid: 7d6671db918debb4cb5968a679401348, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1825031491}
     - targetCorrespondingSourceObject: {fileID: 2104174310682892282, guid: 7d6671db918debb4cb5968a679401348, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1825031481}
@@ -6161,7 +6168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 945241975}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ArrowPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15138,6 +15145,19 @@ MonoBehaviour:
   bullet: {fileID: 3546563524384098029, guid: 27e5171242c617a4ca934e6013d787b5, type: 3}
   bulletPos: {fileID: 945241975}
   minDistance: 8
+--- !u!114 &1825031491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825031475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b8c6afe91389a4ca41c196d9d78e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 343759616}
 --- !u!1 &1836349889
 GameObject:
   m_ObjectHideFlags: 0
