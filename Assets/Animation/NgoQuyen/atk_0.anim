@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: atk_01
+  m_Name: atk_0
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -40,8 +40,6 @@ AnimationClip:
       value: {fileID: -596168970984758419, guid: a338eb93b36ebe84187138420e9ffbd1, type: 3}
     - time: 0.46666667
       value: {fileID: 5092600408106413843, guid: a338eb93b36ebe84187138420e9ffbd1, type: 3}
-    - time: 0.51666665
-      value: {fileID: -8525311491034348216, guid: a338eb93b36ebe84187138420e9ffbd1, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -74,13 +72,12 @@ AnimationClip:
     - {fileID: -8902882749056030992, guid: a338eb93b36ebe84187138420e9ffbd1, type: 3}
     - {fileID: -596168970984758419, guid: a338eb93b36ebe84187138420e9ffbd1, type: 3}
     - {fileID: 5092600408106413843, guid: a338eb93b36ebe84187138420e9ffbd1, type: 3}
-    - {fileID: -8525311491034348216, guid: a338eb93b36ebe84187138420e9ffbd1, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5333333
+    m_StopTime: 0.48333335
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -99,4 +96,18 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0
+    functionName: PlayAttackAudio
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.2
+    functionName: NormalAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
