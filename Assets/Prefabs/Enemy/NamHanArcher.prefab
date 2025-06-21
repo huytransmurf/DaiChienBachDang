@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &259902106774572662
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6916408191992329983}
+  m_Layer: 7
+  m_Name: Arrow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6916408191992329983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259902106774572662}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3874844294069115917}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2104174310682892282
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,7 +44,9 @@ GameObject:
   - component: {fileID: 2262614241074699391}
   - component: {fileID: 5951016102300468280}
   - component: {fileID: 5956234181550303712}
-  m_Layer: 0
+  - component: {fileID: 2132480521182371628}
+  - component: {fileID: 2690481772673864193}
+  m_Layer: 7
   m_Name: NamHanArcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,7 +65,8 @@ Transform:
   m_LocalPosition: {x: 7.562, y: -3.095, z: 0}
   m_LocalScale: {x: 0.8, y: 0.9, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6916408191992329983}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &790885925572244077
@@ -138,7 +172,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &5956234181550303712
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -185,3 +219,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.83680797, y: 1.2834373}
   m_EdgeRadius: 0
+--- !u!114 &2132480521182371628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104174310682892282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52b8c6afe91389a4ca41c196d9d78e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  keyPrefab: {fileID: 0}
+--- !u!114 &2690481772673864193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104174310682892282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31fa62d14f8a6f4a8fadf0543695f1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 3546563524384098029, guid: 27e5171242c617a4ca934e6013d787b5, type: 3}
+  bulletPos: {fileID: 6916408191992329983}
+  minDistance: 12
