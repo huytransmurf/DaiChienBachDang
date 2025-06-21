@@ -5,15 +5,17 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Enemy
+  - Trap
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -41,6 +43,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Enemy
+    uniqueID: 3175685213
+    locked: 0
+  - name: MainPlayer
+    uniqueID: 2994394803
+    locked: 0
+  - name: UI
+    uniqueID: 1904737589
     locked: 0
   m_RenderingLayers:
   - Default
