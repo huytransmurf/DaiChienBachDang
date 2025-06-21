@@ -19,6 +19,12 @@ public class DialogBox : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            StopAllCoroutines();
+            gameObject.SetActive(false);
+            return;
+        }
         if (isTyping) return;
 
         if (index == 2)
