@@ -1,3 +1,4 @@
+using Assets.Scripts.Player;
 using UnityEngine;
 
 public class EnemyArrow : MonoBehaviour
@@ -5,6 +6,8 @@ public class EnemyArrow : MonoBehaviour
     private GameObject player;
     private Rigidbody2D rb;
     public float force; // Speed of the arrow
+    public float damage;
+
     private float timer;
     void Start()
     {
@@ -30,7 +33,12 @@ public class EnemyArrow : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-         
+            PlayerHealth player = collision.GetComponent<PlayerHealth>();
+            if (player != null)
+            {
+                player.TakeDamage(damage);
+            }
+
             Destroy(gameObject); // Destroy the arrow on hit
         }
         else if (collision.CompareTag("Ground"))

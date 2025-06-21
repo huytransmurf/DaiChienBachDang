@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyShooting : MonoBehaviour
 {
@@ -18,6 +18,18 @@ public class EnemyShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Quay mặt về phía player
+        Vector3 direction = player.transform.position - transform.position;
+
+        if (direction.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+
         float distance = Vector2.Distance(player.transform.position, transform.position);
        
         if (distance < minDistance) // Adjust the distance as needed
