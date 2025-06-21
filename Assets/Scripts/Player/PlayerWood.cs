@@ -22,7 +22,7 @@ public class PlayerWood : MonoBehaviour
     {
         if (woodText != null)
         {
-            woodText.text = "So go can nhat: " + woodCount + "/20";
+            woodText.text = "Số gỗ cần nhặt: " + woodCount + "/20";
         }
     }
 }
