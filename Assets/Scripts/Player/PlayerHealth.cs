@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.Player
@@ -17,12 +11,12 @@ namespace Assets.Scripts.Player
         public float currentHealth;
         public GameObject gameOverMenu;
         public SpriteRenderer spriteRenderer;
-
         public HealthBar healthBar;
 
         // Biến cho hiệu ứng nhấp nháy
         public Color damageColor = Color.red;
         public float flashDuration = 0.1f;
+        private bool isDefending = false;
 
         void Start()
         {
@@ -36,6 +30,12 @@ namespace Assets.Scripts.Player
 
         public void TakeDamage(float amount)
         {
+            if (isDefending)
+            {
+                Debug.Log("Blocked Damage!");
+                return;
+            }
+
             animator.SetTrigger("Hurt");
             Debug.Log("TakeDamage" + amount);
             if (currentHealth <= 0)
@@ -56,6 +56,15 @@ namespace Assets.Scripts.Player
             animator.SetTrigger("Die");
             SceneManager.LoadSceneAsync(0);
             //Time.timeScale = 0f;
+        }
+        public void SetDefending()
+        {
+            isDefending = true;
+        }
+
+        public void ResetDefending()
+        {
+            isDefending = false;
         }
 
         public void RestartGame()

@@ -6,11 +6,11 @@ namespace Assets.Scripts.Player
     public class PlayerCombat : MonoBehaviour
     {
         [Header("Base Stats")]
-        public int baseDamage = 20;
-        public float baseCooldown = 0.5f;
+        [SerializeField] public int baseDamage = 20;
+        [SerializeField] public float baseCooldown = 1f;
 
         [Header("Attack Settings")]
-        public float attackRange = 1.5f;
+        [SerializeField] public float attackRange = 1.5f;
         public Transform attackPoint;
         public LayerMask enemyLayer;
 
@@ -21,15 +21,18 @@ namespace Assets.Scripts.Player
         // Tracks the last time each skill was used
         private Dictionary<string, float> lastUsedTimes;
 
+        public GameObject damagePopupPrefab; // gán trong Inspector
+        public Canvas uiCanvas; // tham chiếu tới canvas chính
+
         void Start()
         {
             // Initialize cooldown durations
             cooldownTimes = new Dictionary<string, float>
             {
-                { "NormalAttack", baseCooldown },
-                { "Skill1", baseCooldown * 6f },
-                { "Skill2", baseCooldown * 10f },
-                { "Ultimate", baseCooldown * 15f }
+                { "NormalAttack", baseCooldown * 0f },
+                { "Skill1", baseCooldown * 0f },
+                { "Skill2", baseCooldown * 2f },
+                { "Ultimate", baseCooldown * 6f }
             };
 
             skillRanges = new Dictionary<string, float>
@@ -72,7 +75,7 @@ namespace Assets.Scripts.Player
             if (IsSkillReady("Skill1"))
             {
                 lastUsedTimes["Skill1"] = Time.time;
-                DoDamage((int)(baseDamage * 1.5f), skillRanges["Skill1"]);
+                DoDamage((int)(baseDamage * 0.5f), skillRanges["Skill1"]);
             }
         }
 
@@ -122,14 +125,31 @@ namespace Assets.Scripts.Player
                 {
                     health.TakeDamage(damage);
                     Debug.Log($"Hit {enemy.name} for {damage} damage.");
+
+                    ShowDamagePopup(enemy.transform.position, damage);
                 }
             }
         }
+        private void ShowDamagePopup(Vector3 worldPosition, int damage)
+        {
+            // Chuyển vị trí thế giới sang màn hình
+            Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPosition + Vector3.up * 1f);
+
+            // Thêm offset ngẫu nhiên để tránh chồng popup
+            float offsetX = Random.Range(-30f, 30f);
+            float offsetY = Random.Range(-10f, 30f);
+            screenPos += new Vector3(offsetX, offsetY, 0f);
+
+            // Tạo và hiển thị popup
+            GameObject popup = Instantiate(damagePopupPrefab, screenPos, Quaternion.identity, uiCanvas.transform);
+            popup.GetComponent<DamagePopup>().SetDamage(damage);
+        }
+
 
         /// <summary>
         /// Checks if a skill is ready to be used based on cooldown.
         /// </summary>
-        bool IsSkillReady(string skillName)
+        public bool IsSkillReady(string skillName)
         {
             Debug.Log($"Checking cooldown for {skillName}");
             float lastTime = lastUsedTimes[skillName];
@@ -145,6 +165,10 @@ namespace Assets.Scripts.Player
             float lastTime = lastUsedTimes[skillName];
             float cooldown = cooldownTimes[skillName];
             return Mathf.Max(0, cooldown - (Time.time - lastTime));
+        }
+        public float GetSkillCooldownDuration(string skillName)
+        {
+            return cooldownTimes.ContainsKey(skillName) ? cooldownTimes[skillName] : 0f;
         }
 
         /// <summary>
