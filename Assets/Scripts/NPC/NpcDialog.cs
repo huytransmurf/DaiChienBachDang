@@ -20,6 +20,8 @@ public class NpcDialog : MonoBehaviour
     private bool playerInRange = false;
     private bool dialogActive = false;
 
+    public GameObject npcToHide;
+
     void Update()
     {
         if (playerInRange)
@@ -76,9 +78,20 @@ public class NpcDialog : MonoBehaviour
         dialogActive = false;
         dialogUI.SetActive(false);
         currentLine = 0;
-        GameManager.instance.hasTalkedToNpc = true;
 
+        // Nếu có GameManager thì gán trạng thái
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.hasTalkedToNpc = true;
+        }
+
+        // Ẩn NPC nếu đã gán trong Inspector
+        if (npcToHide != null)
+        {
+            npcToHide.SetActive(false);
+        }
     }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {

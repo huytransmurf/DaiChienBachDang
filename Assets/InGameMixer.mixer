@@ -9,8 +9,7 @@ AudioMixerGroupController:
   m_Name: Music
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 5861e02795628034a8634f4ea7cbbc31
-  m_Children:
-  - {fileID: 7409873321045306900}
+  m_Children: []
   m_Volume: ecc3b2b7cc1b8dc47963841102783ac4
   m_Pitch: 8fcbd12907fe93b45ab7330deac909e7
   m_Send: 00000000000000000000000000000000
@@ -59,6 +58,7 @@ AudioMixerGroupController:
   m_GroupID: 01183b6263bc63640abd415adcff9b86
   m_Children:
   - {fileID: -3268766121292520205}
+  - {fileID: 7409873321045306900}
   m_Volume: 058e1fc6326a9ed44b012096d05ab5c5
   m_Pitch: f4d0ced40173c4f4483fc181ce50f0e5
   m_Send: 00000000000000000000000000000000
@@ -92,11 +92,11 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 3dd9d8235dce2924fbd2c717e5aefa74
   m_FloatValues:
-    81ec5331cbe2b8646a54d61ebd97f003: 20
+    81ec5331cbe2b8646a54d61ebd97f003: 0
     f4d0ced40173c4f4483fc181ce50f0e5: 1
     058e1fc6326a9ed44b012096d05ab5c5: 0
     ecc3b2b7cc1b8dc47963841102783ac4: 20
-    8fcbd12907fe93b45ab7330deac909e7: 10
+    8fcbd12907fe93b45ab7330deac909e7: 1
   m_TransitionOverrides: {}
 --- !u!244 &4077970001027194717
 AudioMixerEffectController:
