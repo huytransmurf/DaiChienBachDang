@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Enemy
   - Trap
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -44,14 +45,26 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Enemy
+  - name: Ground
     uniqueID: 3175685213
     locked: 0
-  - name: MainPlayer
+  - name: Stair
     uniqueID: 2994394803
     locked: 0
-  - name: UI
+  - name: WalkInfront
+    uniqueID: 2117396439
+    locked: 0
+  - name: Collision
     uniqueID: 1904737589
+    locked: 0
+  - name: Player
+    uniqueID: 1050165059
+    locked: 0
+  - name: WalkBehind
+    uniqueID: 62925541
+    locked: 0
+  - name: Decor
+    uniqueID: 3329731447
     locked: 0
   m_RenderingLayers:
   - Default
