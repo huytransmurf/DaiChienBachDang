@@ -76,6 +76,8 @@ public class NpcDialog : MonoBehaviour
         dialogActive = false;
         dialogUI.SetActive(false);
         currentLine = 0;
+        GameManager.instance.hasTalkedToNpc = true;
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)

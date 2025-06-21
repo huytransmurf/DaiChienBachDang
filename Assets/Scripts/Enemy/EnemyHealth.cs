@@ -47,6 +47,7 @@ namespace Assets.Scripts.Enemy
             if (currentHealth <= 0)
             {
                 Die();
+                GameManager.instance.bossDefeated = true;
                 DropKey();
             }
             else
