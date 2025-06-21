@@ -10,6 +10,8 @@ public class TreeInteraction : MonoBehaviour
     private Transform player;
     private int logsDropped = 0;
     public int maxLogs;
+    public int minLogs;
+    private int totalLogs;
     public GameObject dialogBox;               // Gán DialogBox
     public TextMeshProUGUI dialogText;
     private float messageDuration = 2f;
@@ -21,7 +23,7 @@ public class TreeInteraction : MonoBehaviour
         {
             player = playerObj.transform;
         }
-        maxLogs = Random.Range(1, 6);
+        totalLogs = Random.Range(minLogs, maxLogs);
         if (dialogBox != null)
             dialogBox.SetActive(false);
     }
@@ -40,7 +42,7 @@ public class TreeInteraction : MonoBehaviour
 
     void DropWood()
     {
-        if (logsDropped >= maxLogs)
+        if (logsDropped >= totalLogs)
         {
             ShowDialog("Cây này đã hết gỗ! Bạn hãy đi cây khác");
             return;
@@ -53,7 +55,7 @@ public class TreeInteraction : MonoBehaviour
         Instantiate(woodPrefab, dropPosition, Quaternion.identity);
         logsDropped++;
 
-        Debug.Log($"Đã chặt ra {logsDropped}/{maxLogs} khúc gỗ.");
+        Debug.Log($"Đã chặt ra {logsDropped}/{totalLogs} khúc gỗ.");
     }
     void ShowDialog(string message)
     {

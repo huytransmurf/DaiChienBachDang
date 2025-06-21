@@ -1,4 +1,5 @@
-﻿using Unity.VisualScripting;
+﻿using Assets.Scripts.Player;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -7,15 +8,14 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
     public AudioPlayer audioPlayer;
+    public PlayerCombat combat; // Reference to PlayerCombat script
 
     private float movement;
-    public float speed = 7f;
+    [SerializeField] public float speed = 7f;
+    [SerializeField] public float jumpForce = 10f;
 
-    public float jumpForce = 10f;
-
-    private int jumpCount = 0;
-    public int maxJumpCount = 2;
-
+    [SerializeField] private int jumpCount = 0;
+    [SerializeField] public int maxJumpCount = 2;
 
     public Transform wallCheck;
     public Transform groundCheck;
@@ -24,6 +24,15 @@ public class PlayerMovement : MonoBehaviour
 
     public bool canMove = true;
     public bool canFlip = true;
+
+    private void Start()
+    {
+        // Ensure combat reference is assigned
+        if (combat == null)
+        {
+            combat = GetComponent<PlayerCombat>();
+        }
+    }
 
     private void Update()
     {
@@ -110,41 +119,49 @@ public class PlayerMovement : MonoBehaviour
 
         if (IsInAttackState()) return;
 
-        HandleUltimateRelease();    // Khi thả nút K (I)
+        HandleUltimateRelease(); // Khi thả nút K (I)
 
-        if(HandleDefendState()) return;        // Bật/tắt phòng thủ (S)
+        if (HandleDefendState()) return; // Bật/tắt phòng thủ (S)
 
         if (Input.GetKey(KeyCode.W) && IsGrounded())
         {
-            HandleSkill2();         // S + J
-            HandleCharge();         // S + I
+            if (Input.GetKeyDown(KeyCode.J) || Input.GetMouseButtonDown(0))
+            {
+                HandleSkill2(); // S + J
+            }
+            if (Input.GetKeyDown(KeyCode.I) || Input.GetMouseButtonDown(1))
+            {
+                HandleCharge(); // S + I}
+            }
         }
         else
         {
-            HandleNormalAttack();   // J hoặc click chuột trái
-            HandleSkill1();         // I hoặc click chuột phải
+            if (Input.GetKeyDown(KeyCode.J) || Input.GetMouseButtonDown(0))
+            {
+                HandleNormalAttack(); // J hoặc click chuột trái
+            }
+            if (Input.GetKeyDown(KeyCode.I) || Input.GetMouseButtonDown(1))
+            {
+                HandleSkill1(); // I hoặc click chuột phải
+            }
         }
     }
 
     private void HandleNormalAttack()
     {
-        if (Input.GetKeyDown(KeyCode.J) || Input.GetMouseButtonDown(0))
-        {
+        if (combat.IsSkillReady("NormalAttack"))
             animator.SetTrigger("Attack0");
-        }
     }
 
     private void HandleSkill1()
     {
-        if (Input.GetKeyDown(KeyCode.I) || Input.GetMouseButtonDown(1))
-        {
+        if (combat.IsSkillReady("Skill1"))
             animator.SetTrigger("Attack1");
-        }
     }
 
     private void HandleSkill2()
     {
-        if (Input.GetKeyDown(KeyCode.J) || Input.GetMouseButtonDown(0))
+        if (combat.IsSkillReady("Skill2"))
         {
             if (IsInChargeState()) return;
 
@@ -156,19 +173,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleCharge()
     {
-        if (Input.GetKeyDown(KeyCode.I) || Input.GetMouseButtonDown(1))
-        {
-            if (IsInChargeState()) return;
+        if (IsInChargeState()) return;
 
+        if (combat.IsSkillReady("Ultimate"))
             animator.SetTrigger("Charge");
-        }
     }
 
     private void HandleUltimateRelease()
     {
         if (Input.GetKeyUp(KeyCode.I) || Input.GetMouseButtonUp(1))
         {
-            if (IsInChargeState())
+            if (IsInChargeState() && combat.IsSkillReady("Ultimate"))
             {
                 canFlip = false;
                 animator.SetTrigger("Ultimate");
@@ -211,6 +226,7 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, checkRadius, groundLayer);
     }
 
+    // Đừng xóa 
     private void PlayAttackAudio()
     {
         audioPlayer.PlayAttackAudio();
