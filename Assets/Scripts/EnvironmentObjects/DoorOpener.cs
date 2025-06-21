@@ -8,7 +8,9 @@ public class DoorOpener : MonoBehaviour
 
     [Header("Camera Settings")]
     public float focusDuration = 2f;
-    public Vector3 cameraOffset = new Vector3(0, 0, -10f); // giữ nguyên Z
+    public Vector3 cameraOffset = new Vector3(0, 0, -10f);
+
+    private bool playerInRange = false;
 
     private void Start()
     {
@@ -18,36 +20,37 @@ public class DoorOpener : MonoBehaviour
 
     private void Update()
     {
-        if (hasOpened) return;
+        if (!playerInRange || hasOpened) return;
 
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if (enemies.Length == 0)
+        if (Input.GetKeyDown(KeyCode.F)) // 👈 Nhấn F mới kiểm tra
         {
-            hasOpened = true;
-            OpenDoor();
+            if (PlayerInventory.instance != null && PlayerInventory.instance.hasKey)
+            {
+                hasOpened = true;
+                OpenDoor();
+            }
+            else
+            {
+                Debug.Log("Bạn chưa có chìa khóa!");
+            }
         }
     }
 
     void OpenDoor()
     {
-        Debug.Log("All enemies defeated. Door opening...");
+        Debug.Log("Cửa mở!");
 
         if (animator != null)
         {
             animator.SetTrigger("open");
         }
 
-        // Disable collider (nếu có)
         if (doorCollider != null)
         {
             doorCollider.enabled = false;
         }
 
-        // Focus camera vào cửa
         FocusCamera();
-
-        // Nếu muốn ẩn cửa sau khi mở, dùng dòng này (nếu không thì bỏ)
-        // gameObject.SetActive(false);
     }
 
     void FocusCamera()
@@ -55,8 +58,6 @@ public class DoorOpener : MonoBehaviour
         if (Camera.main != null)
         {
             Camera.main.transform.position = transform.position + cameraOffset;
-
-            // Nếu muốn camera focus trong vài giây rồi quay lại player
             Invoke("ReturnCameraToPlayer", focusDuration);
         }
     }
@@ -67,6 +68,23 @@ public class DoorOpener : MonoBehaviour
         if (player != null)
         {
             Camera.main.transform.position = player.transform.position + new Vector3(0, 0, -10f);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            playerInRange = true;
+            Debug.Log("Player đứng gần cửa (Collision).");
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Player"))
+        {
+            playerInRange = false;
         }
     }
 }
