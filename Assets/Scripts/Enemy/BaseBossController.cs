@@ -167,7 +167,7 @@ namespace Assets.Scripts.Enemy
             FindPlayer();
             //while (!playerDetected)
             //{
-                ChangeState(BossState.Idle);
+            //    ChangeState(BossState.Idle);
             //}
         }
 
