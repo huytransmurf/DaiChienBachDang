@@ -1,43 +1,22 @@
 fileFormatVersion: 2
-guid: b075dc25f3254da438a1d85f39f3e9bd
+guid: d5aeb12f01ac9084b8a90c59bd74b0c6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3463904139046904432
-    second: row-6-column-1_0
+      213: 3043340567503955313
+    second: Warrior-Block Hit_0
   - first:
-      213: 4998894937260717509
-    second: row-6-column-1_1
+      213: 960158066258730561
+    second: Warrior-Block Hit_1
   - first:
-      213: 5392724974497278557
-    second: row-6-column-1_2
+      213: -1431564337654505721
+    second: Warrior-Block Hit_2
   - first:
-      213: -7254639333028619539
-    second: row-6-column-1_3
+      213: -42699583175497546
+    second: Warrior-Block Hit_3
   - first:
-      213: -2695289263079287372
-    second: row-6-column-1_4
-  - first:
-      213: -8941619909460993911
-    second: row-6-column-1_5
-  - first:
-      213: 2440050466429741576
-    second: row-6-column-1_6
-  - first:
-      213: -6578199105943133173
-    second: row-6-column-1_7
-  - first:
-      213: -221173990317005171
-    second: row-6-column-1_8
-  - first:
-      213: 8834626292789098408
-    second: row-6-column-1_9
-  - first:
-      213: 8765611760094164900
-    second: row-6-column-1_10
-  - first:
-      213: 2069039193938562174
-    second: row-6-column-1_11
+      213: 3155950311835479329
+    second: Warrior-Block Hit_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -133,177 +112,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: row-6-column-1_0
+      name: Warrior-Block Hit_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 288
-        height: 128
+        width: 126
+        height: 71
       alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+      pivot: {x: 0.35, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 07265ef3672421030800000000000000
-      internalID: 3463904139046904432
+      spriteID: 175eb903f1e1c3a20800000000000000
+      internalID: 3043340567503955313
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: row-6-column-1_1
+      name: Warrior-Block Hit_1
       rect:
         serializedVersion: 2
-        x: 288
+        x: 126
         y: 0
-        width: 288
-        height: 128
+        width: 126
+        height: 71
       alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+      pivot: {x: 0.35, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c57cecc574af5540800000000000000
-      internalID: 4998894937260717509
+      spriteID: 14ed3939caa235d00800000000000000
+      internalID: 960158066258730561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: row-6-column-1_2
+      name: Warrior-Block Hit_2
       rect:
         serializedVersion: 2
-        x: 576
+        x: 252
         y: 0
-        width: 288
-        height: 128
+        width: 126
+        height: 71
       alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+      pivot: {x: 0.35, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5aa94cdacec6da40800000000000000
-      internalID: 5392724974497278557
+      spriteID: 70f5cf4d1df022ce0800000000000000
+      internalID: -1431564337654505721
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: row-6-column-1_3
+      name: Warrior-Block Hit_3
       rect:
         serializedVersion: 2
-        x: 864
+        x: 378
         y: 0
-        width: 288
-        height: 128
+        width: 126
+        height: 71
       alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+      pivot: {x: 0.35, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dea904d96f7525b90800000000000000
-      internalID: -7254639333028619539
+      spriteID: 6b864c094fc486ff0800000000000000
+      internalID: -42699583175497546
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: row-6-column-1_4
+      name: Warrior-Block Hit_4
       rect:
         serializedVersion: 2
-        x: 1152
+        x: 504
         y: 0
-        width: 288
-        height: 128
+        width: 126
+        height: 71
       alignment: 9
-      pivot: {x: 0.5, y: 0.4}
+      pivot: {x: 0.35, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b51c3b02b8689ad0800000000000000
-      internalID: -2695289263079287372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: row-6-column-1_5
-      rect:
-        serializedVersion: 2
-        x: 1440
-        y: 0
-        width: 288
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 988540c211cf8e380800000000000000
-      internalID: -8941619909460993911
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: row-6-column-1_6
-      rect:
-        serializedVersion: 2
-        x: 1728
-        y: 0
-        width: 288
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 80a2295a8fcccd120800000000000000
-      internalID: 2440050466429741576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: row-6-column-1_7
-      rect:
-        serializedVersion: 2
-        x: 2016
-        y: 0
-        width: 288
-        height: 128
-      alignment: 9
-      pivot: {x: 0.5, y: 0.4}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b04a77414ca85b4a0800000000000000
-      internalID: -6578199105943133173
+      spriteID: 12dacb176103ccb20800000000000000
+      internalID: 3155950311835479329
       vertices: []
       indices: 
       edges: []
@@ -312,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8206f32e5cc42fa4092238d3f35e8c7f
+    spriteID: 2f16545706ad3ee499e64d512ffe4907
     internalID: 0
     vertices: []
     indices: 
@@ -322,16 +235,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":288.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.4000000059604645},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":126.0,"y":71.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.3499999940395355,"y":0.20000000298023225},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      row-6-column-1_0: 3463904139046904432
-      row-6-column-1_1: 4998894937260717509
-      row-6-column-1_2: 5392724974497278557
-      row-6-column-1_3: -7254639333028619539
-      row-6-column-1_4: -2695289263079287372
-      row-6-column-1_5: -8941619909460993911
-      row-6-column-1_6: 2440050466429741576
-      row-6-column-1_7: -6578199105943133173
+      Warrior-Block Hit_0: 3043340567503955313
+      Warrior-Block Hit_1: 960158066258730561
+      Warrior-Block Hit_2: -1431564337654505721
+      Warrior-Block Hit_3: -42699583175497546
+      Warrior-Block Hit_4: 3155950311835479329
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

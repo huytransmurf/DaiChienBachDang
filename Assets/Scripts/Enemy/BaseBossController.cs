@@ -165,10 +165,10 @@ namespace Assets.Scripts.Enemy
         protected virtual void Start()
         {
             FindPlayer();
-            while (!playerDetected)
-            {
+            //while (!playerDetected)
+            //{
                 ChangeState(BossState.Idle);
-            }
+            //}
         }
 
         protected virtual void Update()

@@ -1,0 +1,589 @@
+fileFormatVersion: 2
+guid: e33f2a7b4d2e871458bdfdbf3c131d93
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2630794038056113607
+    second: Warrior-MindLazer_0
+  - first:
+      213: 7331066934416004008
+    second: Warrior-MindLazer_1
+  - first:
+      213: 1709159885016037464
+    second: Warrior-MindLazer_2
+  - first:
+      213: 3866398350722382994
+    second: Warrior-MindLazer_3
+  - first:
+      213: 3511816917770224117
+    second: Warrior-MindLazer_4
+  - first:
+      213: 6811203674043939293
+    second: Warrior-MindLazer_5
+  - first:
+      213: 6549836054358184088
+    second: Warrior-MindLazer_6
+  - first:
+      213: 8003919522166816587
+    second: Warrior-MindLazer_7
+  - first:
+      213: -8431214226153347172
+    second: Warrior-MindLazer_8
+  - first:
+      213: -2185871910288950568
+    second: Warrior-MindLazer_9
+  - first:
+      213: 1255755822283592531
+    second: Warrior-MindLazer_10
+  - first:
+      213: -900391062392627290
+    second: Warrior-MindLazer_11
+  - first:
+      213: 5362731066891152017
+    second: Warrior-MindLazer_12
+  - first:
+      213: 3278912823747847475
+    second: Warrior-MindLazer_13
+  - first:
+      213: 6058369267747985023
+    second: Warrior-MindLazer_14
+  - first:
+      213: 442778230754335516
+    second: Warrior-MindLazer_15
+  - first:
+      213: -8740692942179768777
+    second: Warrior-MindLazer_16
+  - first:
+      213: -3030371318165715841
+    second: Warrior-MindLazer_17
+  - first:
+      213: 3563296387790149985
+    second: Warrior-MindLazer_18
+  - first:
+      213: 7785855774488059272
+    second: Warrior-MindLazer_19
+  - first:
+      213: -8544714122229433592
+    second: Warrior-MindLazer_20
+  - first:
+      213: -7863727475418480313
+    second: Warrior-MindLazer_21
+  - first:
+      213: -1827315513171162834
+    second: Warrior-MindLazer_22
+  - first:
+      213: 1490049536222648134
+    second: Warrior-MindLazer_23
+  - first:
+      213: 4157580175063876436
+    second: Warrior-MindLazer_24
+  - first:
+      213: 8424659932897596885
+    second: Warrior-MindLazer_25
+  - first:
+      213: -6332222125472026086
+    second: Warrior-MindLazer_26
+  - first:
+      213: -7444315824298521451
+    second: Warrior-MindLazer_27
+  - first:
+      213: -5606501550412116913
+    second: Warrior-MindLazer_28
+  - first:
+      213: 5394785361836671491
+    second: Warrior-MindLazer_29
+  - first:
+      213: -957671001163185531
+    second: Warrior-MindLazer_30
+  - first:
+      213: 4916442788758020312
+    second: Warrior-MindLazer_31
+  - first:
+      213: -3764559905402855008
+    second: Warrior-MindLazer_32
+  - first:
+      213: 3215267229680811044
+    second: Warrior-MindLazer_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Warrior-MindLazer_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 126
+        height: 71
+      alignment: 9
+      pivot: {x: 0.35, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93a237cc2ca8d7bd0800000000000000
+      internalID: -2630794038056113607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-MindLazer_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 0
+        width: 126
+        height: 71
+      alignment: 9
+      pivot: {x: 0.35, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a35a72098e2db560800000000000000
+      internalID: 7331066934416004008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-MindLazer_2
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 0
+        width: 126
+        height: 71
+      alignment: 9
+      pivot: {x: 0.35, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8587ab22cd728b710800000000000000
+      internalID: 1709159885016037464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-MindLazer_3
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 0
+        width: 126
+        height: 71
+      alignment: 9
+      pivot: {x: 0.35, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29cb6fe90d438a530800000000000000
+      internalID: 3866398350722382994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-MindLazer_4
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 0
+        width: 126
+        height: 71
+      alignment: 9
+      pivot: {x: 0.35, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f1c6eb51ea7cb030800000000000000
+      internalID: 3511816917770224117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-MindLazer_5
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 126
+        height: 71
+      alignment: 9
+      pivot: {x: 0.35, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd9793c77a1468e50800000000000000
+      internalID: 6811203674043939293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-MindLazer_6
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 0
+        width: 126
+        height: 71
+      alignment: 9
+      pivot: {x: 0.35, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890d01d5031b5ea50800000000000000
+      internalID: 6549836054358184088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-MindLazer_7
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 0
+        width: 126
+        height: 71
+      alignment: 9
+      pivot: {x: 0.35, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4f31991662a31f60800000000000000
+      internalID: 8003919522166816587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-MindLazer_8
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 126
+        height: 71
+      alignment: 9
+      pivot: {x: 0.35, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c97e8e0f45f4efa80800000000000000
+      internalID: -8431214226153347172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-MindLazer_9
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 0
+        width: 126
+        height: 71
+      alignment: 9
+      pivot: {x: 0.35, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8daf8be24193aa1e0800000000000000
+      internalID: -2185871910288950568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-MindLazer_10
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 0
+        width: 126
+        height: 71
+      alignment: 9
+      pivot: {x: 0.35, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35397df54475d6110800000000000000
+      internalID: 1255755822283592531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-MindLazer_11
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 0
+        width: 126
+        height: 71
+      alignment: 9
+      pivot: {x: 0.35, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6af9627691b2183f0800000000000000
+      internalID: -900391062392627290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-MindLazer_12
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 0
+        width: 126
+        height: 71
+      alignment: 9
+      pivot: {x: 0.35, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19aaffb0e7f3c6a40800000000000000
+      internalID: 5362731066891152017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-MindLazer_13
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 0
+        width: 126
+        height: 71
+      alignment: 9
+      pivot: {x: 0.35, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335a6fc37d9018d20800000000000000
+      internalID: 3278912823747847475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-MindLazer_14
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 0
+        width: 126
+        height: 71
+      alignment: 9
+      pivot: {x: 0.35, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76134a10c6a31450800000000000000
+      internalID: 6058369267747985023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-MindLazer_15
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 0
+        width: 126
+        height: 71
+      alignment: 9
+      pivot: {x: 0.35, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b53667470152600800000000000000
+      internalID: 442778230754335516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9701e104c637cfc4e89832e7c4b478fe
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":126.0,"y":71.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.3499999940395355,"y":0.20000000298023225},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Warrior-MindLazer_0: -2630794038056113607
+      Warrior-MindLazer_1: 7331066934416004008
+      Warrior-MindLazer_10: 1255755822283592531
+      Warrior-MindLazer_11: -900391062392627290
+      Warrior-MindLazer_12: 5362731066891152017
+      Warrior-MindLazer_13: 3278912823747847475
+      Warrior-MindLazer_14: 6058369267747985023
+      Warrior-MindLazer_15: 442778230754335516
+      Warrior-MindLazer_2: 1709159885016037464
+      Warrior-MindLazer_3: 3866398350722382994
+      Warrior-MindLazer_4: 3511816917770224117
+      Warrior-MindLazer_5: 6811203674043939293
+      Warrior-MindLazer_6: 6549836054358184088
+      Warrior-MindLazer_7: 8003919522166816587
+      Warrior-MindLazer_8: -8431214226153347172
+      Warrior-MindLazer_9: -2185871910288950568
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

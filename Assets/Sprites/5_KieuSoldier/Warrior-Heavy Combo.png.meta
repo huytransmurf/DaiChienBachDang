@@ -1,0 +1,877 @@
+fileFormatVersion: 2
+guid: 404611e9eec85e64d8aa78e105fbba02
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8347421417341935482
+    second: Warrior-Heavy Combo_0
+  - first:
+      213: 1893095641997248014
+    second: Warrior-Heavy Combo_1
+  - first:
+      213: 2708011917843594054
+    second: Warrior-Heavy Combo_2
+  - first:
+      213: 8246213238074958481
+    second: Warrior-Heavy Combo_3
+  - first:
+      213: 4470034622392314809
+    second: Warrior-Heavy Combo_4
+  - first:
+      213: 9000531609812511363
+    second: Warrior-Heavy Combo_5
+  - first:
+      213: 5081805717079786181
+    second: Warrior-Heavy Combo_6
+  - first:
+      213: -5139374742117093475
+    second: Warrior-Heavy Combo_7
+  - first:
+      213: 5891792152981697662
+    second: Warrior-Heavy Combo_8
+  - first:
+      213: -6392874048276991472
+    second: Warrior-Heavy Combo_9
+  - first:
+      213: 1158405315314282376
+    second: Warrior-Heavy Combo_10
+  - first:
+      213: 2345368596491467978
+    second: Warrior-Heavy Combo_11
+  - first:
+      213: 5990434977302753736
+    second: Warrior-Heavy Combo_12
+  - first:
+      213: -6158771526669505554
+    second: Warrior-Heavy Combo_13
+  - first:
+      213: -4935780681378251555
+    second: Warrior-Heavy Combo_14
+  - first:
+      213: 5434004713535216251
+    second: Warrior-Heavy Combo_15
+  - first:
+      213: 4142265113133030612
+    second: Warrior-Heavy Combo_16
+  - first:
+      213: 6009924288414943941
+    second: Warrior-Heavy Combo_17
+  - first:
+      213: -4132071056094815187
+    second: Warrior-Heavy Combo_18
+  - first:
+      213: -4229244997052375533
+    second: Warrior-Heavy Combo_19
+  - first:
+      213: 5320841601999616993
+    second: Warrior-Heavy Combo_20
+  - first:
+      213: 254924000257435943
+    second: Warrior-Heavy Combo_21
+  - first:
+      213: 7809889846140952331
+    second: Warrior-Heavy Combo_22
+  - first:
+      213: -245380520388106663
+    second: Warrior-Heavy Combo_23
+  - first:
+      213: 9100284353144703378
+    second: Warrior-Heavy Combo_24
+  - first:
+      213: -6576596094823774619
+    second: Warrior-Heavy Combo_25
+  - first:
+      213: 2754077146582451620
+    second: Warrior-Heavy Combo_26
+  - first:
+      213: -8165732355287107831
+    second: Warrior-Heavy Combo_27
+  - first:
+      213: 4938577044771059199
+    second: Warrior-Heavy Combo_28
+  - first:
+      213: -8667571495924721378
+    second: Warrior-Heavy Combo_29
+  - first:
+      213: 7805039158506157423
+    second: Warrior-Heavy Combo_30
+  - first:
+      213: -7698408918243675875
+    second: Warrior-Heavy Combo_31
+  - first:
+      213: -2352377198031744635
+    second: Warrior-Heavy Combo_32
+  - first:
+      213: -5241806368736378299
+    second: Warrior-Heavy Combo_33
+  - first:
+      213: 8111335961801122482
+    second: Warrior-Heavy Combo_34
+  - first:
+      213: -1406071009413188861
+    second: Warrior-Heavy Combo_35
+  - first:
+      213: 755898370144025043
+    second: Warrior-Heavy Combo_36
+  - first:
+      213: -1336979995452536124
+    second: Warrior-Heavy Combo_37
+  - first:
+      213: -2652713384775597799
+    second: Warrior-Heavy Combo_38
+  - first:
+      213: -7222487891451335580
+    second: Warrior-Heavy Combo_39
+  - first:
+      213: -4527404109132374561
+    second: Warrior-Heavy Combo_40
+  - first:
+      213: -1590690555418331664
+    second: Warrior-Heavy Combo_41
+  - first:
+      213: 6232115535893273677
+    second: Warrior-Heavy Combo_42
+  - first:
+      213: -7736871280237296789
+    second: Warrior-Heavy Combo_43
+  - first:
+      213: -5279143511712335748
+    second: Warrior-Heavy Combo_44
+  - first:
+      213: -8861439387631130547
+    second: Warrior-Heavy Combo_45
+  - first:
+      213: -8335600145165128831
+    second: Warrior-Heavy Combo_46
+  - first:
+      213: 7454103966493043775
+    second: Warrior-Heavy Combo_47
+  - first:
+      213: -1826821756679794601
+    second: Warrior-Heavy Combo_48
+  - first:
+      213: -9039636942788124549
+    second: Warrior-Heavy Combo_49
+  - first:
+      213: 7956813109216277628
+    second: Warrior-Heavy Combo_50
+  - first:
+      213: 1244579929936192453
+    second: Warrior-Heavy Combo_51
+  - first:
+      213: 8773432295656338509
+    second: Warrior-Heavy Combo_52
+  - first:
+      213: -676015955528633034
+    second: Warrior-Heavy Combo_53
+  - first:
+      213: 5787912505668413613
+    second: Warrior-Heavy Combo_54
+  - first:
+      213: -2715802925886357842
+    second: Warrior-Heavy Combo_55
+  - first:
+      213: 5533787208240076470
+    second: Warrior-Heavy Combo_56
+  - first:
+      213: -8029197597725682878
+    second: Warrior-Heavy Combo_57
+  - first:
+      213: -6200248804985978713
+    second: Warrior-Heavy Combo_58
+  - first:
+      213: -8220460692436394043
+    second: Warrior-Heavy Combo_59
+  - first:
+      213: 140555217335248911
+    second: Warrior-Heavy Combo_60
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7f57237d8ff7d370800000000000000
+      internalID: 8347421417341935482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_1
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e060613d470a54a10800000000000000
+      internalID: 1893095641997248014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_2
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64b779add7ac49520800000000000000
+      internalID: 2708011917843594054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_3
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 192e49def3f607270800000000000000
+      internalID: 8246213238074958481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_4
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bb24694ec0c80e30800000000000000
+      internalID: 4470034622392314809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_5
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38aac80ffcf48ec70800000000000000
+      internalID: 9000531609812511363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_6
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c207180063368640800000000000000
+      internalID: 5081805717079786181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_7
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9fee70d6e54da8b0800000000000000
+      internalID: -5139374742117093475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_8
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7478e04fb9d3c150800000000000000
+      internalID: 5891792152981697662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_9
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012f2aa8ce2f747a0800000000000000
+      internalID: -6392874048276991472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_10
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88f6b3d2f7b731010800000000000000
+      internalID: 1158405315314282376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_11
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: accfa3def4c6c8020800000000000000
+      internalID: 2345368596491467978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_12
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c1b4388fdc422350800000000000000
+      internalID: 5990434977302753736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_13
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eebe2145de5a78aa0800000000000000
+      internalID: -6158771526669505554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_14
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddcb6350f95908bb0800000000000000
+      internalID: -4935780681378251555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_15
+      rect:
+        serializedVersion: 2
+        x: 2085
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a90121f76796b40800000000000000
+      internalID: 5434004713535216251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_16
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dc99c97c284c7930800000000000000
+      internalID: 4142265113133030612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_17
+      rect:
+        serializedVersion: 2
+        x: 2363
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca07f16c4a876350800000000000000
+      internalID: 6009924288414943941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_18
+      rect:
+        serializedVersion: 2
+        x: 2502
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2c9bc2644fe7a6c0800000000000000
+      internalID: -4132071056094815187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_19
+      rect:
+        serializedVersion: 2
+        x: 2641
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e589a2514be45c0800000000000000
+      internalID: -4229244997052375533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_20
+      rect:
+        serializedVersion: 2
+        x: 2780
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ebbe49fe3d67d940800000000000000
+      internalID: 5320841601999616993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_21
+      rect:
+        serializedVersion: 2
+        x: 2919
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 729e010170ca98300800000000000000
+      internalID: 254924000257435943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_22
+      rect:
+        serializedVersion: 2
+        x: 3058
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0f592ebf6d426c60800000000000000
+      internalID: 7809889846140952331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_23
+      rect:
+        serializedVersion: 2
+        x: 3197
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 956677f77bb389cf0800000000000000
+      internalID: -245380520388106663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Heavy Combo_24
+      rect:
+        serializedVersion: 2
+        x: 3336
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2994c306764ba4e70800000000000000
+      internalID: 9100284353144703378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 98f3ac328a74d5946ab3df67ad87aa3b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":139.0,"y":71.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.2800000011920929,"y":0.20000000298023225},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Warrior-Heavy Combo_0: 8347421417341935482
+      Warrior-Heavy Combo_1: 1893095641997248014
+      Warrior-Heavy Combo_10: 1158405315314282376
+      Warrior-Heavy Combo_11: 2345368596491467978
+      Warrior-Heavy Combo_12: 5990434977302753736
+      Warrior-Heavy Combo_13: -6158771526669505554
+      Warrior-Heavy Combo_14: -4935780681378251555
+      Warrior-Heavy Combo_15: 5434004713535216251
+      Warrior-Heavy Combo_16: 4142265113133030612
+      Warrior-Heavy Combo_17: 6009924288414943941
+      Warrior-Heavy Combo_18: -4132071056094815187
+      Warrior-Heavy Combo_19: -4229244997052375533
+      Warrior-Heavy Combo_2: 2708011917843594054
+      Warrior-Heavy Combo_20: 5320841601999616993
+      Warrior-Heavy Combo_21: 254924000257435943
+      Warrior-Heavy Combo_22: 7809889846140952331
+      Warrior-Heavy Combo_23: -245380520388106663
+      Warrior-Heavy Combo_24: 9100284353144703378
+      Warrior-Heavy Combo_3: 8246213238074958481
+      Warrior-Heavy Combo_4: 4470034622392314809
+      Warrior-Heavy Combo_5: 9000531609812511363
+      Warrior-Heavy Combo_6: 5081805717079786181
+      Warrior-Heavy Combo_7: -5139374742117093475
+      Warrior-Heavy Combo_8: 5891792152981697662
+      Warrior-Heavy Combo_9: -6392874048276991472
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
