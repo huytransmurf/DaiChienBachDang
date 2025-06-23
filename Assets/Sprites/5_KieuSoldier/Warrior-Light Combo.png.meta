@@ -1,0 +1,687 @@
+fileFormatVersion: 2
+guid: 7267db8a75444d141831774b31eec18b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 609867309340875080
+    second: Warrior-Light Combo_0
+  - first:
+      213: -2552642092601983443
+    second: Warrior-Light Combo_1
+  - first:
+      213: -2513215947358989126
+    second: Warrior-Light Combo_2
+  - first:
+      213: -4480178879467351071
+    second: Warrior-Light Combo_3
+  - first:
+      213: 7042558329922356811
+    second: Warrior-Light Combo_4
+  - first:
+      213: -6396881911455130600
+    second: Warrior-Light Combo_5
+  - first:
+      213: -5150977241847660033
+    second: Warrior-Light Combo_6
+  - first:
+      213: -3580777133748570505
+    second: Warrior-Light Combo_7
+  - first:
+      213: -2941104778197063965
+    second: Warrior-Light Combo_8
+  - first:
+      213: -6256664434749288885
+    second: Warrior-Light Combo_9
+  - first:
+      213: 7426279948801009487
+    second: Warrior-Light Combo_10
+  - first:
+      213: -8568807302313110878
+    second: Warrior-Light Combo_11
+  - first:
+      213: 4258857819656392138
+    second: Warrior-Light Combo_12
+  - first:
+      213: 8694150473527369261
+    second: Warrior-Light Combo_13
+  - first:
+      213: 1183839494424365333
+    second: Warrior-Light Combo_14
+  - first:
+      213: -606617217968685270
+    second: Warrior-Light Combo_15
+  - first:
+      213: -2190939955701090445
+    second: Warrior-Light Combo_16
+  - first:
+      213: -2475720631739001322
+    second: Warrior-Light Combo_17
+  - first:
+      213: -7545062363097757880
+    second: Warrior-Light Combo_18
+  - first:
+      213: 2807530209714911286
+    second: Warrior-Light Combo_19
+  - first:
+      213: 6424240734093255720
+    second: Warrior-Light Combo_20
+  - first:
+      213: 1855304697908553248
+    second: Warrior-Light Combo_21
+  - first:
+      213: 182480024439967648
+    second: Warrior-Light Combo_22
+  - first:
+      213: 5602051136467646303
+    second: Warrior-Light Combo_23
+  - first:
+      213: -2537724487617935703
+    second: Warrior-Light Combo_24
+  - first:
+      213: 6664519230302173439
+    second: Warrior-Light Combo_25
+  - first:
+      213: -5179252222607108558
+    second: Warrior-Light Combo_26
+  - first:
+      213: 6550070991755562782
+    second: Warrior-Light Combo_27
+  - first:
+      213: 3746927158469087383
+    second: Warrior-Light Combo_28
+  - first:
+      213: -3191865943606129473
+    second: Warrior-Light Combo_29
+  - first:
+      213: -8753753384284270340
+    second: Warrior-Light Combo_30
+  - first:
+      213: -5159154180343750216
+    second: Warrior-Light Combo_31
+  - first:
+      213: 1084824033925815529
+    second: Warrior-Light Combo_32
+  - first:
+      213: 891478233091560103
+    second: Warrior-Light Combo_33
+  - first:
+      213: 7803825867267805326
+    second: Warrior-Light Combo_34
+  - first:
+      213: -7236878270700415722
+    second: Warrior-Light Combo_35
+  - first:
+      213: 4840275413813524157
+    second: Warrior-Light Combo_36
+  - first:
+      213: 6964600364496861316
+    second: Warrior-Light Combo_37
+  - first:
+      213: -4183868701168405754
+    second: Warrior-Light Combo_38
+  - first:
+      213: 7693063552467500493
+    second: Warrior-Light Combo_39
+  - first:
+      213: 3345172140570606214
+    second: Warrior-Light Combo_40
+  - first:
+      213: -8619748246390931252
+    second: Warrior-Light Combo_41
+  - first:
+      213: -8532706733455757348
+    second: Warrior-Light Combo_42
+  - first:
+      213: -3916866596926646815
+    second: Warrior-Light Combo_43
+  - first:
+      213: 6051951320548290245
+    second: Warrior-Light Combo_44
+  - first:
+      213: -3504763108068351039
+    second: Warrior-Light Combo_45
+  - first:
+      213: -7201915124698536891
+    second: Warrior-Light Combo_46
+  - first:
+      213: 234295709523697725
+    second: Warrior-Light Combo_47
+  - first:
+      213: 5262565506368399776
+    second: Warrior-Light Combo_48
+  - first:
+      213: 489993041283871292
+    second: Warrior-Light Combo_49
+  - first:
+      213: 7307808753839069057
+    second: Warrior-Light Combo_50
+  - first:
+      213: 5355351578765180222
+    second: Warrior-Light Combo_51
+  - first:
+      213: 159251966942456446
+    second: Warrior-Light Combo_52
+  - first:
+      213: 4290600655607885271
+    second: Warrior-Light Combo_53
+  - first:
+      213: -2331216294047286072
+    second: Warrior-Light Combo_54
+  - first:
+      213: 8720210489725807828
+    second: Warrior-Light Combo_55
+  - first:
+      213: 3319606907090435756
+    second: Warrior-Light Combo_56
+  - first:
+      213: -8443438358049729720
+    second: Warrior-Light Combo_57
+  - first:
+      213: 1123800251984340873
+    second: Warrior-Light Combo_58
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Warrior-Light Combo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 849d26d261fa67800800000000000000
+      internalID: 609867309340875080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Light Combo_1
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2ebfbf8a81339cd0800000000000000
+      internalID: -2552642092601983443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Light Combo_2
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab412d559634f1dd0800000000000000
+      internalID: -2513215947358989126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Light Combo_3
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3142fcb0533d1c0800000000000000
+      internalID: -4480178879467351071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Light Combo_4
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b468dfcec713cb160800000000000000
+      internalID: 7042558329922356811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Light Combo_5
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81c589d2bc5b937a0800000000000000
+      internalID: -6396881911455130600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Light Combo_6
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff18c855d7d0488b0800000000000000
+      internalID: -5150977241847660033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Light Combo_7
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 776331b2b268e4ec0800000000000000
+      internalID: -3580777133748570505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Light Combo_8
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e62c5079c81f27d0800000000000000
+      internalID: -2941104778197063965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Light Combo_9
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ec2f788dcdb29a0800000000000000
+      internalID: -6256664434749288885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Light Combo_10
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47e3ee64427f0760800000000000000
+      internalID: 7426279948801009487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Light Combo_11
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a29ad4782b751980800000000000000
+      internalID: -8568807302313110878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Light Combo_12
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acd83816f908a1b30800000000000000
+      internalID: 4258857819656392138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Light Combo_13
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2e9466cac3d7a870800000000000000
+      internalID: 8694150473527369261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Light Combo_14
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5190e387fb7dd6010800000000000000
+      internalID: 1183839494424365333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Light Combo_15
+      rect:
+        serializedVersion: 2
+        x: 2085
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2f3750badcd497f0800000000000000
+      internalID: -606617217968685270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior-Light Combo_16
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 0
+        width: 139
+        height: 71
+      alignment: 9
+      pivot: {x: 0.28, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 377f938e7b73891e0800000000000000
+      internalID: -2190939955701090445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e4daf0f87a639cd4a86a5ce22ee0b550
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":139.0,"y":71.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.2800000011920929,"y":0.20000000298023225},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Warrior-Light Combo_0: 609867309340875080
+      Warrior-Light Combo_1: -2552642092601983443
+      Warrior-Light Combo_10: 7426279948801009487
+      Warrior-Light Combo_11: -8568807302313110878
+      Warrior-Light Combo_12: 4258857819656392138
+      Warrior-Light Combo_13: 8694150473527369261
+      Warrior-Light Combo_14: 1183839494424365333
+      Warrior-Light Combo_15: -606617217968685270
+      Warrior-Light Combo_16: -2190939955701090445
+      Warrior-Light Combo_2: -2513215947358989126
+      Warrior-Light Combo_3: -4480178879467351071
+      Warrior-Light Combo_4: 7042558329922356811
+      Warrior-Light Combo_5: -6396881911455130600
+      Warrior-Light Combo_6: -5150977241847660033
+      Warrior-Light Combo_7: -3580777133748570505
+      Warrior-Light Combo_8: -2941104778197063965
+      Warrior-Light Combo_9: -6256664434749288885
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
