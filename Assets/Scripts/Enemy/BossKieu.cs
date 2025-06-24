@@ -18,18 +18,15 @@ namespace Assets.Scripts.Enemy
         public GameObject comboEffectPrefab; // Chiêu 2
         public Transform comboEffectPoint;
 
-        protected override void OnAttack1()
+        public override void OnAttack1()
         {
-            // Chiêu 1: Đánh thường
-            // Tạm thời không cần hiệu ứng đặc biệt, chỉ play animation và deal damage gần
             Debug.Log("Boss uses basic melee attack");
         }
 
         protected override void OnAttack2()
         {
             Debug.Log("Boss uses combo attack 2");
-            // Chiêu 2: Combo 2 đòn diện rộng
-            StartCoroutine(ComboAOE());
+            //StartCoroutine(ComboAOE());
         }
 
         protected override void OnAttack3()
@@ -43,6 +40,47 @@ namespace Assets.Scripts.Enemy
                     laserSpawnPoint.rotation
                 );
                 Debug.Log("Boss fires a laser beam!");
+            }
+        }
+
+        protected override IEnumerator PerformAttack3()
+        {
+            FacePlayer();
+            PlaySound(GetAttackSound());
+
+            yield return new WaitForSeconds(0.6f);
+            DealDamageAttack3(20, new Vector2(4f, 1f), Vector2.right * 1.5f);
+            OnAttack3();
+
+            yield return new WaitForSeconds(0.7f);
+
+            canChangeState = true;
+            MakeAIDecision();
+        }
+
+        void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            Vector2 center = (Vector2)transform.position + Vector2.right * 2f;
+            Vector2 size = new Vector2(5f, 1f);
+            Gizmos.DrawWireCube(center, size);
+        }
+
+        protected virtual void DealDamageAttack3(float damage, Vector2 boxSize, Vector2 offset)
+        {
+            if (player == null)
+                return;
+
+            Vector2 center = (Vector2)transform.position + offset;
+
+            Collider2D hit = Physics2D.OverlapBox(center, boxSize, 0f, LayerMask.GetMask("Player"));
+            if (hit != null)
+            {
+                var playerHealth = hit.GetComponent<PlayerHealth>();
+                if (playerHealth != null)
+                {
+                    playerHealth.TakeDamage((int)damage);
+                }
             }
         }
 
