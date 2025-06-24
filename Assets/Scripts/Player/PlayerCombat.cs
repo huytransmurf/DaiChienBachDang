@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Assets.Scripts.Player
@@ -50,7 +51,20 @@ namespace Assets.Scripts.Player
                 lastUsedTimes[key] = -Mathf.Infinity;
             }
         }
+        public void AddAttack(int amount)
+        {
+            if (amount == 1)
+            {
+                baseDamage = baseDamage * 20 / 100;
 
+            }
+            else if (amount == 2)
+            {
+                baseDamage = baseDamage * 35 / 100;
+
+            }
+           // Debug.Log("Tăng attack: " + baseDamage);
+        }
         // =========================
         // Called from animation events
         // =========================
@@ -124,7 +138,7 @@ namespace Assets.Scripts.Player
                 if (health != null)
                 {
                     health.TakeDamage(damage);
-                    Debug.Log($"Hit {enemy.name} for {damage} damage.");
+                    //Debug.Log($"Hit {enemy.name} for {damage} damage.");
 
                     ShowDamagePopup(enemy.transform.position, damage);
                 }

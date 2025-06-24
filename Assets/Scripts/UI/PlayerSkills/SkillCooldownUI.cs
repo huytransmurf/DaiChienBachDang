@@ -45,6 +45,6 @@ public class SkillCooldownUI : MonoBehaviour
             cooldownText.text = "";
         }
 
-        Debug.Log($"Skill: {skillName}, Remaining: {remaining}, Max: {max}");
+       // Debug.Log($"Skill: {skillName}, Remaining: {remaining}, Max: {max}");
     }
 }
