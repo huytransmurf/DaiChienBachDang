@@ -2,6 +2,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace Assets.Scripts.Enemy
@@ -43,6 +44,7 @@ namespace Assets.Scripts.Enemy
             "Ta sẽ không tha thứ cho ngươi!",
             "Chuẩn bị chiến đấu!"
         };
+
         //item drop
         //public GameObject keyPrefab;
         public enum EnemyState
@@ -428,7 +430,6 @@ namespace Assets.Scripts.Enemy
                 }
             }
         }
-        
 
         #region Dialogue System
         void ShowDialogue()
