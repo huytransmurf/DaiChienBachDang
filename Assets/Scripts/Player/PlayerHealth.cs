@@ -58,6 +58,7 @@ namespace Assets.Scripts.Player
             SceneManager.LoadSceneAsync(0);
             //Time.timeScale = 0f;
         }
+
         public void SetDefending()
         {
             isDefending = true;
@@ -112,6 +113,12 @@ namespace Assets.Scripts.Player
             UnityEngine.SceneManagement.SceneManager.LoadScene(
                 UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
             );
+        }
+
+        public void HealHealth(int amount)
+        {
+            currentHealth += amount;
+            healthBar.SetHeal(currentHealth);
         }
     }
 }
