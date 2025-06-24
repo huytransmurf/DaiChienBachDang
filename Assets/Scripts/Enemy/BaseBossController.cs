@@ -98,7 +98,9 @@ namespace Assets.Scripts.Enemy
 
         [Header("Audio")]
         public AudioSource audioSource;
-        public AudioClip[] attackSounds;
+        public AudioClip attackSound1;
+        public AudioClip attackSound2;
+        public AudioClip attackSound3;
         public AudioClip hurtSound;
         public AudioClip jumpSound;
         public AudioClip blockSound;
@@ -155,6 +157,7 @@ namespace Assets.Scripts.Enemy
 
         protected virtual void Start()
         {
+            audioSource = GetComponent<AudioSource>();
             FindPlayer();
         }
 
@@ -679,7 +682,7 @@ namespace Assets.Scripts.Enemy
         {
             Debug.Log("Attack 1 executed");
             FacePlayer();
-            PlaySound(GetAttackSound());
+            PlaySound(attackSound1);
 
             yield return new WaitForSeconds(0.2f);
             DealDamageInRange(stats.attack1Damage, stats.attack1Range);
@@ -696,7 +699,7 @@ namespace Assets.Scripts.Enemy
         {
             Debug.Log("Attack 2 executed");
             FacePlayer();
-            PlaySound(GetAttackSound());
+            PlaySound(attackSound2);
 
             yield return new WaitForSeconds(0.4f);
             DealDamageInRange(stats.attack2Damage, stats.attack2Range);
@@ -712,7 +715,7 @@ namespace Assets.Scripts.Enemy
         {
             Debug.Log("Attack 3 executed");
             FacePlayer();
-            PlaySound(GetAttackSound());
+            PlaySound(attackSound3);
 
             yield return new WaitForSeconds(0.6f);
             DealDamageInRange(stats.attack3Damage, stats.attack3Range);
@@ -819,19 +822,11 @@ namespace Assets.Scripts.Enemy
 
         protected virtual void PlaySound(AudioClip clip)
         {
+            Debug.Log("[Boss] Play sound " + audioSource + " " + clip);
             if (audioSource != null && clip != null)
             {
                 audioSource.PlayOneShot(clip);
             }
-        }
-
-        protected virtual AudioClip GetAttackSound()
-        {
-            if (attackSounds != null && attackSounds.Length > 0)
-            {
-                return attackSounds[UnityEngine.Random.Range(0, attackSounds.Length)];
-            }
-            return null;
         }
 
         protected virtual void UpdateStateTimer()

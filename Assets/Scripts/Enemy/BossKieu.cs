@@ -46,7 +46,7 @@ namespace Assets.Scripts.Enemy
         protected override IEnumerator PerformAttack3()
         {
             FacePlayer();
-            PlaySound(GetAttackSound());
+            PlaySound(attackSound3);
 
             yield return new WaitForSeconds(0.6f);
             DealDamageAttack3(20, new Vector2(4f, 1f), Vector2.right * 1.5f);

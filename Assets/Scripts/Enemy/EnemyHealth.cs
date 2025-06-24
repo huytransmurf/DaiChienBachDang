@@ -19,7 +19,6 @@ namespace Assets.Scripts.Enemy
 
         public HealthBar healthBar;
 
-
         private bool isDead = false;
 
         public GameObject keyPrefab;
@@ -39,9 +38,9 @@ namespace Assets.Scripts.Enemy
         {
             if (isDead)
                 return;
-
+            animator.SetTrigger("Hurt");
             currentHealth -= damage;
-           healthBar.SetHeal(currentHealth);
+            healthBar.SetHeal(currentHealth);
             Debug.Log(currentHealth);
 
             if (currentHealth <= 0)
@@ -72,6 +71,7 @@ namespace Assets.Scripts.Enemy
                 rb.AddForce(new Vector2(0.5f, 2f), ForceMode2D.Impulse); // Bay nhẹ sang phải và lên
             }
         }
+
         void Die()
         {
             isDead = true;
