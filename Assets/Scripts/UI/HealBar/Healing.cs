@@ -12,7 +12,7 @@ namespace Assets.Scripts.UI.HealBar
 {
     public class Healing : MonoBehaviour
     {
-        public int maxHeals = 5;
+        public int totalHeal = 5;
         public int healAmount = 20;
         public KeyCode healKey = KeyCode.L;
 
@@ -24,8 +24,8 @@ namespace Assets.Scripts.UI.HealBar
         void Start()
         {
             if (healCountText != null)
-                healCountText.text = string.Format("{0}", maxHeals);
-            currentHeals = maxHeals;
+                healCountText.text = string.Format("{0}", totalHeal);
+            currentHeals = totalHeal;
             GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
             if (playerObj != null)
             {

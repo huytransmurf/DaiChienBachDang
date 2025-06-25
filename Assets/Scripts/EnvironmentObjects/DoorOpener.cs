@@ -22,7 +22,7 @@ public class DoorOpener : MonoBehaviour
     {
         if (!playerInRange || hasOpened) return;
 
-        if (Input.GetKeyDown(KeyCode.F)) // 👈 Nhấn F mới kiểm tra
+        if (Input.GetKeyDown(KeyCode.F)) 
         {
             if (PlayerInventory.instance != null && PlayerInventory.instance.hasKey)
             {

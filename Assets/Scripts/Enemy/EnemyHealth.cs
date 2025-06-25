@@ -22,6 +22,9 @@ namespace Assets.Scripts.Enemy
         private bool isDead = false;
 
         public GameObject keyPrefab;
+        public GameObject goldPrefab;
+        public int maxgold;
+        public int mingold;
 
         void Start()
         {
@@ -48,6 +51,7 @@ namespace Assets.Scripts.Enemy
                 Die();
                 GameManager.instance.bossDefeated = true;
                 DropKey();
+               // DropGold();
             }
             else
             {
@@ -62,13 +66,30 @@ namespace Assets.Scripts.Enemy
             GameObject key = Instantiate(keyPrefab, dropPosition, Quaternion.identity);
             if (key == null)
             {
-                Debug.LogError("Chìa khóa bị null! Bạn đã gán đúng Prefab chưa?");
+                Debug.LogError("Chìa khóa bị null!");
                 return;
             }
             Rigidbody2D rb = key.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                rb.AddForce(new Vector2(0.5f, 2f), ForceMode2D.Impulse); // Bay nhẹ sang phải và lên
+                rb.AddForce(new Vector2(0.5f, 2f), ForceMode2D.Impulse); 
+            }
+        }
+        void DropGold()
+        {
+            int goldCount = UnityEngine.Random.Range(mingold, maxgold + 1);
+            Debug.Log("Rơi " + goldCount + " vàng!");
+            for (int i = 0; i < goldCount; i++)
+            {
+                Vector3 randomOffset = new Vector3(UnityEngine.Random.Range(-0.5f, 0.5f), 0, 0);
+                GameObject gold = Instantiate(goldPrefab, transform.position + randomOffset, Quaternion.identity);
+                Rigidbody2D goldRb = gold.GetComponent<Rigidbody2D>();
+
+                if (goldRb != null)
+                {
+                    Vector2 force = new Vector2(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(1f, 3f));
+                    goldRb.AddForce(force, ForceMode2D.Impulse);
+                }
             }
         }
 
@@ -85,7 +106,7 @@ namespace Assets.Scripts.Enemy
                 rb.linearVelocity = Vector2.zero;
             if (col != null)
                 col.enabled = false;
-
+             DropGold();
             // Destroy after delay or call other cleanup
             Destroy(gameObject, 2f); // or use Object Pooling
         }

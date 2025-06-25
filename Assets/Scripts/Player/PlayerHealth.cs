@@ -72,16 +72,19 @@ namespace Assets.Scripts.Player
 
         public void AddHealth(int amount)
         {
+            float healtotal = 0;
             if (amount == 1)
             {
-                maxHealth = maxHealth * 20 / 100;
+                healtotal = maxHealth * 0.2f;
 
             }
             else if (amount == 2)
             {
-                maxHealth = maxHealth * 35 / 100;
+                healtotal = maxHealth * 0.35f;
 
             }
+            maxHealth += healtotal;
+            healthBar.SetMaxHeal(maxHealth);
            // Debug.Log("Tăng máu: " + maxHealth);
         }
         public void Healing(int amount)
