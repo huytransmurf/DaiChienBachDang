@@ -15,7 +15,6 @@ public class SkillCooldownUI : MonoBehaviour
 
     void Start()
     {
-        lockOverlay.SetActive(false);
         // Tự tìm PlayerCombat nếu chưa gán
         if (playerCombat == null)
         {
@@ -28,22 +27,34 @@ public class SkillCooldownUI : MonoBehaviour
         if (playerCombat == null)
             return;
 
-        float remaining = playerCombat.GetRemainingCooldown(skillName);
-        float max = playerCombat.GetSkillCooldownDuration(skillName);
-
-        if (remaining > 0)
+        if(playerCombat.IsSkillLocked(skillName))
         {
-            cooldownImage.fillAmount = remaining / max;
-
-            if (remaining >= 1f)
-                cooldownText.text = Mathf.CeilToInt(remaining).ToString();
-            else
-                cooldownText.text = remaining.ToString("F1"); // hiển thị 0.9, 0.4...
+            lockOverlay.SetActive(true);
+            cooldownImage.fillAmount = 100;
+            cooldownText.text = "";
+            keyText.text = ""; 
+            return;
         }
         else
         {
-            cooldownImage.fillAmount = 0;
-            cooldownText.text = "";
+            lockOverlay.SetActive(false);
+            float remaining = playerCombat.GetRemainingCooldown(skillName);
+            float max = playerCombat.GetSkillCooldownDuration(skillName);
+
+            if (remaining > 0)
+            {
+                cooldownImage.fillAmount = remaining / max;
+
+                if (remaining >= 1f)
+                    cooldownText.text = Mathf.CeilToInt(remaining).ToString();
+                else
+                    cooldownText.text = remaining.ToString("F1");  // hiển thị 0.9, 0.4...
+            }
+            else
+            {
+                cooldownImage.fillAmount = 0;
+                cooldownText.text = "";
+            }
         }
     }
 }

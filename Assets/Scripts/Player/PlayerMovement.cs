@@ -13,9 +13,13 @@ public class PlayerMovement : MonoBehaviour
     private float movement;
     [SerializeField] public float speed = 7f;
     [SerializeField] public float jumpForce = 10f;
-
     [SerializeField] private int jumpCount = 0;
     [SerializeField] public int maxJumpCount = 2;
+
+    [SerializeField] public float dashForce = 10f;
+    [SerializeField] private int dashCount = 0;
+    [SerializeField] public int maxDashCount = 3;
+    [SerializeField] public float dashCooldown = 1f;
 
     public Transform wallCheck;
     public Transform groundCheck;
@@ -24,6 +28,11 @@ public class PlayerMovement : MonoBehaviour
 
     public bool canMove = true;
     public bool canFlip = true;
+
+    private bool isDashing = false;
+    private float dashTime = 0.2f;
+    private float dashTimer = 0f;
+    private float dashCooldownTimer = 0f;
 
     private void Start()
     {
@@ -39,9 +48,24 @@ public class PlayerMovement : MonoBehaviour
         HandleRun();
         HandleJump();
         HandleCombat();
+        HandleDash();
+        HandleDashRecharge();
     }
+
     private void FixedUpdate()
     {
+        if (isDashing)
+        {
+            dashTimer -= Time.fixedDeltaTime;
+            if (dashTimer <= 0)
+            {
+                isDashing = false;
+            }
+
+            // Không ghi đè velocity khi đang dash
+            return;
+        }
+
         //transform.position += new Vector3(movement, 0f, 0f) * Time.fixedDeltaTime * speed;
         rb.linearVelocity = new Vector2(movement * speed, rb.linearVelocity.y);
 
@@ -68,6 +92,45 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpCount = 0;
             animator.SetBool("isJumping", false);
+        }
+    }
+
+    private void HandleDash()
+    {
+        if (isDashing || IsInAttackState() || IsInChargeState() || !IsGrounded()) return;
+
+        if ((Input.GetKeyDown(KeyCode.L) || Input.GetMouseButtonDown(2)) && dashCount < maxDashCount)
+        {
+            audioPlayer.PlayJumpAudio();
+
+            float direction = transform.eulerAngles.y == 0 ? 1f : -1f;
+
+            rb.AddForce(new Vector2(direction * jumpForce, 0f), ForceMode2D.Impulse);
+
+            isDashing = true;
+            dashTimer = dashTime;
+
+            animator.Play("roll");
+            dashCount++;
+            Debug.Log($"Dash Used: {dashCount}/{maxDashCount}");
+        }
+    }
+
+    private void HandleDashRecharge()
+    {
+        if (dashCount > 0)
+        {
+            dashCooldownTimer += Time.deltaTime;
+
+            if (dashCooldownTimer > dashCooldown)
+            {
+                dashCount--;
+                dashCooldownTimer = 0f;
+            }
+        }
+        else
+        {
+            dashCooldownTimer = 0f;
         }
     }
 
@@ -149,19 +212,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleNormalAttack()
     {
-        if (combat.IsSkillReady("NormalAttack"))
+        if (combat.IsSkillReady("NormalAttack") && !combat.IsSkillLocked("NormalAttack"))
             animator.SetTrigger("Attack0");
     }
 
     private void HandleSkill1()
     {
-        if (combat.IsSkillReady("Skill1"))
+        if (combat.IsSkillReady("Skill1") && !combat.IsSkillLocked("Skill1"))
             animator.SetTrigger("Attack1");
     }
 
     private void HandleSkill2()
     {
-        if (combat.IsSkillReady("Skill2"))
+        if (combat.IsSkillReady("Skill2") && !combat.IsSkillLocked("Skill2"))
         {
             if (IsInChargeState()) return;
 
@@ -175,7 +238,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (IsInChargeState()) return;
 
-        if (combat.IsSkillReady("Ultimate"))
+        if (combat.IsSkillReady("Ultimate") && !combat.IsSkillLocked("Ultimate"))
             animator.SetTrigger("Charge");
     }
 
@@ -183,7 +246,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.I) || Input.GetMouseButtonUp(1))
         {
-            if (IsInChargeState() && combat.IsSkillReady("Ultimate"))
+            if (IsInChargeState() && combat.IsSkillReady("Ultimate") && !combat.IsSkillLocked("Ultimate"))
             {
                 canFlip = false;
                 animator.SetTrigger("Ultimate");

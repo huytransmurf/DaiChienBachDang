@@ -18,6 +18,7 @@ namespace Assets.Scripts.Player
         // Stores cooldown duration for each skill by name
         private Dictionary<string, float> cooldownTimes;
         private Dictionary<string, float> skillRanges;
+        private Dictionary<string, bool> lockedSkills;
 
         // Tracks the last time each skill was used
         private Dictionary<string, float> lastUsedTimes;
@@ -42,6 +43,14 @@ namespace Assets.Scripts.Player
                 { "Skill1", 1.2f },
                 { "Skill2", 1.8f },
                 { "Ultimate", 2f }
+            };
+
+            lockedSkills = new Dictionary<string, bool>
+            {
+                { "NormalAttack", false },
+                { "Skill1", true },
+                { "Skill2", true },
+                { "Ultimate", true }
             };
 
             // Set all skills to be ready at the start
@@ -138,8 +147,6 @@ namespace Assets.Scripts.Player
                 if (health != null)
                 {
                     health.TakeDamage(damage);
-                    //Debug.Log($"Hit {enemy.name} for {damage} damage.");
-
                     ShowDamagePopup(enemy.transform.position, damage);
                 }
             }
@@ -183,6 +190,26 @@ namespace Assets.Scripts.Player
         public float GetSkillCooldownDuration(string skillName)
         {
             return cooldownTimes.ContainsKey(skillName) ? cooldownTimes[skillName] : 0f;
+        }
+
+        /// <summary>
+        /// Check if a skill is currently locked.
+        /// </summary>
+        public bool IsSkillLocked(string skillName)
+        {
+            return lockedSkills.ContainsKey(skillName) && lockedSkills[skillName];
+        }
+
+        public void LockSkill(string skillName)
+        {
+            if (lockedSkills.ContainsKey(skillName))
+                lockedSkills[skillName] = true;
+        }
+
+        public void UnlockSkill(string skillName)
+        {
+            if (lockedSkills.ContainsKey(skillName))
+                lockedSkills[skillName] = false;
         }
 
         /// <summary>
