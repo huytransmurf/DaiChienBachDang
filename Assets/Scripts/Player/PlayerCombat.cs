@@ -62,17 +62,19 @@ namespace Assets.Scripts.Player
         }
         public void AddAttack(int amount)
         {
+            int strengthamount = 0;
+
             if (amount == 1)
             {
-                baseDamage = baseDamage * 20 / 100;
-
+                strengthamount = (int)(baseDamage * 0.2f); // Hồi 20% máu
             }
             else if (amount == 2)
             {
-                baseDamage = baseDamage * 35 / 100;
-
+                strengthamount = (int)(baseDamage * 0.35f); // Hồi 35% máu
             }
-           // Debug.Log("Tăng attack: " + baseDamage);
+
+            baseDamage += strengthamount;
+            // Debug.Log("Tăng attack: " + baseDamage);
         }
         // =========================
         // Called from animation events

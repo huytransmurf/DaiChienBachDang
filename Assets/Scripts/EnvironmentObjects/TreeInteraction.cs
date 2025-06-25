@@ -12,7 +12,7 @@ public class TreeInteraction : MonoBehaviour
     public int maxLogs;
     public int minLogs;
     private int totalLogs;
-    public GameObject dialogBox;               // Gán DialogBox
+    public GameObject dialogBox;              
     public TextMeshProUGUI dialogText;
     private float messageDuration = 2f;
 
@@ -55,7 +55,7 @@ public class TreeInteraction : MonoBehaviour
         Instantiate(woodPrefab, dropPosition, Quaternion.identity);
         logsDropped++;
 
-        Debug.Log($"Đã chặt ra {logsDropped}/{totalLogs} khúc gỗ.");
+        //Debug.Log($"Đã chặt ra {logsDropped}/{totalLogs} khúc gỗ.");
     }
     void ShowDialog(string message)
     {
