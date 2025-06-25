@@ -26,10 +26,12 @@ namespace Assets.Scripts.Enemy
         private Vector2 startPosition;
         private bool movingRight = true;
         private float lastAttackTime;
-        private float lastFlipTime; // Thêm biến này
+        private float lastFlipTime;
 
         private Transform player;
         private bool playerDetected = false;
+        public AudioClip attackSound;
+        public AudioSource audioSource;
 
         private enum EnemyState
         {
@@ -46,6 +48,7 @@ namespace Assets.Scripts.Enemy
             rb = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
             spriteRenderer = GetComponent<SpriteRenderer>();
+            audioSource = GetComponent<AudioSource>();
 
             startPosition = transform.position;
 
@@ -179,19 +182,29 @@ namespace Assets.Scripts.Enemy
         {
             lastAttackTime = Time.time;
             Debug.Log("Attack!");
+
+            animator.SetTrigger("attack"); // Kích hoạt trigger
+
+            if (audioSource != null && attackSound != null)
+                audioSource.PlayOneShot(attackSound);
+        }
+
+        void TakeDamage()
+        {
             Collider2D playerCol = Physics2D.OverlapCircle(
                 transform.position,
                 attackRange,
                 playerLayer
             );
-
             if (playerCol != null)
             {
                 Debug.Log("Hit player!");
                 PlayerHealth ph = playerCol.GetComponent<PlayerHealth>();
                 if (ph != null)
+                {
                     Debug.Log("Hit player2!");
-                ph.TakeDamage(damage);
+                    ph.TakeDamage(damage);
+                }
             }
         }
 
@@ -206,7 +219,7 @@ namespace Assets.Scripts.Enemy
             if (animator == null)
                 return;
             animator.SetBool("isMoving", Mathf.Abs(rb.linearVelocity.x) > 0.1f);
-            animator.SetBool("isAttacking", currentState == EnemyState.Attack);
+            //animator.SetBool("isAttacking", currentState == EnemyState.Attack);
             animator.SetBool("isChasing", currentState == EnemyState.Chase);
         }
 

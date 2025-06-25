@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class SkillCooldownUI : MonoBehaviour
 {
     public string skillName;
-    public Image cooldownImage;        // Cooldown overlay (filled image)
-    public TextMeshProUGUI cooldownText;          // Countdown text
-    public TextMeshProUGUI keyText;               // Key hint (ví dụ: "I" hoặc "J")
-    public GameObject lockOverlay;     // Optional: icon or text showing skill is locked/unavailable
+    public Image cooldownImage; // Cooldown overlay (filled image)
+    public TextMeshProUGUI cooldownText; // Countdown text
+    public TextMeshProUGUI keyText; // Key hint (ví dụ: "I" hoặc "J")
+    public GameObject lockOverlay; // Optional: icon or text showing skill is locked/unavailable
 
     public PlayerCombat playerCombat;
 
@@ -24,7 +24,8 @@ public class SkillCooldownUI : MonoBehaviour
 
     void Update()
     {
-        if (playerCombat == null) return;
+        if (playerCombat == null)
+            return;
 
         if(playerCombat.IsSkillLocked(skillName))
         {

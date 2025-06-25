@@ -48,6 +48,7 @@ namespace Assets.Scripts.Player
             currentHealth -= amount;
             healthBar.SetHeal(currentHealth);
         }
+        
 
         void Die()
         {
@@ -57,6 +58,7 @@ namespace Assets.Scripts.Player
             SceneManager.LoadSceneAsync(0);
             //Time.timeScale = 0f;
         }
+
         public void SetDefending()
         {
             isDefending = true;
@@ -67,6 +69,43 @@ namespace Assets.Scripts.Player
             isDefending = false;
         }
 
+
+        public void AddHealth(int amount)
+        {
+            if (amount == 1)
+            {
+                maxHealth = maxHealth * 20 / 100;
+
+            }
+            else if (amount == 2)
+            {
+                maxHealth = maxHealth * 35 / 100;
+
+            }
+           // Debug.Log("Tăng máu: " + maxHealth);
+        }
+        public void Healing(int amount)
+        {
+            float healAmount = 0;
+
+            if (amount == 1)
+            {
+                healAmount = currentHealth * 0.2f; // Hồi 20% máu
+            }
+            else if (amount == 2)
+            {
+                healAmount = currentHealth * 0.35f; // Hồi 35% máu
+            }
+
+            currentHealth += healAmount;
+
+            
+
+            healthBar.SetHeal(currentHealth);
+
+          //  Debug.Log("Tăng máu: " + maxHealth);
+          //  Debug.Log($" → Máu hiện tại: {currentHealth}/{maxHealth}");
+        }
         public void RestartGame()
         {
             Time.timeScale = 1f;
@@ -74,6 +113,12 @@ namespace Assets.Scripts.Player
             UnityEngine.SceneManagement.SceneManager.LoadScene(
                 UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
             );
+        }
+
+        public void HealHealth(int amount)
+        {
+            currentHealth += amount;
+            healthBar.SetHeal(currentHealth);
         }
     }
 }

@@ -21,6 +21,8 @@ public class NpcDialog : MonoBehaviour
     private bool dialogActive = false;
 
     public GameObject npcToHide;
+    public GameObject choiceUI;   // UI có 2 lựa chọn
+    public GameObject shopUI;
 
     void Update()
     {
@@ -28,13 +30,30 @@ public class NpcDialog : MonoBehaviour
         {
             if (!dialogActive && Input.GetKeyDown(KeyCode.F))
             {
-                StartDialog();
+                ShowChoices();
+                //StartDialog();
             }
             else if (dialogActive && Input.GetKeyDown(KeyCode.F))
             {
                 NextLine();
             }
         }
+    }
+    void ShowChoices()
+    {
+        choiceUI.SetActive(true);  // Hiện 2 nút
+    }
+
+    public void OnTalkButton()
+    {
+        choiceUI.SetActive(false);
+        StartDialog(); // Bắt đầu đối thoại như cũ
+    }
+
+    public void OnShopButton()
+    {
+        choiceUI.SetActive(false);
+        shopUI.SetActive(true); // Mở cửa hàng
     }
 
     void StartDialog()
@@ -77,15 +96,14 @@ public class NpcDialog : MonoBehaviour
     {
         dialogActive = false;
         dialogUI.SetActive(false);
+        shopUI.SetActive(false); // Đóng cửa hàng nếu đang mở
         currentLine = 0;
 
-        // Nếu có GameManager thì gán trạng thái
         if (GameManager.instance != null)
         {
             GameManager.instance.hasTalkedToNpc = true;
         }
 
-        // Ẩn NPC nếu đã gán trong Inspector
         if (npcToHide != null)
         {
             npcToHide.SetActive(false);
@@ -106,7 +124,10 @@ public class NpcDialog : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
-            EndDialog(); // Tắt UI khi rời xa
+            dialogUI.SetActive(false);
+            shopUI.SetActive(false);
+            choiceUI.SetActive(false);
+            dialogActive = false;
         }
     }
 }
