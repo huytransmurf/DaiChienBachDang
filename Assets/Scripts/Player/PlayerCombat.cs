@@ -210,6 +210,7 @@ namespace Assets.Scripts.Player
 
         public void UnlockSkill(string skillName)
         {
+            Debug.Log($"Skill {skillName} unlocked: {lockedSkills[skillName]}");
             if (lockedSkills.ContainsKey(skillName))
                 lockedSkills[skillName] = false;
         }
