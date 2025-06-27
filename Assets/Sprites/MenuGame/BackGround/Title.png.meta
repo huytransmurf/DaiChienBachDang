@@ -1,0 +1,224 @@
+fileFormatVersion: 2
+guid: 49cf2ceb4b32140428d561377f61e713
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7998097571841481819
+    second: Title-removebg-preview_0
+  - first:
+      213: -4908985711158470233
+    second: Title-removebg-preview_1
+  - first:
+      213: -7388808470592025188
+    second: Title-removebg-preview_2
+  - first:
+      213: -2683538687997105898
+    second: Title-removebg-preview_3
+  - first:
+      213: -7070117243938355095
+    second: Title-removebg-preview_4
+  - first:
+      213: -5817419833233912354
+    second: Title-removebg-preview_5
+  - first:
+      213: -2922649770282889306
+    second: Title-removebg-preview_6
+  - first:
+      213: 4240461298228942975
+    second: Title-removebg-preview_7
+  - first:
+      213: 5597457208769235269
+    second: Title-removebg-preview_8
+  - first:
+      213: 6006697999189034530
+    second: Title-removebg-preview_9
+  - first:
+      213: 3146823475495048485
+    second: Title-removebg-preview_10
+  - first:
+      213: 5588845913526432739
+    second: Title-removebg-preview_11
+  - first:
+      213: -6734842584083580684
+    second: Title-removebg-preview_12
+  - first:
+      213: 5638389904438662419
+    second: Title-removebg-preview_13
+  - first:
+      213: 926094954046420368
+    second: Title-removebg-preview_14
+  - first:
+      213: -6686847630752264849
+    second: Title-removebg-preview_15
+  - first:
+      213: 1952083684888464510
+    second: Title-removebg-preview_16
+  - first:
+      213: 6879234048732809262
+    second: Title-removebg-preview_17
+  - first:
+      213: -3624315875241339136
+    second: Title-removebg-preview_18
+  - first:
+      213: -2998679406691701100
+    second: Title-removebg-preview_19
+  - first:
+      213: 7979027888405861594
+    second: Title-removebg-preview_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Title_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 10
+        width: 728
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252ca7535a0bf1c42b8e9191922aefe0
+      internalID: -1265282386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9e15cf46d6ba841418a97bba6f347f56
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Title-removebg-preview_0: 7998097571841481819
+      Title-removebg-preview_1: -4908985711158470233
+      Title-removebg-preview_10: 3146823475495048485
+      Title-removebg-preview_11: 5588845913526432739
+      Title-removebg-preview_12: -6734842584083580684
+      Title-removebg-preview_13: 5638389904438662419
+      Title-removebg-preview_14: 926094954046420368
+      Title-removebg-preview_15: -6686847630752264849
+      Title-removebg-preview_16: 1952083684888464510
+      Title-removebg-preview_17: 6879234048732809262
+      Title-removebg-preview_18: -3624315875241339136
+      Title-removebg-preview_19: -2998679406691701100
+      Title-removebg-preview_2: -7388808470592025188
+      Title-removebg-preview_20: 7979027888405861594
+      Title-removebg-preview_3: -2683538687997105898
+      Title-removebg-preview_4: -7070117243938355095
+      Title-removebg-preview_5: -5817419833233912354
+      Title-removebg-preview_6: -2922649770282889306
+      Title-removebg-preview_7: 4240461298228942975
+      Title-removebg-preview_8: 5597457208769235269
+      Title-removebg-preview_9: 6006697999189034530
+      Title_0: -1265282386
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
