@@ -1,11 +1,13 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.Menu;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
     public void Playgame()
     {
-        SceneManager.LoadSceneAsync(1);
+        LoadingData.targetScene = "MainScene"; 
+        SceneManager.LoadScene("LoadingScene");
     }
 
     public void ExitGame()
