@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class ShopItem : MonoBehaviour
 {
-    public enum StatType { Attack1, Defense1, Health1, Attack2, Defense2, Health2 }
+    public enum StatType { Attack1, Defense1, Health1, Attack2, Defense2, Health2, Skill1, Skill2, Ultimate }
 
     public StatType bonusType;
     public Button  buyButton;
 
     private PlayerHealth playerHealth;
-    private PlayerCombat PlayerCombat;
+    private PlayerCombat playerCombat;
 
     public int bonusAmount;
     public TextMeshProUGUI dialogText;
@@ -26,13 +26,13 @@ public class ShopItem : MonoBehaviour
         if (dialogBox != null)
             dialogBox.SetActive(false);
         playerHealth = GameObject.FindWithTag("Player").GetComponent<PlayerHealth>();
-        PlayerCombat = GameObject.FindWithTag("Player").GetComponent<PlayerCombat>();
+        playerCombat = GameObject.FindWithTag("Player").GetComponent<PlayerCombat>();
 
         if (buyButton != null)
         {
             buyButton.onClick.AddListener(BuyItem);
           //  Debug.Log($"mau {playerHealth.currentHealth}");
-            //PlayerCombat.AddAttack(50);
+            //playerCombat.AddAttack(50);
 
         }
         else
@@ -41,7 +41,7 @@ public class ShopItem : MonoBehaviour
         }
         //Debug.Log("ShopItem Start gọi");
         //playerHealth = GameObject.FindWithTag("Player").GetComponent<PlayerHealth>();
-        //PlayerCombat = GameObject.FindWithTag("Player").GetComponent<PlayerCombat>();
+        //playerCombat = GameObject.FindWithTag("Player").GetComponent<playerCombat>();
         //buyButton.onClick.AddListener(BuyItem);
     }
 
@@ -49,7 +49,7 @@ public class ShopItem : MonoBehaviour
     {
        // Debug.Log("Đã bấm nút mua!");
 
-        if (playerHealth == null || PlayerCombat == null)
+        if (playerHealth == null || playerCombat == null)
         {
           //  Debug.LogError("Không tìm thấy Player!");
             return;
@@ -68,34 +68,48 @@ public class ShopItem : MonoBehaviour
         switch (bonusType)
         {
             case StatType.Attack1:
-                PlayerCombat.AddAttack(1);
-                ShowDialog(" Đã mua thành công! Strength hiện tại: " + PlayerCombat.baseDamage);
-
+                playerCombat.AddAttack(1);
+                ShowDialog(" Đã mua thành công! Strength hiện tại: " + playerCombat.baseDamage);
                 break;
+
             case StatType.Defense1:
                 playerHealth.Healing(1);
                 ShowDialog(" Đã mua thành công! Heal hiện tại: " + playerHealth.currentHealth);
-
                 break;
+
             case StatType.Health1:
                 playerHealth.AddHealth(1);
                 ShowDialog(" Đã mua thành công! Heal hiện tại: " + playerHealth.maxHealth);
-
                 break;
+
             case StatType.Attack2:
-                PlayerCombat.AddAttack(2);
-                ShowDialog(" Đã mua thành công! Strength hiện tại: " + PlayerCombat.baseDamage);
-
+                playerCombat.AddAttack(2);
+                ShowDialog(" Đã mua thành công! Strength hiện tại: " + playerCombat.baseDamage);
                 break;
+
             case StatType.Defense2:
                 playerHealth.Healing(2);
                 ShowDialog(" Đã mua thành công! Heal hiện tại: " + playerHealth.currentHealth);
-
                 break;
+
             case StatType.Health2:
                 playerHealth.AddHealth(2);
                 ShowDialog(" Đã mua thành công! Heal hiện tại: " + playerHealth.maxHealth);
+                break;
 
+            case StatType.Skill1:
+                playerCombat.UnlockSkill("Skill1");
+                Debug.Log("Đã mở khóa Skill1");
+                break;
+
+            case StatType.Skill2:
+                playerCombat.UnlockSkill("Skill2");
+                Debug.Log("Đã mở khóa Skill2");
+                break;
+
+            case StatType.Ultimate:
+                playerCombat.UnlockSkill("Ultimate");
+                Debug.Log("Đã mở khóa Ultimate");
                 break;
         }
 

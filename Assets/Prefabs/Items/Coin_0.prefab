@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1c7ffda1082a4749bc1ec230f5fedbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldValue: 1
+  goldValue: 5
 --- !u!61 &8763917871947224549
 BoxCollider2D:
   m_ObjectHideFlags: 0

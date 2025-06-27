@@ -2,7 +2,7 @@
 
 public class GoldPickup : MonoBehaviour
 {
-    public int goldValue = 1; 
+    public int goldValue = 2; 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
