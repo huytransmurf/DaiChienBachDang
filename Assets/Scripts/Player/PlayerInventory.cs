@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using Assets.Scripts.UI.HealBar;
+using TMPro;
 using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
@@ -7,7 +8,7 @@ public class PlayerInventory : MonoBehaviour
     public bool hasKey = false;
     public int goldAmount = 0;
     public TextMeshProUGUI goldText;
-
+    public int potionCount = 0;
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -24,6 +25,16 @@ public class PlayerInventory : MonoBehaviour
     private void Start()
     {
         UpdateGoldUI();
+    }
+    public void AddPotion(int amount)
+    {
+        potionCount += amount;
+
+        // Cập nhật UI nếu Healing đã khởi tạo
+        if (Healing.instance != null)
+        {
+            Healing.instance.UpdateHealUI();
+        }
     }
 
     private void UpdateGoldUI()
