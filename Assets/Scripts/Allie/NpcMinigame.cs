@@ -88,9 +88,9 @@ public class NpcMinigame : MonoBehaviour
         dialogUI.SetActive(false);
         currentLine = 0;
 
-        if (GameManager.instance != null)
+        if (GameManager.Instance != null)
         {
-            GameManager.instance.hasTalkedToNpc = true;
+            GameManager.Instance.hasTalkedToNpc = true;
         }
 
         if (npcToHide != null)
