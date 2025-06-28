@@ -134,7 +134,7 @@ namespace Assets.Scripts.Enemy
             animator.SetTrigger("Die");
             if (rb != null)
             {
-                rb.velocity = Vector2.zero;
+                rb.linearVelocity = Vector2.zero;
                 rb.bodyType = RigidbodyType2D.Kinematic;
                 rb.simulated = false;
             }
