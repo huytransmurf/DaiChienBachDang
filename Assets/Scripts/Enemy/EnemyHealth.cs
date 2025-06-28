@@ -49,7 +49,7 @@ namespace Assets.Scripts.Enemy
             if (currentHealth <= 0)
             {
                 Die();
-                GameManager.instance.bossDefeated = true;
+                GameManager.Instance.bossDefeated = true;
                 DropKey();
                // DropGold();
             }
