@@ -19,35 +19,25 @@ public class DialogBox : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            StopAllCoroutines();
-            gameObject.SetActive(false);
-            return;
-        }
+        //if (Input.GetKeyDown(KeyCode.F))
+        //{
+        //    StopAllCoroutines();
+        //    gameObject.SetActive(false);
+        //    return;
+        //}
         if (isTyping) return;
 
-        if (index == 2)
-        {
-            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+       
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 NextLine();
+              //  Debug.Log("@@@");
             }
-        }
-        else if (index == 3)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                NextLine();
-            }
-        }
-        else if (index == 4)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                NextLine();
-            }
-        }
+        
+        
+        
+           
+        
     }
 
     void StartDialog()
@@ -80,23 +70,25 @@ public class DialogBox : MonoBehaviour
         if (index < lines.Length - 1)
         {
             index++;
-            StartCoroutine(DelayedTypeLine());
+           StartCoroutine(DelayedTypeLine());
         }
         else
         {
+
             gameObject.SetActive(false);
+            //DestroyObject(gameObject);
         }
     }
 
     IEnumerator DelayedTypeLine()
     {
-        yield return new WaitForSeconds(1f); 
+        yield return new WaitForSeconds(0.07f); 
         StartCoroutine(TypeLine());
     }
 
     IEnumerator DelayedNextLine()
     {
-        yield return new WaitForSeconds(0.7f); 
+        yield return new WaitForSeconds(0f); 
         NextLine();
     }
 }
