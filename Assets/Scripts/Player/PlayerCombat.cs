@@ -7,143 +7,62 @@ namespace Assets.Scripts.Player
     public class PlayerCombat : MonoBehaviour
     {
         [Header("Base Stats")]
-        [SerializeField] public int baseDamage = 20;
-        [SerializeField] public float baseCooldown = 1f;
+        public int baseDamage = 20;
+        public float baseCooldown = 1f;
 
         [Header("Attack Settings")]
-        [SerializeField] public float attackRange = 1.5f;
+        public float attackRange = 1.5f;
         public Transform attackPoint;
         public LayerMask enemyLayer;
 
-        // Stores cooldown duration for each skill by name
-        private Dictionary<string, float> cooldownTimes;
-        private Dictionary<string, float> skillRanges;
-        private Dictionary<string, bool> lockedSkills;
-
-        // Tracks the last time each skill was used
+        private Dictionary<string, SkillData> skillDict;
         private Dictionary<string, float> lastUsedTimes;
 
-        public GameObject damagePopupPrefab; // gán trong Inspector
-        public Canvas uiCanvas; // tham chiếu tới canvas chính
+        public GameObject damagePopupPrefab;
+        public Canvas uiCanvas;
 
         void Start()
         {
-            // Initialize cooldown durations
-            cooldownTimes = new Dictionary<string, float>
+            skillDict = new Dictionary<string, SkillData>
             {
-                { "NormalAttack", baseCooldown * 0f },
-                { "Skill1", baseCooldown * 0f },
-                { "Skill2", baseCooldown * 2f },
-                { "Ultimate", baseCooldown * 6f }
+                { "NormalAttack", new SkillData { skillName = "NormalAttack", baseDamageMultiplier = 1f, baseRange = 1f, cooldown = 0f, isLocked = false } },
+                { "Skill1",       new SkillData { skillName = "Skill1", baseDamageMultiplier = 0.5f, baseRange = 1.2f, cooldown = 0f } },
+                { "Skill2",       new SkillData { skillName = "Skill2", baseDamageMultiplier = 3f, baseRange = 1.8f, cooldown = 2f } },
+                { "Ultimate",     new SkillData { skillName = "Ultimate", baseDamageMultiplier = 5f, baseRange = 2f, cooldown = 6f } }
             };
 
-            skillRanges = new Dictionary<string, float>
-            {
-                { "NormalAttack", 1f },
-                { "Skill1", 1.2f },
-                { "Skill2", 1.8f },
-                { "Ultimate", 2f }
-            };
-
-            lockedSkills = new Dictionary<string, bool>
-            {
-                { "NormalAttack", false },
-                { "Skill1", true },
-                { "Skill2", true },
-                { "Ultimate", true }
-            };
-
-            // Set all skills to be ready at the start
             lastUsedTimes = new Dictionary<string, float>();
-            foreach (var key in cooldownTimes.Keys)
-            {
-                lastUsedTimes[key] = -Mathf.Infinity;
-            }
-        }
-        public void AddAttack(int amount)
-        {
-            int strengthamount = 0;
-
-            if (amount == 1)
-            {
-                strengthamount = (int)(baseDamage * 0.2f); // Hồi 20% máu
-            }
-            else if (amount == 2)
-            {
-                strengthamount = (int)(baseDamage * 0.35f); // Hồi 35% máu
-            }
-
-            baseDamage += strengthamount;
-            // Debug.Log("Tăng attack: " + baseDamage);
-        }
-        // =========================
-        // Called from animation events
-        // =========================
-
-        /// <summary>
-        /// Normal attack (basic skill).
-        /// </summary>
-        public void NormalAttack()
-        {
-            if (IsSkillReady("NormalAttack"))
-            {
-                lastUsedTimes["NormalAttack"] = Time.time;
-                DoDamage(baseDamage, skillRanges["NormalAttack"]);
-            }
+            foreach (var skill in skillDict.Keys)
+                lastUsedTimes[skill] = -Mathf.Infinity;
         }
 
-        /// <summary>
-        /// Skill 1 - stronger than basic attack.
-        /// </summary>
-        public void Skill1()
+        // ========================
+        // ATTACK METHODS
+        // ========================
+        public void NormalAttack() => UseSkill("NormalAttack");
+        public void Skill1() => UseSkill("Skill1");
+        public void Skill2() => UseSkill("Skill2");
+        public void Ultimate() => UseSkill("Ultimate");
+
+        private void UseSkill(string skillName)
         {
-            if (IsSkillReady("Skill1"))
-            {
-                lastUsedTimes["Skill1"] = Time.time;
-                DoDamage((int)(baseDamage * 0.5f), skillRanges["Skill1"]);
-            }
+            if (!IsSkillReady(skillName)) return;
+
+            var skill = skillDict[skillName];
+            lastUsedTimes[skillName] = Time.time;
+
+            float finalDamage = baseDamage * skill.GetCurrentDamageMultiplier();
+            float finalRange = skill.GetCurrentRange();
+            DoDamage((int)finalDamage, finalRange);
         }
 
-        /// <summary>
-        /// Skill 2 - medium-power skill.
-        /// </summary>
-        public void Skill2()
+        // ========================
+        // DAMAGE
+        // ========================
+        private void DoDamage(int damage, float range)
         {
-            if (IsSkillReady("Skill2"))
-            {
-                lastUsedTimes["Skill2"] = Time.time;
-                DoDamage((int)(baseDamage * 3f), skillRanges["Skill2"]);
-            }
-        }
-
-        /// <summary>
-        /// Ultimate skill - strongest skill.
-        /// </summary>
-        public void Ultimate()
-        {
-            if (IsSkillReady("Ultimate"))
-            {
-                lastUsedTimes["Ultimate"] = Time.time;
-                DoDamage((int)(baseDamage * 5f), skillRanges["Ultimate"]);
-            }
-        }
-
-        // =========================
-        // Damage Logic
-        // =========================
-
-        /// <summary>
-        /// Apply damage to all enemies in range.
-        /// </summary>
-        void DoDamage(int damage, float range)
-        {
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
-                attackPoint.position,
-                range,
-                enemyLayer
-            );
-
-            foreach (Collider2D enemy in hitEnemies)
+            Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPoint.position, range, enemyLayer);
+            foreach (var enemy in enemies)
             {
                 var health = enemy.GetComponent<Enemy.EnemyHealth>();
                 if (health != null)
@@ -153,76 +72,106 @@ namespace Assets.Scripts.Player
                 }
             }
         }
-        private void ShowDamagePopup(Vector3 worldPosition, int damage)
+
+        public void AddAttack(int amount)
         {
-            // Chuyển vị trí thế giới sang màn hình
-            Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPosition + Vector3.up * 1f);
+            int strengthamount = 0;
 
-            // Thêm offset ngẫu nhiên để tránh chồng popup
-            float offsetX = Random.Range(-30f, 30f);
-            float offsetY = Random.Range(-10f, 30f);
-            screenPos += new Vector3(offsetX, offsetY, 0f);
+            if (amount == 1)
+            {
+                strengthamount = (int)(baseDamage * 0.2f);
+            }
+            else if (amount == 2)
+            {
+                strengthamount = (int)(baseDamage * 0.35f);
+            }
+            baseDamage += strengthamount; // ✅ Dòng này mới thực sự tăng baseDamage
+            Debug.Log($"Tăng baseDamage: +{strengthamount} => {baseDamage}");
+        }
 
-            // Tạo và hiển thị popup
+        private void ShowDamagePopup(Vector3 worldPos, int damage)
+        {
+            Vector3 screenPos = Camera.main.WorldToScreenPoint(worldPos + Vector3.up);
+            screenPos += new Vector3(Random.Range(-30f, 30f), Random.Range(-10f, 30f));
             GameObject popup = Instantiate(damagePopupPrefab, screenPos, Quaternion.identity, uiCanvas.transform);
             popup.GetComponent<DamagePopup>().SetDamage(damage);
         }
 
-
-        /// <summary>
-        /// Checks if a skill is ready to be used based on cooldown.
-        /// </summary>
+        // ========================
+        // COOLDOWN & UPGRADE
+        // ========================
         public bool IsSkillReady(string skillName)
         {
-            Debug.Log($"Checking cooldown for {skillName}");
+            if (!skillDict.ContainsKey(skillName)) return false;
             float lastTime = lastUsedTimes[skillName];
-            float cooldown = cooldownTimes[skillName];
-            return Time.time >= lastTime + cooldown;
+            return Time.time >= lastTime + skillDict[skillName].cooldown;
         }
 
-        /// <summary>
-        /// Get remaining cooldown time for a specific skill.
-        /// </summary>
         public float GetRemainingCooldown(string skillName)
         {
-            float lastTime = lastUsedTimes[skillName];
-            float cooldown = cooldownTimes[skillName];
-            return Mathf.Max(0, cooldown - (Time.time - lastTime));
+            if (!skillDict.ContainsKey(skillName)) return 0f;
+
+            float lastTime = lastUsedTimes.ContainsKey(skillName) ? lastUsedTimes[skillName] : -Mathf.Infinity;
+            float cooldown = skillDict[skillName].cooldown;
+
+            return Mathf.Max(0f, cooldown - (Time.time - lastTime));
         }
+
         public float GetSkillCooldownDuration(string skillName)
         {
-            return cooldownTimes.ContainsKey(skillName) ? cooldownTimes[skillName] : 0f;
-        }
-
-        /// <summary>
-        /// Check if a skill is currently locked.
-        /// </summary>
-        public bool IsSkillLocked(string skillName)
-        {
-            return lockedSkills.ContainsKey(skillName) && lockedSkills[skillName];
-        }
-
-        public void LockSkill(string skillName)
-        {
-            if (lockedSkills.ContainsKey(skillName))
-                lockedSkills[skillName] = true;
+            return skillDict.ContainsKey(skillName) ? skillDict[skillName].cooldown : 0f;
         }
 
         public void UnlockSkill(string skillName)
         {
-            Debug.Log($"Skill {skillName} unlocked: {lockedSkills[skillName]}");
-            if (lockedSkills.ContainsKey(skillName))
-                lockedSkills[skillName] = false;
+            if (skillDict.ContainsKey(skillName))
+                skillDict[skillName].Unlock();
         }
 
-        /// <summary>
-        /// Draws the attack range in the editor.
-        /// </summary>
+        public void UpgradeSkill(string skillName)
+        {
+            if (skillDict.ContainsKey(skillName))
+                skillDict[skillName].Upgrade();
+        }
+
+        public bool IsSkillLocked(string skillName)
+        {
+            if (skillDict.ContainsKey(skillName))
+            {
+                return skillDict[skillName].isLocked;
+            }
+            return true;
+        }
+
+        public bool IsSkillUpgraded(string skillName)
+        {
+            return skillDict.ContainsKey(skillName) && skillDict[skillName].level > 0;
+        }
+
         void OnDrawGizmosSelected()
         {
             if (attackPoint == null) return;
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(attackPoint.position, attackRange);
         }
+    }
+
+
+
+    [System.Serializable]
+    public class SkillData
+    {
+        public string skillName;
+        public float baseDamageMultiplier;
+        public float baseRange;
+        public float cooldown;
+        public bool isLocked = true;
+        public int level = 0;
+
+        public float GetCurrentDamageMultiplier() => baseDamageMultiplier * (1f + 0.2f * level);
+        public float GetCurrentRange() => baseRange * (1f + 0.2f * level);
+        public bool IsUnlocked() => !isLocked;
+        public void Unlock() => isLocked = false;
+        public void Upgrade() => level++;
     }
 }

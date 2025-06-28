@@ -1,31 +1,43 @@
 fileFormatVersion: 2
-guid: af04d7d00187fe54b8b737871cac9ddc
+guid: b075dc25f3254da438a1d85f39f3e9bd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8620441816999443727
-    second: Fire_WarriorRun_0
+      213: 3463904139046904432
+    second: row-6-column-1_0
   - first:
-      213: -5852517897997107495
-    second: Fire_WarriorRun_1
+      213: 4998894937260717509
+    second: row-6-column-1_1
   - first:
-      213: 5577561119392635050
-    second: Fire_WarriorRun_2
+      213: 5392724974497278557
+    second: row-6-column-1_2
   - first:
-      213: 1996169985876597193
-    second: Fire_WarriorRun_3
+      213: -7254639333028619539
+    second: row-6-column-1_3
   - first:
-      213: 1689742655356397643
-    second: Fire_WarriorRun_4
+      213: -2695289263079287372
+    second: row-6-column-1_4
   - first:
-      213: 2630543449219525100
-    second: Fire_WarriorRun_5
+      213: -8941619909460993911
+    second: row-6-column-1_5
   - first:
-      213: 61789631945277448
-    second: Fire_WarriorRun_6
+      213: 2440050466429741576
+    second: row-6-column-1_6
   - first:
-      213: -748193811219636371
-    second: Fire_WarriorRun_7
+      213: -6578199105943133173
+    second: row-6-column-1_7
+  - first:
+      213: -221173990317005171
+    second: row-6-column-1_8
+  - first:
+      213: 8834626292789098408
+    second: row-6-column-1_9
+  - first:
+      213: 8765611760094164900
+    second: row-6-column-1_10
+  - first:
+      213: 2069039193938562174
+    second: row-6-column-1_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,177 +133,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fire_WarriorRun_0
+      name: air_atk_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 144
-        height: 80
+        width: 288
+        height: 128
       alignment: 9
-      pivot: {x: 0.4, y: 0.5}
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f0dbc25d826f1a770800000000000000
-      internalID: 8620441816999443727
+      spriteID: 3d835c969f6dcd14aa5c0523091df48f
+      internalID: -1691515972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_WarriorRun_1
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 144
-        height: 80
-      alignment: 9
-      pivot: {x: 0.4, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9de3440dafda7cea0800000000000000
-      internalID: -5852517897997107495
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fire_WarriorRun_2
+      name: air_atk_1
       rect:
         serializedVersion: 2
         x: 288
         y: 0
-        width: 144
-        height: 80
+        width: 288
+        height: 128
       alignment: 9
-      pivot: {x: 0.4, y: 0.5}
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: aa89d62794a776d40800000000000000
-      internalID: 5577561119392635050
+      spriteID: 6f7e50c4c3f55604d90b0db9c605ceab
+      internalID: -1329413641
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_WarriorRun_3
-      rect:
-        serializedVersion: 2
-        x: 432
-        y: 0
-        width: 144
-        height: 80
-      alignment: 9
-      pivot: {x: 0.4, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9c99877a602d3bb10800000000000000
-      internalID: 1996169985876597193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fire_WarriorRun_4
+      name: air_atk_2
       rect:
         serializedVersion: 2
         x: 576
         y: 0
-        width: 144
-        height: 80
+        width: 288
+        height: 128
       alignment: 9
-      pivot: {x: 0.4, y: 0.5}
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b48e75e0efb237710800000000000000
-      internalID: 1689742655356397643
+      spriteID: 4f06d3d0d51cb8a4786322587f8ae820
+      internalID: 1215939469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_WarriorRun_5
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 0
-        width: 144
-        height: 80
-      alignment: 9
-      pivot: {x: 0.4, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ce9e5f07451918420800000000000000
-      internalID: 2630543449219525100
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fire_WarriorRun_6
+      name: air_atk_3
       rect:
         serializedVersion: 2
         x: 864
         y: 0
-        width: 144
-        height: 80
+        width: 288
+        height: 128
       alignment: 9
-      pivot: {x: 0.4, y: 0.5}
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 80086e6c7558bd000800000000000000
-      internalID: 61789631945277448
+      spriteID: 150aaa59abd269647bedbe42504ed146
+      internalID: -1407491495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fire_WarriorRun_7
+      name: air_atk_4
       rect:
         serializedVersion: 2
-        x: 1008
+        x: 1152
         y: 0
-        width: 144
-        height: 80
+        width: 288
+        height: 128
       alignment: 9
-      pivot: {x: 0.4, y: 0.5}
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d6f9b1b51b1ed95f0800000000000000
-      internalID: -748193811219636371
+      spriteID: 764f05deab91e9a418f98e22f05f9529
+      internalID: 1451269011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: air_atk_5
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f8e7267cafae64fb540ac16c544a4b
+      internalID: -902867753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: air_atk_6
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013e614db0a79714d9b340d66ee6bd71
+      internalID: -766088964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: air_atk_7
+      rect:
+        serializedVersion: 2
+        x: 2016
+        y: 0
+        width: 288
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80019e2c4cf6004a80508a02eac5499
+      internalID: 895769805
       vertices: []
       indices: 
       edges: []
@@ -300,7 +312,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f6b10d88000ad584c9bea1075b764dcd
+    spriteID: 8206f32e5cc42fa4092238d3f35e8c7f
     internalID: 0
     vertices: []
     indices: 
@@ -310,16 +322,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":144.0,"y":80.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.4000000059604645,"y":0.5},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":288.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.30000001192092898},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Fire_WarriorRun_0: 8620441816999443727
-      Fire_WarriorRun_1: -5852517897997107495
-      Fire_WarriorRun_2: 5577561119392635050
-      Fire_WarriorRun_3: 1996169985876597193
-      Fire_WarriorRun_4: 1689742655356397643
-      Fire_WarriorRun_5: 2630543449219525100
-      Fire_WarriorRun_6: 61789631945277448
-      Fire_WarriorRun_7: -748193811219636371
+      air_atk_0: -1691515972
+      air_atk_1: -1329413641
+      air_atk_2: 1215939469
+      air_atk_3: -1407491495
+      air_atk_4: 1451269011
+      air_atk_5: -902867753
+      air_atk_6: -766088964
+      air_atk_7: 895769805
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
