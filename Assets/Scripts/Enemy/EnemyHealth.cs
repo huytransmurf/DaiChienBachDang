@@ -26,6 +26,8 @@ namespace Assets.Scripts.Enemy
         public int maxgold;
         public int mingold;
 
+        public GameObject healthPotionPrefab;
+        public float healthPotionPercent;
         void Start()
         {
             currentHealth = maxHealth;
@@ -60,7 +62,25 @@ namespace Assets.Scripts.Enemy
                 // Play hurt animation...
             }
         }
-
+        void DropHealthPotion()
+        {
+            float chance = UnityEngine.Random.value; // random từ 0.0f -> 1.0f
+            if (chance <= healthPotionPercent)
+            {
+                Debug.Log("Rơi bình máu");
+                Vector3 dropPosition = transform.position + new Vector3(-0.5f, 0, 0); // lệch nhẹ so với key
+                GameObject potion = Instantiate(healthPotionPrefab, dropPosition, Quaternion.identity);
+                Rigidbody2D rb = potion.GetComponent<Rigidbody2D>();
+                if (rb != null)
+                {
+                    rb.AddForce(new Vector2(-0.5f, 2f), ForceMode2D.Impulse);
+                }
+            }
+            else
+            {
+              //  Debug.Log("Không rơi bình máu");
+            }
+        }
         void DropKey()
         {
             Debug.Log("Đã gọi DropKey");
@@ -112,7 +132,6 @@ namespace Assets.Scripts.Enemy
 
             animator.ResetTrigger("attack"); // ← CHẶN animation tấn công lỡ đang active
             animator.SetTrigger("Die");
-
             if (rb != null)
             {
                 rb.velocity = Vector2.zero;
@@ -122,8 +141,10 @@ namespace Assets.Scripts.Enemy
 
             if (GetComponent<Collider2D>() != null)
                 GetComponent<Collider2D>().enabled = false;
-
+            DropGold();
+            DropHealthPotion();
             Destroy(gameObject, 2f);
+
         }
     }
 }

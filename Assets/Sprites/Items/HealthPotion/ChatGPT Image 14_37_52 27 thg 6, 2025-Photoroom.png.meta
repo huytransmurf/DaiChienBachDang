@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6e153ac0a330dd94f9c1bccf7486962a
+guid: 9c9959c555a1c764ea51a953c6da9d97
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5481847107522299546
-    second: long_wood_spike_05_0
+      213: 1253373490889862105
+    second: ChatGPT Image 14_37_52 27 thg 6, 2025-Photoroom_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: long_wood_spike_05_0
+      name: ChatGPT Image 14_37_52 27 thg 6, 2025-Photoroom_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 63
-        height: 178
+        x: 195
+        y: 259
+        width: 495
+        height: 789
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a968ed476ee631c40800000000000000
-      internalID: 5481847107522299546
+      spriteID: 9dba16f9c80e46110800000000000000
+      internalID: 1253373490889862105
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      long_wood_spike_05_0: 5481847107522299546
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

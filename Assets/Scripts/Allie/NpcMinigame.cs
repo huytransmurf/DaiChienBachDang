@@ -1,8 +1,8 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
-public class NpcDialog : MonoBehaviour
+public class NpcMinigame : MonoBehaviour
 {
     [System.Serializable]
     public class DialogLine
@@ -11,49 +11,38 @@ public class NpcDialog : MonoBehaviour
         public Sprite image;
     }
 
-    public GameObject dialogUI;                    
-    public TextMeshProUGUI dialogText;             
-    public Image dialogImage;                      
-    public DialogLine[] dialogLines;               
+    [Header("UI Components")]
+    public GameObject dialogUI;
+    public TextMeshProUGUI dialogText;
+    public Image dialogImage;
+
+    [Header("Dialog Content")]
+    public DialogLine[] dialogLines;
+
+    [Header("NPC Settings")]
+    public GameObject npcToHide; 
 
     private int currentLine = 0;
     private bool playerInRange = false;
     private bool dialogActive = false;
 
-    public GameObject npcToHide;
-    public GameObject choiceUI;   
-    public GameObject shopUI;
+    public GameObject minigame;
+    public static NpcMinigame instance;
+    public bool isdonetalk = false;
 
     void Update()
     {
-        if (playerInRange)
+        if (playerInRange )
         {
             if (!dialogActive && Input.GetKeyDown(KeyCode.F))
             {
-                ShowChoices();
-                //StartDialog();
+                StartDialog();
             }
-            else if (dialogActive && Input.GetKeyDown(KeyCode.F))
+            else if (dialogActive && Input.GetKeyDown(KeyCode.Tab))
             {
                 NextLine();
             }
         }
-    }
-    void ShowChoices()
-    {
-        choiceUI.SetActive(true);  // Hiện 2 nút
-    }
-
-    public void OnTalkButton()
-    {
-        choiceUI.SetActive(false);
-        StartDialog(); // Bắt đầu đối thoại như cũ
-    }
-
-    public void OnShopButton()
-    {
-        choiceUI.SetActive(false);
-        shopUI.SetActive(true); // Mở cửa hàng
     }
 
     void StartDialog()
@@ -92,11 +81,11 @@ public class NpcDialog : MonoBehaviour
         }
     }
 
+
     void EndDialog()
     {
         dialogActive = false;
         dialogUI.SetActive(false);
-        shopUI.SetActive(false); // Đóng cửa hàng nếu đang mở
         currentLine = 0;
 
         if (GameManager.instance != null)
@@ -108,10 +97,17 @@ public class NpcDialog : MonoBehaviour
         {
             npcToHide.SetActive(false);
         }
+
+        if(minigame != null)
+        {
+            isdonetalk = true;
+           // minigame.SetActive(true);
+            
+        }
+        
     }
 
-
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
@@ -119,15 +115,15 @@ public class NpcDialog : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
+
             dialogUI.SetActive(false);
-            shopUI.SetActive(false);
-            choiceUI.SetActive(false);
             dialogActive = false;
+            currentLine = 0;
         }
     }
 }

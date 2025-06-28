@@ -1,35 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Assets.Scripts.Player;
+﻿using Assets.Scripts.Player;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Assets.Scripts.UI.HealBar
 {
     public class Healing : MonoBehaviour
     {
-        public int totalHeal = 5;
         public int healAmount = 20;
-        public KeyCode healKey = KeyCode.L;
+        public KeyCode healKey = KeyCode.E;
 
-        private int currentHeals;
         private PlayerHealth playerHealth;
+        private PlayerInventory inventory;
 
         public TextMeshProUGUI healCountText;
-
+        public static Healing instance;
         void Start()
         {
-            if (healCountText != null)
-                healCountText.text = string.Format("{0}", totalHeal);
-            currentHeals = totalHeal;
             GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
             if (playerObj != null)
             {
                 playerHealth = playerObj.GetComponent<PlayerHealth>();
+                inventory = playerObj.GetComponent<PlayerInventory>();
             }
 
             UpdateHealUI();
@@ -37,7 +28,8 @@ namespace Assets.Scripts.UI.HealBar
 
         void Update()
         {
-            if (Input.GetKeyDown(healKey) && currentHeals > 0)
+            UpdateHealUI();
+            if (Input.GetKeyDown(healKey) && inventory != null && inventory.potionCount > 0)
             {
                 HealPlayer();
             }
@@ -45,20 +37,21 @@ namespace Assets.Scripts.UI.HealBar
 
         void HealPlayer()
         {
-            if (playerHealth == null)
+            if (playerHealth == null || inventory == null)
                 return;
 
             playerHealth.HealHealth(healAmount);
-            currentHeals--;
-
-            Debug.Log("Healed! Remaining heals: " + currentHeals);
+            inventory.potionCount--;
+            //Debug.Log("Đã dùng bình máu, còn lại: " + inventory.potionCount);
             UpdateHealUI();
         }
 
-        void UpdateHealUI()
+        public void UpdateHealUI()
         {
-            if (healCountText != null)
-                healCountText.text = string.Format("{0}", currentHeals);
+            if (healCountText != null && inventory != null)
+            {
+                healCountText.text = $"{inventory.potionCount}";
+            }
         }
     }
 }

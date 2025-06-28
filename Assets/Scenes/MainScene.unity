@@ -4642,7 +4642,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2133bd92f889bdc45b333886ffdd32e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalHeal: 5
   healAmount: 20
   healKey: 101
   healCountText: {fileID: 666164673}
@@ -13214,6 +13213,14 @@ PrefabInstance:
       propertyPath: goldPrefab
       value: 
       objectReference: {fileID: 8549547998948246653, guid: adaa774dce664364baf3057128debd43, type: 3}
+    - target: {fileID: 7705947543652121013, guid: fe6f1f1329ff3e54d8a01175b1a1f2cd, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 3512136139584225557, guid: 81ffe78d6dab9844893d979d5bdcbb60, type: 3}
+    - target: {fileID: 7705947543652121013, guid: fe6f1f1329ff3e54d8a01175b1a1f2cd, type: 3}
+      propertyPath: healthPotionPercent
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15362,6 +15369,8 @@ MonoBehaviour:
   goldPrefab: {fileID: 0}
   maxgold: 0
   mingold: 0
+  healthPotionPrefab: {fileID: 0}
+  healthPotionPercent: 0
 --- !u!1 &1653312573
 GameObject:
   m_ObjectHideFlags: 0
@@ -15571,6 +15580,7 @@ MonoBehaviour:
   hasKey: 0
   goldAmount: 0
   goldText: {fileID: 2005567125}
+  potionCount: 0
 --- !u!114 &1669006212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17850,9 +17860,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 2042708618}
   keyPrefab: {fileID: 5956455792310665460, guid: 38015ee632c33994291e5bb16e2ccda4, type: 3}
-  goldPrefab: {fileID: 0}
-  maxgold: 0
-  mingold: 0
+  goldPrefab: {fileID: 8549547998948246653, guid: adaa774dce664364baf3057128debd43, type: 3}
+  maxgold: 17
+  mingold: 15
+  healthPotionPrefab: {fileID: 3512136139584225557, guid: 81ffe78d6dab9844893d979d5bdcbb60, type: 3}
+  healthPotionPercent: 0.7
 --- !u!1 &1907616984
 GameObject:
   m_ObjectHideFlags: 0
@@ -18046,6 +18058,14 @@ PrefabInstance:
       propertyPath: goldPrefab
       value: 
       objectReference: {fileID: 8549547998948246653, guid: adaa774dce664364baf3057128debd43, type: 3}
+    - target: {fileID: 7705947543652121013, guid: fe6f1f1329ff3e54d8a01175b1a1f2cd, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 3512136139584225557, guid: 81ffe78d6dab9844893d979d5bdcbb60, type: 3}
+    - target: {fileID: 7705947543652121013, guid: fe6f1f1329ff3e54d8a01175b1a1f2cd, type: 3}
+      propertyPath: healthPotionPercent
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18500,6 +18520,14 @@ PrefabInstance:
       propertyPath: goldPrefab
       value: 
       objectReference: {fileID: 8549547998948246653, guid: adaa774dce664364baf3057128debd43, type: 3}
+    - target: {fileID: 7705947543652121013, guid: fe6f1f1329ff3e54d8a01175b1a1f2cd, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 3512136139584225557, guid: 81ffe78d6dab9844893d979d5bdcbb60, type: 3}
+    - target: {fileID: 7705947543652121013, guid: fe6f1f1329ff3e54d8a01175b1a1f2cd, type: 3}
+      propertyPath: healthPotionPercent
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8499088295688986547, guid: fe6f1f1329ff3e54d8a01175b1a1f2cd, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -30215,6 +30243,14 @@ PrefabInstance:
       propertyPath: goldPrefab
       value: 
       objectReference: {fileID: 8549547998948246653, guid: adaa774dce664364baf3057128debd43, type: 3}
+    - target: {fileID: 7705947543652121013, guid: fe6f1f1329ff3e54d8a01175b1a1f2cd, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 3512136139584225557, guid: 81ffe78d6dab9844893d979d5bdcbb60, type: 3}
+    - target: {fileID: 7705947543652121013, guid: fe6f1f1329ff3e54d8a01175b1a1f2cd, type: 3}
+      propertyPath: healthPotionPercent
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30477,6 +30513,14 @@ PrefabInstance:
       propertyPath: goldPrefab
       value: 
       objectReference: {fileID: 8549547998948246653, guid: adaa774dce664364baf3057128debd43, type: 3}
+    - target: {fileID: 7705947543652121013, guid: fe6f1f1329ff3e54d8a01175b1a1f2cd, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 3512136139584225557, guid: 81ffe78d6dab9844893d979d5bdcbb60, type: 3}
+    - target: {fileID: 7705947543652121013, guid: fe6f1f1329ff3e54d8a01175b1a1f2cd, type: 3}
+      propertyPath: healthPotionPercent
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8499088295688986547, guid: fe6f1f1329ff3e54d8a01175b1a1f2cd, type: 3}
       propertyPath: m_SortingLayer
       value: 5
