@@ -30,7 +30,7 @@ public class TreeInteraction : MonoBehaviour
 
     void Update()
     {
-       if (!GameManager.instance.hasTalkedToNpc || !GameManager.instance.bossDefeated) return;
+      // if (!GameManager.instance.hasTalkedToNpc || !GameManager.instance.bossDefeated) return;
         if (player == null || interactionPoint == null) return;
 
         float distance = Vector2.Distance(interactionPoint.position, player.position);
