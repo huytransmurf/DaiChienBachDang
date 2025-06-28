@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Enemy
 {
-    public class EnemyHealth : MonoBehaviour
+    public abstract class BossHealth : MonoBehaviour
     {
         [Header("Health Settings")]
         public int maxHealth = 100;
@@ -40,30 +40,7 @@ namespace Assets.Scripts.Enemy
             Debug.Log(currentHealth);
         }
 
-        public virtual void TakeDamage(int damage)
-        {
-            EnemyController controller = GetComponent<EnemyController>();
-            if (controller != null && controller.IsDead())
-                return;
-            animator.SetTrigger("Hurt");
-            currentHealth -= damage;
-            healthBar.SetHeal(currentHealth);
-            Debug.Log(currentHealth);
-
-            if (currentHealth <= 0)
-            {
-                controller.Die();
-                Die();
-                GameManager.Instance.bossDefeated = true;
-                if (keyPrefab != null)
-                    DropKey();
-                DropGold();
-            }
-            else
-            {
-                // Play hurt animation...
-            }
-        }
+        public virtual void TakeDamage(int damage) { }
 
         public void DropHealthPotion()
         {
