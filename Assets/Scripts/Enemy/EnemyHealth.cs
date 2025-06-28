@@ -10,24 +10,27 @@ namespace Assets.Scripts.Enemy
     public class EnemyHealth : MonoBehaviour
     {
         [Header("Health Settings")]
-        private int maxHealth = 100;
-        private int currentHealth;
+        public int maxHealth = 100;
+        protected int currentHealth;
 
-        private Animator animator;
-        private Rigidbody2D rb;
-        private Collider2D col;
+        protected Animator animator;
+        protected Rigidbody2D rb;
+        protected Collider2D col;
 
         public HealthBar healthBar;
 
-        private bool isDead = false;
+        protected bool isDead = false;
 
         public GameObject keyPrefab;
+        public GameObject mapPrefab;
+
         public GameObject goldPrefab;
         public int maxgold;
         public int mingold;
 
         public GameObject healthPotionPrefab;
         public float healthPotionPercent;
+
         void Start()
         {
             currentHealth = maxHealth;
@@ -39,7 +42,7 @@ namespace Assets.Scripts.Enemy
             Debug.Log(currentHealth);
         }
 
-        public void TakeDamage(int damage)
+        public virtual void TakeDamage(int damage)
         {
             EnemyController controller = GetComponent<EnemyController>();
             if (controller != null && controller.IsDead())
@@ -53,23 +56,35 @@ namespace Assets.Scripts.Enemy
             {
                 controller.Die();
                 Die();
-                GameManager.instance.bossDefeated = true;
-                DropKey();
-                // DropGold();
+                GameManager.Instance.bossDefeated = true;
+
+                if (keyPrefab != null)
+                    DropKey();
+                DropGold();
+                if (mapPrefab != null) 
+                {
+                    DropMap();
+
+                };
             }
             else
             {
                 // Play hurt animation...
             }
         }
-        void DropHealthPotion()
+
+        public void DropHealthPotion()
         {
             float chance = UnityEngine.Random.value; // random từ 0.0f -> 1.0f
             if (chance <= healthPotionPercent)
             {
                 Debug.Log("Rơi bình máu");
                 Vector3 dropPosition = transform.position + new Vector3(-0.5f, 0, 0); // lệch nhẹ so với key
-                GameObject potion = Instantiate(healthPotionPrefab, dropPosition, Quaternion.identity);
+                GameObject potion = Instantiate(
+                    healthPotionPrefab,
+                    dropPosition,
+                    Quaternion.identity
+                );
                 Rigidbody2D rb = potion.GetComponent<Rigidbody2D>();
                 if (rb != null)
                 {
@@ -78,10 +93,11 @@ namespace Assets.Scripts.Enemy
             }
             else
             {
-              //  Debug.Log("Không rơi bình máu");
+                //  Debug.Log("Không rơi bình máu");
             }
         }
-        void DropKey()
+
+        public void DropKey()
         {
             Debug.Log("Đã gọi DropKey");
             Vector3 dropPosition = transform.position + new Vector3(0.5f, 0, 0);
@@ -97,8 +113,24 @@ namespace Assets.Scripts.Enemy
                 rb.AddForce(new Vector2(0.5f, 2f), ForceMode2D.Impulse);
             }
         }
+        void DropMap()
+        {
+            Debug.Log("Đã gọi Map");
+            Vector3 dropPosition = transform.position + new Vector3(0.5f, 0, 0);
+            GameObject map = Instantiate(mapPrefab, dropPosition, Quaternion.identity);
+            if (map == null)
+            {
+                Debug.LogError("Chìa khóa bị null!");
+                return;
+            }
+            Rigidbody2D rb = map.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.AddForce(new Vector2(0.5f, 2f), ForceMode2D.Impulse);
+            }
+        }
 
-        void DropGold()
+        public void DropGold()
         {
             int goldCount = UnityEngine.Random.Range(mingold, maxgold + 1);
             Debug.Log("Rơi " + goldCount + " vàng!");
@@ -144,7 +176,6 @@ namespace Assets.Scripts.Enemy
             DropGold();
             DropHealthPotion();
             Destroy(gameObject, 2f);
-
         }
     }
 }

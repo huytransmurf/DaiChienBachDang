@@ -36,6 +36,19 @@ namespace Assets.Scripts.UI.Quiz
             submitButton.onClick.AddListener(CheckAnswer);
         }
 
+        void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                QuizUIManager.Instance.ShowClue(); // ấn 1 lần là hiện 1 clue
+            }
+
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                Debug.Log("Ngô Quyền"); // test câu trả lời
+            }
+        }
+
         public void SetData(string[] newClues, string answer)
         {
             clues = new List<string>(newClues);

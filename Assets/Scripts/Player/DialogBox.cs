@@ -19,26 +19,21 @@ public class DialogBox : MonoBehaviour
 
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.F))
-        //{
-        //    StopAllCoroutines();
-        //    gameObject.SetActive(false);
-        //    return;
-        //}
-        if (isTyping) return;
-
-       
-            if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (isTyping)
+            {
+                StopAllCoroutines();
+                textComponent.text = lines[index];
+                isTyping = false;
+            }
+            else
             {
                 NextLine();
-              //  Debug.Log("@@@");
             }
-        
-        
-        
-           
-        
+        }
     }
+
 
     void StartDialog()
     {
