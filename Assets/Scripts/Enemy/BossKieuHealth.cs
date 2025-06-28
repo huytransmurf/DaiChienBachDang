@@ -25,6 +25,11 @@ namespace Assets.Scripts.Enemy
                 if (keyPrefab != null)
                     DropKey();
                 DropGold();
+                if (mapPrefab != null)
+                {
+                    DropMap();
+
+                };
             }
             else
             {

@@ -176,8 +176,8 @@ public class NpcDialog : MonoBehaviour
         if (npcToHide != null)
             npcToHide.SetActive(false);
 
-        if (GameManager.instance != null)
-            GameManager.instance.hasTalkedToNpc = true;
+        if (GameManager.Instance != null)
+            GameManager.Instance.hasTalkedToNpc = true;
     }
 
 
