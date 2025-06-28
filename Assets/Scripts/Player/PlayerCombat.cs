@@ -65,9 +65,15 @@ namespace Assets.Scripts.Player
             foreach (var enemy in enemies)
             {
                 var health = enemy.GetComponent<Enemy.EnemyHealth>();
-                if (health != null)
+                var bossHealth = enemy.GetComponent<BossHealth>();
+                if (health != null )
                 {
                     health.TakeDamage(damage);
+                    ShowDamagePopup(enemy.transform.position, damage);
+                } 
+                if(bossHealth != null)
+                {
+                    bossHealth.TakeDamage(damage);
                     ShowDamagePopup(enemy.transform.position, damage);
                 }
             }
