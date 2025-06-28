@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 45d897ce60f540a46981e07e82b36678
+guid: ba52fc566d3b0d1408b0f719a7214f62
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5904401969670539821
-    second: z6682451459309_6c3a89c84fa48c5e32dc8326aab51cb6_0
+      213: 3731866616710572618
+    second: Find your Constellation_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,24 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: z6682451459309_6c3a89c84fa48c5e32dc8326aab51cb6_0
+      name: Find your Constellation_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d5bba201b95f0ea0800000000000000
-      internalID: -5904401969670539821
+      spriteID: a4a2c266ae04ac330800000000000000
+      internalID: 3731866616710572618
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      z6682451459309_6c3a89c84fa48c5e32dc8326aab51cb6_0: -5904401969670539821
+      Find your Constellation_0: 3731866616710572618
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
