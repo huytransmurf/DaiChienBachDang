@@ -68,7 +68,7 @@ public class ShopItem : MonoBehaviour
         switch (bonusType)
         {
             case StatType.Attack1:
-                playerCombat.AddAttack(1);
+                playerCombat.UpgradeSkill("NormalAttack");
                 ShowDialog(" Đã mua thành công! Strength hiện tại: " + playerCombat.baseDamage);
                 break;
 
@@ -83,7 +83,7 @@ public class ShopItem : MonoBehaviour
                 break;
 
             case StatType.Attack2:
-                playerCombat.AddAttack(2);
+                playerCombat.UpgradeSkill("Skill1");
                 ShowDialog(" Đã mua thành công! Strength hiện tại: " + playerCombat.baseDamage);
                 break;
 

@@ -152,6 +152,7 @@ public class NpcDialog : MonoBehaviour
 
         currentLine = 0;
 
+
         // 🎁 Chỉ rơi phần thưởng nếu hoàn thành nhiệm vụ và chưa nhận
         if (hasCompletedTask && !rewardGiven && mapPiecePrefab != null)
         {
@@ -168,6 +169,7 @@ public class NpcDialog : MonoBehaviour
                 Vector2 randomDir = new Vector2(Random.Range(-1f, 1f), 1f).normalized;
                 rb.AddForce(randomDir * dropForce, ForceMode2D.Impulse);
             }
+
         }
 
         // Ẩn NPC nếu cần

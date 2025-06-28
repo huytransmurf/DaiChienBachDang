@@ -213,13 +213,27 @@ public class PlayerMovement : MonoBehaviour
     private void HandleNormalAttack()
     {
         if (combat.IsSkillReady("NormalAttack") && !combat.IsSkillLocked("NormalAttack"))
+        {
+            if (combat.IsSkillUpgraded("NormalAttack"))
+            {
+                animator.SetTrigger("UpgradedAttack0");
+                return;
+            }
             animator.SetTrigger("Attack0");
+        }
     }
 
     private void HandleSkill1()
     {
         if (combat.IsSkillReady("Skill1") && !combat.IsSkillLocked("Skill1"))
+        {
+            if (combat.IsSkillUpgraded("Skill1"))
+            {
+                animator.SetTrigger("UpgradedAttack1");
+                return;
+            }
             animator.SetTrigger("Attack1");
+        }
     }
 
     private void HandleSkill2()

@@ -55,7 +55,7 @@ namespace Assets.Scripts.Enemy
             {
                 controller.Die();
                 Die();
-                GameManager.instance.bossDefeated = true;
+                GameManager.Instance.bossDefeated = true;
                 DropKey();
                 if (mapPrefab != null) 
                 {
