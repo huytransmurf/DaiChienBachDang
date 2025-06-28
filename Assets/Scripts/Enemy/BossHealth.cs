@@ -18,6 +18,7 @@ namespace Assets.Scripts.Enemy
         protected Collider2D col;
 
         public HealthBar healthBar;
+        public GameObject mapPrefab;
 
         protected bool isDead = false;
 
@@ -66,6 +67,22 @@ namespace Assets.Scripts.Enemy
             }
         }
 
+        public void DropMap()
+        {
+            Debug.Log("Đã gọi Map");
+            Vector3 dropPosition = transform.position + new Vector3(0.5f, 0, 0);
+            GameObject map = Instantiate(mapPrefab, dropPosition, Quaternion.identity);
+            if (map == null)
+            {
+                Debug.LogError("Chìa khóa bị null!");
+                return;
+            }
+            Rigidbody2D rb = map.GetComponent<Rigidbody2D>();
+            if (rb != null)
+            {
+                rb.AddForce(new Vector2(0.5f, 2f), ForceMode2D.Impulse);
+            }
+        }
         public void DropKey()
         {
             Debug.Log("Đã gọi DropKey");
@@ -119,7 +136,7 @@ namespace Assets.Scripts.Enemy
             animator.SetTrigger("Die");
             if (rb != null)
             {
-                rb.velocity = Vector2.zero;
+                rb.linearVelocity = Vector2.zero;
                 rb.bodyType = RigidbodyType2D.Kinematic;
                 rb.simulated = false;
             }
