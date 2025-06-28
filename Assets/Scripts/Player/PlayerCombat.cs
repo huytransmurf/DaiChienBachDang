@@ -123,6 +123,18 @@ namespace Assets.Scripts.Player
             );
             foreach (var enemy in enemies)
             {
+                var health = enemy.GetComponent<Enemy.EnemyHealth>();
+                var bossHealth = enemy.GetComponent<BossHealth>();
+                if (health != null )
+                {
+                    health.TakeDamage(damage);
+                    ShowDamagePopup(enemy.transform.position, damage);
+                } 
+                if(bossHealth != null)
+                {
+                    bossHealth.TakeDamage(damage);
+                    ShowDamagePopup(enemy.transform.position, damage);
+                }
                 Debug.Log("Hit " + enemy.name);
                 if (enemy.GetComponent<BossDeKieuHealth>() != null)
                 {
