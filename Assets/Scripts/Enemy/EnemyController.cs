@@ -33,6 +33,8 @@ namespace Assets.Scripts.Enemy
         public AudioClip attackSound;
         public AudioSource audioSource;
 
+        public bool isDead = false;
+
         private enum EnemyState
         {
             Idle,
@@ -59,6 +61,8 @@ namespace Assets.Scripts.Enemy
 
         void Update()
         {
+            if (isDead)
+                return;
             DetectPlayer();
             StateMachine();
             UpdateAnimation();
@@ -70,6 +74,18 @@ namespace Assets.Scripts.Enemy
                 return;
             float distance = Vector2.Distance(transform.position, player.position);
             playerDetected = distance <= detectionRange;
+        }
+
+        public void Die()
+        {
+            if (isDead)
+                return;
+            isDead = true;
+        }
+
+        public bool IsDead()
+        {
+            return isDead;
         }
 
         void StateMachine()

@@ -39,7 +39,8 @@ namespace Assets.Scripts.Enemy
 
         public void TakeDamage(int damage)
         {
-            if (isDead)
+            EnemyController controller = GetComponent<EnemyController>();
+            if (controller != null && controller.IsDead())
                 return;
             animator.SetTrigger("Hurt");
             currentHealth -= damage;
@@ -48,10 +49,11 @@ namespace Assets.Scripts.Enemy
 
             if (currentHealth <= 0)
             {
+                controller.Die();
                 Die();
                 GameManager.instance.bossDefeated = true;
                 DropKey();
-               // DropGold();
+                // DropGold();
             }
             else
             {
@@ -72,9 +74,10 @@ namespace Assets.Scripts.Enemy
             Rigidbody2D rb = key.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
-                rb.AddForce(new Vector2(0.5f, 2f), ForceMode2D.Impulse); 
+                rb.AddForce(new Vector2(0.5f, 2f), ForceMode2D.Impulse);
             }
         }
+
         void DropGold()
         {
             int goldCount = UnityEngine.Random.Range(mingold, maxgold + 1);
@@ -82,33 +85,45 @@ namespace Assets.Scripts.Enemy
             for (int i = 0; i < goldCount; i++)
             {
                 Vector3 randomOffset = new Vector3(UnityEngine.Random.Range(-0.5f, 0.5f), 0, 0);
-                GameObject gold = Instantiate(goldPrefab, transform.position + randomOffset, Quaternion.identity);
+                GameObject gold = Instantiate(
+                    goldPrefab,
+                    transform.position + randomOffset,
+                    Quaternion.identity
+                );
                 Rigidbody2D goldRb = gold.GetComponent<Rigidbody2D>();
 
                 if (goldRb != null)
                 {
-                    Vector2 force = new Vector2(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(1f, 3f));
+                    Vector2 force = new Vector2(
+                        UnityEngine.Random.Range(-1f, 1f),
+                        UnityEngine.Random.Range(1f, 3f)
+                    );
                     goldRb.AddForce(force, ForceMode2D.Impulse);
                 }
             }
         }
 
-        void Die()
+        public void Die()
         {
+            if (isDead)
+                return;
+
             isDead = true;
 
-            // Play death animation
-            if (animator != null)
-                animator.SetTrigger("Die");
+            animator.ResetTrigger("attack"); // ← CHẶN animation tấn công lỡ đang active
+            animator.SetTrigger("Die");
 
-            // Disable physics and collider
             if (rb != null)
-                rb.linearVelocity = Vector2.zero;
-            if (col != null)
-                col.enabled = false;
-             DropGold();
-            // Destroy after delay or call other cleanup
-            Destroy(gameObject, 2f); // or use Object Pooling
+            {
+                rb.velocity = Vector2.zero;
+                rb.bodyType = RigidbodyType2D.Kinematic;
+                rb.simulated = false;
+            }
+
+            if (GetComponent<Collider2D>() != null)
+                GetComponent<Collider2D>().enabled = false;
+
+            Destroy(gameObject, 2f);
         }
     }
 }
