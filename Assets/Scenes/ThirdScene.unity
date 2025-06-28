@@ -287,6 +287,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &110211294
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1486114303597717024, guid: f6c5636325687d04699de878cbb55259, type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669435328490834965, guid: f6c5636325687d04699de878cbb55259, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28.16697
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669435328490834965, guid: f6c5636325687d04699de878cbb55259, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.74994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669435328490834965, guid: f6c5636325687d04699de878cbb55259, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669435328490834965, guid: f6c5636325687d04699de878cbb55259, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669435328490834965, guid: f6c5636325687d04699de878cbb55259, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669435328490834965, guid: f6c5636325687d04699de878cbb55259, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669435328490834965, guid: f6c5636325687d04699de878cbb55259, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669435328490834965, guid: f6c5636325687d04699de878cbb55259, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669435328490834965, guid: f6c5636325687d04699de878cbb55259, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3669435328490834965, guid: f6c5636325687d04699de878cbb55259, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 678181021998216608, guid: f6c5636325687d04699de878cbb55259, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1486114303597717024, guid: f6c5636325687d04699de878cbb55259, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1952241416}
+  m_SourcePrefab: {fileID: 100100000, guid: f6c5636325687d04699de878cbb55259, type: 3}
 --- !u!1 &152866668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1585,7 +1646,8 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 1050165059
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3310749801046428680, guid: aa7f13bcbf65df54fa7db75c67f1b1f6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -40142,6 +40204,27 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1952241415 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1486114303597717024, guid: f6c5636325687d04699de878cbb55259, type: 3}
+  m_PrefabInstance: {fileID: 110211294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1952241416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952241415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82727968a2a4d6c45a21645e80f32d34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossDefeated: 0
+  hasTalkedToNpc: 0
+  playerData:
+    gold: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -40157,3 +40240,4 @@ SceneRoots:
   - {fileID: 1395887977}
   - {fileID: 760796261}
   - {fileID: 1419583193}
+  - {fileID: 110211294}
