@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Item_Amphoreus_Readable_3_0: 5243131382642625711
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
