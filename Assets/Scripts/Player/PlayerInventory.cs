@@ -17,7 +17,8 @@ public class PlayerInventory : MonoBehaviour
     public void AddGold(int amount)
     {
         goldAmount += amount;
-       // Debug.Log("Vàng hiện có: " + goldAmount);
+        GameManager.Instance.playerData.gold += amount;
+        // Debug.Log("Vàng hiện có: " + goldAmount);
         UpdateGoldUI();
 
     }
@@ -35,7 +36,6 @@ public class PlayerInventory : MonoBehaviour
             Healing.instance.UpdateHealUI();
         }
     }
-
 
     private void UpdateGoldUI()
     {

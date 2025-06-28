@@ -99,9 +99,9 @@ public class NpcDialog : MonoBehaviour
         shopUI.SetActive(false); // Đóng cửa hàng nếu đang mở
         currentLine = 0;
 
-        if (GameManager.instance != null)
+        if (GameManager.Instance != null)
         {
-            GameManager.instance.hasTalkedToNpc = true;
+            GameManager.Instance.hasTalkedToNpc = true;
         }
 
         if (npcToHide != null)

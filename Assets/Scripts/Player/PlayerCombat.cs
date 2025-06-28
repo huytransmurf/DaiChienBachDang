@@ -31,6 +31,19 @@ namespace Assets.Scripts.Player
                 { "Ultimate",     new SkillData { skillName = "Ultimate", baseDamageMultiplier = 5f, baseRange = 2f, cooldown = 6f } }
             };
 
+            var data = GameManager.Instance.playerData;
+
+            foreach (var kv in skillDict)
+            {
+                string name = kv.Key;
+
+                if (data.unlockedSkills.ContainsKey(name) && data.unlockedSkills[name])
+                    kv.Value.Unlock();
+
+                if (data.upgradedSkills.ContainsKey(name))
+                    kv.Value.level = data.upgradedSkills[name];
+            }
+
             lastUsedTimes = new Dictionary<string, float>();
             foreach (var skill in skillDict.Keys)
                 lastUsedTimes[skill] = -Mathf.Infinity;
@@ -125,13 +138,19 @@ namespace Assets.Scripts.Player
         public void UnlockSkill(string skillName)
         {
             if (skillDict.ContainsKey(skillName))
+            {
                 skillDict[skillName].Unlock();
+                GameManager.Instance.playerData.unlockedSkills[skillName] = true;
+            }
         }
 
         public void UpgradeSkill(string skillName)
         {
             if (skillDict.ContainsKey(skillName))
+            {
                 skillDict[skillName].Upgrade();
+                GameManager.Instance.playerData.upgradedSkills[skillName] = skillDict[skillName].level;
+            }
         }
 
         public bool IsSkillLocked(string skillName)
