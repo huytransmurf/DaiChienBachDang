@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Enemy
 {
-    public class EnemyHealth : MonoBehaviour
+    public abstract class BossHealth : MonoBehaviour
     {
         [Header("Health Settings")]
         public int maxHealth = 100;
@@ -22,8 +22,6 @@ namespace Assets.Scripts.Enemy
         protected bool isDead = false;
 
         public GameObject keyPrefab;
-        public GameObject mapPrefab;
-
         public GameObject goldPrefab;
         public int maxgold;
         public int mingold;
@@ -42,36 +40,7 @@ namespace Assets.Scripts.Enemy
             Debug.Log(currentHealth);
         }
 
-        public virtual void TakeDamage(int damage)
-        {
-            EnemyController controller = GetComponent<EnemyController>();
-            if (controller != null && controller.IsDead())
-                return;
-            animator.SetTrigger("Hurt");
-            currentHealth -= damage;
-            healthBar.SetHeal(currentHealth);
-            Debug.Log(currentHealth);
-
-            if (currentHealth <= 0)
-            {
-                controller.Die();
-                Die();
-                GameManager.Instance.bossDefeated = true;
-
-                if (keyPrefab != null)
-                    DropKey();
-                DropGold();
-                if (mapPrefab != null) 
-                {
-                    DropMap();
-
-                };
-            }
-            else
-            {
-                // Play hurt animation...
-            }
-        }
+        public virtual void TakeDamage(int damage) { }
 
         public void DropHealthPotion()
         {
@@ -108,22 +77,6 @@ namespace Assets.Scripts.Enemy
                 return;
             }
             Rigidbody2D rb = key.GetComponent<Rigidbody2D>();
-            if (rb != null)
-            {
-                rb.AddForce(new Vector2(0.5f, 2f), ForceMode2D.Impulse);
-            }
-        }
-        void DropMap()
-        {
-            Debug.Log("Đã gọi Map");
-            Vector3 dropPosition = transform.position + new Vector3(0.5f, 0, 0);
-            GameObject map = Instantiate(mapPrefab, dropPosition, Quaternion.identity);
-            if (map == null)
-            {
-                Debug.LogError("Chìa khóa bị null!");
-                return;
-            }
-            Rigidbody2D rb = map.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
                 rb.AddForce(new Vector2(0.5f, 2f), ForceMode2D.Impulse);
@@ -166,7 +119,7 @@ namespace Assets.Scripts.Enemy
             animator.SetTrigger("Die");
             if (rb != null)
             {
-                rb.linearVelocity = Vector2.zero;
+                rb.velocity = Vector2.zero;
                 rb.bodyType = RigidbodyType2D.Kinematic;
                 rb.simulated = false;
             }

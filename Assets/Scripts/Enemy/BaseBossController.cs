@@ -775,13 +775,18 @@ namespace Assets.Scripts.Enemy
             MakeAIDecision();
         }
 
-        protected virtual void HandleDeath()
+        public virtual void HandleDeath()
         {
             Debug.Log("[Boss] Death state");
             isDead = true;
             rb.linearVelocity = Vector2.zero;
             OnDeath?.Invoke();
             OnDeathCustom();
+        }
+
+        public bool IsDead()
+        {
+            return isDead;
         }
         #endregion
 

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts.Enemy
 {
-    internal class BossController : MonoBehaviour
+    public class BossDeKieu : MonoBehaviour
     {
         [Header("Combat Settings")]
         public float attackRange = 1.5f;
@@ -521,7 +521,7 @@ namespace Assets.Scripts.Enemy
             }
         }
 
-        void Die()
+        public void Die()
         {
             Debug.Log("Boss died!");
             isDead = true;
