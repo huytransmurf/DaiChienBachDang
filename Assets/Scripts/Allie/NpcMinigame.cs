@@ -20,7 +20,7 @@ public class NpcMinigame : MonoBehaviour
     public DialogLine[] dialogLines;
 
     [Header("NPC Settings")]
-    public GameObject npcToHide; 
+    public GameObject npcToHide;
 
     private int currentLine = 0;
     private bool playerInRange = false;
@@ -32,7 +32,7 @@ public class NpcMinigame : MonoBehaviour
 
     void Update()
     {
-        if (playerInRange )
+        if (playerInRange)
         {
             if (!dialogActive && Input.GetKeyDown(KeyCode.F))
             {
@@ -81,7 +81,6 @@ public class NpcMinigame : MonoBehaviour
         }
     }
 
-
     void EndDialog()
     {
         dialogActive = false;
@@ -98,13 +97,11 @@ public class NpcMinigame : MonoBehaviour
             npcToHide.SetActive(false);
         }
 
-        if(minigame != null)
+        if (minigame != null)
         {
             isdonetalk = true;
-           // minigame.SetActive(true);
-            
+            // minigame.SetActive(true);
         }
-        
     }
 
     void OnTriggerEnter2D(Collider2D other)
