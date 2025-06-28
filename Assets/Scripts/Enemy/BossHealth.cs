@@ -141,6 +141,8 @@ namespace Assets.Scripts.Enemy
                 rb.simulated = false;
             }
 
+            GameManager.Instance.bossDefeated = true;
+
             if (GetComponent<Collider2D>() != null)
                 GetComponent<Collider2D>().enabled = false;
             DropGold();
