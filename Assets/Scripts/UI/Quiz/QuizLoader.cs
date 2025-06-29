@@ -11,7 +11,8 @@ namespace Assets.Scripts.UI.Quiz
     public class QuizLoader : MonoBehaviour
     {
         private GPTQuizFetcher fetcher;
-
+        public static List<string> QuizList = new List<string>();
+        public static string answerQuiz;
         void Start()
         {
             fetcher = GetComponent<GPTQuizFetcher>();
@@ -24,11 +25,13 @@ namespace Assets.Scripts.UI.Quiz
             foreach (string clue in clues)
             {
                 Debug.Log("🧠 Clue: " + clue);
+                QuizList.Add(clue);
             }
             Debug.Log("🎯 Final Answer: " + answer);
+            answerQuiz = answer;    
 
             // Gửi qua UI manager
-            QuizUIManager.Instance.SetData(clues, answer);
+            //QuizUIManager.Instance.SetData(clues, answer);
         }
     }
 }

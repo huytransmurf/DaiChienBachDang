@@ -1,6 +1,8 @@
 ﻿using Assets.Scripts.UI.HealBar;
+using Assets.Scripts.UI.Quiz;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -15,13 +17,23 @@ public class PlayerInventory : MonoBehaviour
     public int mapPieceCount = 0;
     public int totalMapPieces = 3; // hoặc số mảnh bạn cần để hoàn thành bản đồ
 
+    public Button specialMapButton;
     public void AddMapPiece()
     {
         mapPieceCount++;
+
+        UpdateMapUI();
+        //Debug.Log($"Đã nhặt mảnh bản đồ: {mapPieceCount}/{totalMapPieces}");
+        if (HasAllMapPieces() && specialMapButton != null)
+        {
+            specialMapButton.gameObject.SetActive(true); // Hiện nút
+        }
+
         goldAmount = GameManager.Instance.playerData.gold;
 
         UpdateGoldUI();
         UpdateMapUI();
+
     }
 
     public bool HasAllMapPieces()
@@ -34,6 +46,7 @@ public class PlayerInventory : MonoBehaviour
         if (instance == null) instance = this;
         else Destroy(gameObject);
     }
+    
     public void AddGold(int amount)
     {
         goldAmount += amount;
@@ -46,6 +59,8 @@ public class PlayerInventory : MonoBehaviour
     {
         UpdateGoldUI();
         UpdateMapUI();
+        if (specialMapButton != null)
+            specialMapButton.gameObject.SetActive(false);
     }
     public void AddPotion(int amount)
     {
