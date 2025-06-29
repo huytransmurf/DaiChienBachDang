@@ -2,8 +2,8 @@
 
 public class Boss_Run : StateMachineBehaviour
 {
-    public float speed = 5f;
-    public float attackRange = 3f;
+    public float speed ;
+    public float attackRange;
 
     Transform player;
     Rigidbody2D rb;
@@ -18,6 +18,7 @@ public class Boss_Run : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        Debug.Log("Speed = " + speed); // Xem có log ra không
         boss.LookAtPlayer();
 
         float distance = Vector2.Distance(rb.position, player.position);

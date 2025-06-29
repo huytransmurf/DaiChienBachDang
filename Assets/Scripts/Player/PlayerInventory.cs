@@ -21,12 +21,19 @@ public class PlayerInventory : MonoBehaviour
     public void AddMapPiece()
     {
         mapPieceCount++;
+
         UpdateMapUI();
         //Debug.Log($"Đã nhặt mảnh bản đồ: {mapPieceCount}/{totalMapPieces}");
         if (HasAllMapPieces() && specialMapButton != null)
         {
             specialMapButton.gameObject.SetActive(true); // Hiện nút
         }
+
+        goldAmount = GameManager.Instance.playerData.gold;
+
+        UpdateGoldUI();
+        UpdateMapUI();
+
     }
 
     public bool HasAllMapPieces()

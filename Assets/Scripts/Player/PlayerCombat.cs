@@ -135,13 +135,7 @@ namespace Assets.Scripts.Player
                 }
                 else if (enemy.GetComponent<BossHealth>() != null)
                 {
-                    var health = enemy.GetComponent<Enemy.EnemyHealth>();
                     var bossHealth = enemy.GetComponent<BossHealth>();
-                    if (health != null)
-                    {
-                        health.TakeDamage(damage);
-                        ShowDamagePopup(enemy.transform.position, damage);
-                    }
                     if (bossHealth != null)
                     {
                         bossHealth.TakeDamage(damage);

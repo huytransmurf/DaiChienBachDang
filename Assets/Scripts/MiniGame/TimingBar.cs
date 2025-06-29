@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -25,6 +26,13 @@ public class TimingBar : MonoBehaviour
     private float initialSpeed;
     private float initialSuccessWidth;
     private float initialDangerWidth;
+
+    [Header("Chase Settings")]
+    public GameObject enemyPrefab;
+    public Transform enemySpawnPoint;
+    public Transform playerTeleportPoint;
+
+    public CinemachineCamera virtualCam;
 
     void Start()
     {
@@ -129,11 +137,13 @@ public class TimingBar : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(delay);
 
-        Time.timeScale = 1; 
+        Time.timeScale = 1;
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
+        if (player != null && playerTeleportPoint != null)
         {
+            player.transform.position = playerTeleportPoint.position;
+
             Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
             if (rb != null)
             {
@@ -141,10 +151,23 @@ public class TimingBar : MonoBehaviour
                 rb.angularVelocity = 0f;
             }
         }
-        gameObject.SetActive(false);    
-        minigame.SetActive(false);      
 
-        
+        gameObject.SetActive(false);
+        minigame.SetActive(false);
+
+        // Spawn enemy để rượt đuổi
+        GameObject spawnedEnemy = null;
+        if (enemyPrefab != null && enemySpawnPoint != null)
+        {
+            spawnedEnemy = Instantiate(enemyPrefab, enemySpawnPoint.position, Quaternion.identity);
+        }
+
+        // Lia camera qua enemy 2s rồi quay lại playerTeleportPoint
+        if (virtualCam != null && spawnedEnemy != null)
+        {
+            yield return StartCoroutine(FocusOnTransformTemporarily(spawnedEnemy.transform, 2f));
+        }
+
     }
 
 
@@ -239,4 +262,17 @@ public class TimingBar : MonoBehaviour
             dialogBox.SetActive(false);
         }
     }
+    IEnumerator FocusOnTransformTemporarily(Transform focusTarget, float duration)
+    {
+        if (virtualCam == null || playerTeleportPoint == null) yield break;
+
+        virtualCam.Follow = focusTarget;
+        virtualCam.LookAt = focusTarget;
+
+        yield return new WaitForSecondsRealtime(duration);
+
+        virtualCam.Follow = playerTeleportPoint;
+        virtualCam.LookAt = playerTeleportPoint;
+    }
+
 }
