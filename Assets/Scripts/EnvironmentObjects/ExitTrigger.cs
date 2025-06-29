@@ -12,15 +12,8 @@ namespace Assets.Scripts.EnvironmentObjects
         {
             if (other.CompareTag("Player"))
             {
-                if (GameManager.Instance.bossDefeated)
-                {
-                    LoadingData.targetScene = nextSceneName;
-                    SceneManager.LoadScene("LoadingScene");
-                }
-                else
-                {
-                    Debug.Log("Không thể đi tiếp, boss chưa bị tiêu diệt!");
-                }
+                LoadingData.targetScene = nextSceneName;
+                SceneManager.LoadScene("LoadingScene");
             }
         }
     }

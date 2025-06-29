@@ -36,7 +36,7 @@ public class TreeInteraction : MonoBehaviour
         if (player == null || interactionPoint == null) return;
 
         float distance = Vector2.Distance(interactionPoint.position, player.position);
-        if (distance <= interactRange && Input.GetMouseButtonDown(0))
+        if (distance <= interactRange && Input.GetKeyDown(KeyCode.J))
         {
             DropWood();
         }

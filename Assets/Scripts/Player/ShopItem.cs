@@ -69,7 +69,7 @@ public class ShopItem : MonoBehaviour
         {
             case StatType.Attack1:
                 playerCombat.UpgradeSkill("NormalAttack");
-                ShowDialog(" Đã mua thành công! Strength hiện tại: " + playerCombat.baseDamage);
+                ShowDialog("Skill Upgraded");
                 break;
 
             case StatType.Defense1:
@@ -84,7 +84,7 @@ public class ShopItem : MonoBehaviour
 
             case StatType.Attack2:
                 playerCombat.UpgradeSkill("Skill1");
-                ShowDialog(" Đã mua thành công! Strength hiện tại: " + playerCombat.baseDamage);
+                ShowDialog("Skill Upgraded");
                 break;
 
             case StatType.Defense2:
