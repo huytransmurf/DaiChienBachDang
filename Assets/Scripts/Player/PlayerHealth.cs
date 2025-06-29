@@ -85,7 +85,7 @@ namespace Assets.Scripts.Player
             }
             maxHealth += healtotal;
             healthBar.SetMaxHeal(maxHealth);
-           // Debug.Log("Tăng máu: " + maxHealth);
+            Debug.Log("Tăng máu: " + maxHealth);
         }
         public void Healing(int amount)
         {
