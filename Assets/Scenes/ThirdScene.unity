@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NgoQuyen
       objectReference: {fileID: 0}
+    - target: {fileID: 2661704771774595958, guid: 86557baf84e3d2c45a9582ae9967dc36, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3719551014905216596, guid: 86557baf84e3d2c45a9582ae9967dc36, type: 3}
       propertyPath: uiCanvas
       value: 
@@ -146,6 +150,10 @@ PrefabInstance:
     - target: {fileID: 3719551014905216596, guid: 86557baf84e3d2c45a9582ae9967dc36, type: 3}
       propertyPath: baseDamage
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3811137667642657764, guid: 86557baf84e3d2c45a9582ae9967dc36, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6397093237669736435, guid: 86557baf84e3d2c45a9582ae9967dc36, type: 3}
       propertyPath: speed

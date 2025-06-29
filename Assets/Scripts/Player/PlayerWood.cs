@@ -43,7 +43,7 @@ public class PlayerWood : MonoBehaviour
             if (woodCount >= 20)
                 woodText.text = "Đã nhặt đủ 20 khúc gỗ!";
             else
-                woodText.text = "Số gỗ cần nhặt: " + woodCount + "/20";
+                woodText.text = woodCount + "/20";
         }
     }
     void ShowDialog(string message)

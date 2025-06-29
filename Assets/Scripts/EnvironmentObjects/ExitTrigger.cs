@@ -12,8 +12,15 @@ namespace Assets.Scripts.EnvironmentObjects
         {
             if (other.CompareTag("Player"))
             {
-                LoadingData.targetScene = nextSceneName;
-                SceneManager.LoadScene("LoadingScene");
+                if (GameManager.Instance.bossDefeated && !GameManager.Instance.hasTalkedToNpc)
+                {
+                    LoadingData.targetScene = nextSceneName;
+                    SceneManager.LoadScene("LoadingScene");
+                }
+                else
+                {
+                    Debug.Log("Chưa hoàn thành nhiệm vụ hoặc chưa nói chuyện với NPC.");
+                }
             }
         }
     }

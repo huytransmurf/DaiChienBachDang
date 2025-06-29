@@ -5,5 +5,5 @@ public class PlayerData
 {
     public Dictionary<string, bool> unlockedSkills = new Dictionary<string, bool>();
     public Dictionary<string, int> upgradedSkills = new Dictionary<string, int>();
-    public int gold = 0;
+    public int gold;
 }
