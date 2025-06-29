@@ -46,7 +46,23 @@ public class PlayerInventory : MonoBehaviour
         if (instance == null) instance = this;
         else Destroy(gameObject);
     }
-    
+
+    private void Start()
+    {
+        // Gán vàng từ GameManager (chỉ làm nếu Instance và playerData không null)
+        if (GameManager.Instance != null && GameManager.Instance.playerData != null)
+        {
+            goldAmount = GameManager.Instance.playerData.gold;
+            Debug.Log($"Start - Load vàng từ GameManager: {goldAmount}");
+        }
+
+        UpdateGoldUI();
+        UpdateMapUI();
+
+        if (specialMapButton != null)
+            specialMapButton.gameObject.SetActive(false);
+    }
+
     public void AddGold(int amount)
     {
         goldAmount += amount;
@@ -55,13 +71,7 @@ public class PlayerInventory : MonoBehaviour
         UpdateGoldUI();
 
     }
-    private void Start()
-    {
-        UpdateGoldUI();
-        UpdateMapUI();
-        if (specialMapButton != null)
-            specialMapButton.gameObject.SetActive(false);
-    }
+
     public void AddPotion(int amount)
     {
         potionCount += amount;
@@ -78,6 +88,7 @@ public class PlayerInventory : MonoBehaviour
         if (goldText != null)
         {
             goldText.text = $"{goldAmount}";
+            Debug.Log($"Cập nhật vàng: {goldAmount}");
         }
     }
     private void UpdateMapUI()
