@@ -1,16 +1,35 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class BossHealth : MonoBehaviour
 {
+    [Header("Health Settings")]
     public int health = 500;
+    private int currentHealth;
+    private int maxHealth;
+
+    [Header("Status")]
     public bool isInvulnerable = false;
+    private bool isDead = false;
+
+    [Header("UI")]
+    public Slider healthSlider; // Gán trong Inspector
 
     private Animator animator;
-    private bool isDead = false;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        maxHealth = health;
+        currentHealth = health;
+
+        if (healthSlider != null)
+        {
+            healthSlider.minValue = 0;
+            healthSlider.maxValue = maxHealth;
+            healthSlider.value = currentHealth;
+            healthSlider.gameObject.SetActive(true);
+        }
     }
 
     public void TakeDamage(int damage)
@@ -18,19 +37,26 @@ public class BossHealth : MonoBehaviour
         if (isInvulnerable || isDead)
             return;
 
-        health -= damage;
+        currentHealth -= damage;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
-        // Play hurt animation
+        Debug.Log("Boss Health: " + currentHealth);
+
+        // ✅ Cập nhật thanh máu
+        if (healthSlider != null)
+            healthSlider.value = currentHealth;
+
+        // ✅ Animation bị thương
         animator.SetTrigger("hurt");
-        Debug.Log("Boss Health: " + health);
-        // Check enraged state
-        if (health <= 200)
+
+        // 🔥 Nếu máu yếu, đổi trạng thái animation
+        if (currentHealth <= 200)
         {
             animator.SetBool("isFire", true);
         }
 
-        // Check dead
-        if (health <= 0)
+        // ☠️ Kiểm tra boss chết
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -39,19 +65,24 @@ public class BossHealth : MonoBehaviour
     void Die()
     {
         if (isDead) return;
-
         isDead = true;
 
-        // Play die animation
+        // ⚰️ Animation chết
         animator.SetTrigger("die");
 
-        // Disable collider and AI
+        // Tắt va chạm
         var col = GetComponent<Collider2D>();
         if (col != null) col.enabled = false;
 
+        // ❌ Ẩn thanh máu
+        if (healthSlider != null)
+            healthSlider.gameObject.SetActive(false);
+
+        // Hủy boss sau delay nếu cần
+        Destroy(gameObject, 2f);
     }
 
-    // 👉 Hàm này sẽ được gọi bằng Animation Event cuối animation Die
+    // 👉 Gọi từ Animation Event
     public void DestroyBoss()
     {
         Destroy(gameObject);

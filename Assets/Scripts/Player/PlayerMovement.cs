@@ -188,7 +188,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.W) && IsGrounded())
         {
-            if (Input.GetKeyDown(KeyCode.J) || Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.J))
             {
                 HandleSkill2(); // S + J
             }
@@ -199,7 +199,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.J) || Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.J))
             {
                 HandleNormalAttack(); // J hoặc click chuột trái
             }
