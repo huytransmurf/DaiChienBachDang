@@ -18,6 +18,15 @@ namespace Assets.Scripts.Enemy
             }
         }
 
+        //private void OnTriggerStay2D(Collider2D other)
+        //{
+        //    PlayerHealth player = other.GetComponent<PlayerHealth>();
+        //    if (player != null)
+        //    {
+        //        damageCoroutine = StartCoroutine(DealDamageOverTime(player));
+        //    }
+        //}
+
         private void OnTriggerExit2D(Collider2D other)
         {
             if (damageCoroutine != null)
@@ -32,7 +41,7 @@ namespace Assets.Scripts.Enemy
             while (true)
             {
                 player.TakeDamage(damagePerSecond);
-                yield return new WaitForSeconds(1f); // delay 1 giây mỗi lần gây damage
+                yield return new WaitForSeconds(1f); 
             }
         }
     }
