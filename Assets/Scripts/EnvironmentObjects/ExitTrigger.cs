@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Menu;
+using Assets.Scripts.Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,7 +13,16 @@ namespace Assets.Scripts.EnvironmentObjects
         {
             if (other.CompareTag("Player"))
             {
-                if (GameManager.Instance.bossDefeated && !GameManager.Instance.hasTalkedToNpc)
+                string currentScene = SceneManager.GetActiveScene().name;
+
+                if (currentScene == "SecondScene")
+                {
+                    LoadingData.targetScene = nextSceneName;
+                    SceneManager.LoadScene("LoadingScene");
+                    return;
+                }
+
+                if (GameManager.Instance.bossDefeated)
                 {
                     LoadingData.targetScene = nextSceneName;
                     SceneManager.LoadScene("LoadingScene");

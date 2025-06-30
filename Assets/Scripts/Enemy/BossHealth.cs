@@ -134,6 +134,8 @@ namespace Assets.Scripts.Enemy
 
             animator.ResetTrigger("attack"); // ← CHẶN animation tấn công lỡ đang active
             animator.SetTrigger("Die");
+            Debug.Log("Boss đã chết!");
+
             if (rb != null)
             {
                 rb.linearVelocity = Vector2.zero;
