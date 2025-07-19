@@ -14,25 +14,28 @@ public class FinalQuizUI : MonoBehaviour
     public TMP_InputField answerInput;
     public Button confirmButton;
     public TMP_Text resultText;
+    public GameObject cancelButton;
 
     private PlayerHealth playerHealth;
     private PlayerCombat playerCombat;
-
-    public GameObject cancelButton;
+    private PlayerInventory playerGold;
 
     private List<string> quotes = new List<string>();
     private string correctAnswer;
-    private void Start()
-    {
-        playerHealth = GameObject.FindWithTag("Player").GetComponent<PlayerHealth>();
-        playerCombat = GameObject.FindWithTag("Player").GetComponent<PlayerCombat>();
-    }
 
     private void Awake()
     {
         Instance = this;
         panel.SetActive(false);
         confirmButton.onClick.AddListener(CheckAnswer);
+    }
+
+    private void Start()
+    {
+        GameObject player = GameObject.FindWithTag("Player");
+        playerHealth = player.GetComponent<PlayerHealth>();
+        playerCombat = player.GetComponent<PlayerCombat>();
+        playerGold = player.GetComponent<PlayerInventory>(); // Đảm bảo bạn đã có script PlayerGold gắn vào Player
     }
 
     public void ShowFinalUI()
@@ -53,28 +56,33 @@ public class FinalQuizUI : MonoBehaviour
 
         answerInput.text = "";
         resultText.text = "";
+        confirmButton.interactable = true;
+        cancelButton.SetActive(true);
     }
 
     public void CheckAnswer()
     {
-        string userAnswer = answerInput.text.Trim();
+        string userAnswer = answerInput.text.Trim().ToLower();
 
-        if (string.Equals(userAnswer, correctAnswer, System.StringComparison.OrdinalIgnoreCase))
+        if (string.Equals(userAnswer, correctAnswer.ToLower(), System.StringComparison.OrdinalIgnoreCase))
         {
-            resultText.text = "✅ Chính xác!";
+            resultText.text = "Chính xác! Bạn nhận được 100 vàng và tăng sức mạnh";
+            confirmButton.interactable = false;
+            cancelButton.SetActive(false);
+
+            // Thưởng người chơi
+            playerCombat.AddAttack(10);
+            playerHealth.AddHealth(50);
+            playerGold.AddGold(100); // Thêm 100 vàng
+
+            CoroutineRunner.Instance.StartCoroutine(CloseAfterDelay());
         }
         else
         {
-            resultText.text = $"❌ Sai rồi. Đáp án là: {correctAnswer}";
+            resultText.text = $"❌ Sai rồi. Hãy thử lại!";
+            // Không đóng panel, người chơi tiếp tục trả lời
         }
-
-        CoroutineRunner.Instance.StartCoroutine(CloseAfterDelay());
-        playerCombat.AddAttack(10);
-        playerHealth.AddHealth(50);
-        
-        cancelButton.SetActive(false);
     }
-
 
     private System.Collections.IEnumerator CloseAfterDelay()
     {
