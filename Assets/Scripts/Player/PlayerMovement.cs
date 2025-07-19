@@ -214,7 +214,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (combat.IsSkillReady("NormalAttack") && !combat.IsSkillLocked("NormalAttack"))
         {
-            if (combat.IsSkillUpgraded("NormalAttack"))
+            if (combat.GetSkillLevel("NormalAttack") == 1)
             {
                 animator.SetTrigger("UpgradedAttack0");
                 return;
@@ -227,7 +227,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (combat.IsSkillReady("Skill1") && !combat.IsSkillLocked("Skill1"))
         {
-            if (combat.IsSkillUpgraded("Skill1"))
+            if (combat.GetSkillLevel("Skill1") == 1)
             {
                 animator.SetTrigger("UpgradedAttack1");
                 return;
