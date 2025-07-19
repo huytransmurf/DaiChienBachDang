@@ -22,6 +22,8 @@ namespace Assets.Scripts.Player
         public GameObject damagePopupPrefab;
         public Canvas uiCanvas;
 
+        private float ultimateChargeMultiplier = 1.0f;
+
         void Start()
         {
             skillDict = new Dictionary<string, SkillData>
@@ -106,7 +108,15 @@ namespace Assets.Scripts.Player
             var skill = skillDict[skillName];
             lastUsedTimes[skillName] = Time.time;
 
-            float finalDamage = baseDamage * skill.GetCurrentDamageMultiplier();
+            float damageMultiplier = skill.GetCurrentDamageMultiplier();
+
+            if (skillName == "Ultimate")
+            {
+                damageMultiplier *= ultimateChargeMultiplier;
+                ultimateChargeMultiplier = 1.0f;
+            }
+
+            float finalDamage = baseDamage * damageMultiplier;
             float finalRange = skill.GetCurrentRange();
             DoDamage((int)finalDamage, finalRange);
         }
@@ -255,6 +265,23 @@ namespace Assets.Scripts.Player
             return skillDict.ContainsKey(skillName) && skillDict[skillName].level > 0;
         }
 
+        public int GetSkillLevel(string skillName)
+        {
+            if (skillDict.ContainsKey(skillName))
+            {
+                return skillDict[skillName].level;
+            }
+            return 0;
+        }
+
+        public void Charge()
+        {
+            const float chargeStep = 0.01f;     
+            const float maxCharge = 2.0f;      
+
+            float previous = ultimateChargeMultiplier;
+            ultimateChargeMultiplier = Mathf.Min(ultimateChargeMultiplier + chargeStep, maxCharge);
+        }
 
         void OnDrawGizmosSelected()
         {
