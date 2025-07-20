@@ -42,11 +42,29 @@ public class TreeInteraction : MonoBehaviour
         }
     }
 
+    //void DropWood()
+    //{
+    //    if (logsDropped >= totalLogs)
+    //    {
+    //        ShowDialog("Cây này đã hết gỗ! Bạn hãy đi cây khác");
+    //        return;
+    //    }
+
+    //    float offsetX = Random.Range(-1f, 1f);
+    //    float offsetY = Random.Range(0.5f, 1.5f);
+    //    Vector3 dropPosition = transform.position + new Vector3(offsetX, offsetY, 0);
+
+    //    Instantiate(woodPrefab, dropPosition, Quaternion.identity);
+    //    logsDropped++;
+
+    //    //Debug.Log($"Đã chặt ra {logsDropped}/{totalLogs} khúc gỗ.");
+    //}
     void DropWood()
     {
         if (logsDropped >= totalLogs)
         {
             ShowDialog("Cây này đã hết gỗ! Bạn hãy đi cây khác");
+            Invoke(nameof(HideTree), messageDuration); // Ẩn cây sau khi hết gỗ
             return;
         }
 
@@ -56,8 +74,10 @@ public class TreeInteraction : MonoBehaviour
 
         Instantiate(woodPrefab, dropPosition, Quaternion.identity);
         logsDropped++;
-
-        //Debug.Log($"Đã chặt ra {logsDropped}/{totalLogs} khúc gỗ.");
+    }
+    void HideTree()
+    {
+        gameObject.SetActive(false);
     }
     void ShowDialog(string message)
     {
